@@ -2,6 +2,7 @@
 lock '~> 3.11.0'
 
 set :application, 'thape_web'
+# deploy using 'https://github.com/thape-cn/website.git' is too slow
 set :repo_url, 'git@git.dev.tencent.com:ericguo/thape_web.git'
 
 # Default branch is :master
