@@ -1,0 +1,79 @@
+<% provide(:title, "新闻") %>
+
+<div class="container-fluid core-main">
+  <ul class="list-inline second-level-nav">
+    <li class="activity"><%= link_to t("infos.news"), infos_path, class: 'tianhua-font' %></li>
+  </ul>
+
+  <div class="news-list">
+    <div class="row">
+      <div class="col-md-12 visible-lg-block visible-md-block visible-sm-block">
+        <a href="<%= info_path(id: @home.info_high_link) -%>">
+          <div class="news-group">
+            <%= image_tag(@home.info_high_img.url, style: 'width:100%;', class: 'img-responsive') %>
+            <div class="news-tip">
+              <h4><%= @home.info_high_title %></h4>
+                <p><%= @home.info_high_introduction %></p>
+              </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-12 visible-xs-block">
+        <a href="<%= info_path(id: @home.info_high_link) -%>">
+          <div class="infos-banner-img">
+            <%= image_tag(@home.info_high_phone_img.url, class: 'img-responsive') %>
+            <div class="infos-banner-title">
+              <h4><%= @home.info_high_title %></h4>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+    <% @infos.each_slice(5) do |infos| %>
+      <div class="row cases-line visible-lg-block visible-md-block visible-sm-block">
+        <% infos.each do |info| %>
+          <div class="col-md-5ths col-xs-12 col-sm-6">
+            <div class="infos-img">
+              <%= link_to (image_tag(info.snapshot.url, class: 'news-img') if info.snapshot_identifier.present?), info_path(info) %>
+              <div class="infos-title">
+                <p><%= link_to truncate(info.title, escape: false, length: 26), info_path(info) %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
+
+  <div class="col-xs-12 visible-xs-block phone-xs-12">
+    <ul class="media-list">
+      <% @infos.each do |info| %>
+      <hr>
+      <li class="media">
+        <div class="media-left">
+          <%= link_to (image_tag(info.snapshot.url, class: 'news-img-phone') if info.snapshot_identifier.present?), info_path(info) %>
+        </div>
+        <div class="media-body">
+           <p><%= link_to truncate(info.title, escape: false, length: 40), info_path(info) %></p>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="text-center visible-xs-block phone-paginate">
+    <%= paginate @infos, hide_goto_page: true %>
+  </div>
+
+  <div class="visible-lg-block visible-md-block visible-sm-block">
+    <%= paginate @infos %>
+  </div>
+
+  </div>
+</div>
+
+
+

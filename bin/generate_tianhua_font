@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+APP_ROOT = File.expand_path('..', __dir__)
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+Dir.chdir(APP_ROOT) do
+  words = File.read('config/tianhua_font_contain_words.txt')
+  need_extract_words = words.gsub("\n",'').split(//).uniq.join('')
+  begin
+    system! "java -jar ~/bin/sfnttool.jar -s '#{need_extract_words}' ~/bin/SourceHanSansCN-Medium.ttf app/assets/fonts/tianhua.ttf"
+  rescue Errno::ENOENT
+    $stderr.puts "Need download sfnttool.jar and install java, also need put the SourceHanSansCN-Medium.ttf together at ~/bin"
+    $stderr.puts "Download sfnttool.jar at https://github.com/forJrking/FontZip#sfntly请使用fontzip"
+    exit 1
+  end
+end

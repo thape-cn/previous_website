@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <meta name="title" content="<%= full_title(yield(:title)) %>" />
+    <link rel="shortlink" href="http://www.thape.com/cn" />
+    <link rel="canonical" href="http://www.thape.com/cn" />
+    <meta name="description" content="<%= @seo.description -%>" />
+    <meta name="abstract" content="<%= @seo.abstract -%>" />
+    <meta name="keywords" content="<%= @seo.keywords -%>" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= render 'layouts/navbar' %>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>

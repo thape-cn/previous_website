@@ -1,0 +1,172 @@
+<h3>首页信息    <small><%= link_to "修改", edit_admin_home_path(@home) %></small></h3>
+<hr>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Banner 1</div>
+      <div class="panel-body">
+        <p><%= @home.title_1 %></p>
+        <p><%= @home.subtitle_1 %></p>
+        <p><%= image_tag @home.banner_1.url, width: '260' if @home.banner_1_identifier.present? %></p>
+        <p><%= image_tag @home.banner_phone_1.url, width: '260' if @home.banner_phone_1_identifier.present? %></p>
+        <p><%= @home.banner_alt_1 %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Banner 2</div>
+      <div class="panel-body">
+        <p><%= @home.title_2 %></p>
+        <p><%= @home.subtitle_2 %></p>
+        <p><%= image_tag @home.banner_2.url, width: '260' if @home.banner_2_identifier.present? %></p>
+        <p><%= image_tag @home.banner_phone_2.url, width: '260' if @home.banner_phone_2_identifier.present? %></p>
+        <p><%= @home.banner_alt_2 %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Banner 3</div>
+      <div class="panel-body">
+        <p><%= @home.title_3 %></p>
+        <p><%= @home.subtitle_3 %></p>
+        <p><%= image_tag @home.banner_3.url, width: '260' if @home.banner_3_identifier.present? %></p>
+        <p><%= image_tag @home.banner_phone_3.url, width: '260' if @home.banner_phone_3_identifier.present? %></p>
+        <p><%= @home.banner_alt_3 %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Banner 4</div>
+      <div class="panel-body">
+        <p><%= @home.title_4 %></p>
+        <p><%= @home.subtitle_4 %></p>
+        <p><%= image_tag @home.banner_4.url, width: '260' if @home.banner_4_identifier.present? %></p>
+        <p><%= image_tag @home.banner_phone_4.url, width: '260' if @home.banner_phone_4_identifier.present? %></p>
+        <p><%= @home.banner_alt_4 %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Banner 5</div>
+      <div class="panel-body">
+        <p><%= @home.title_5 %></p>
+        <p><%= @home.subtitle_5 %></p>
+        <p><%= image_tag @home.banner_5.url, width: '260' if @home.banner_5_identifier.present? %></p>
+        <p><%= image_tag @home.banner_phone_5.url, width: '260' if @home.banner_phone_5_identifier.present? %></p>
+        <p><%= @home.banner_alt_5 %></p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">推荐案例 1</div>
+      <div class="panel-body">
+        <p><%= @home.project_title_1 %></p>
+        <p><%= @home.project_subtitle_1 %></p>
+        <p><%= image_tag @home.project_img_1.url, width: '260' if @home.project_img_1_identifier.present? %></p>
+        <p><%= image_tag @home.project_phone_img_1.url, width: '260' if @home.project_phone_img_1_identifier.present? %></p>
+        <p><%= @home.project_alt_1 %></p>
+        <p><%= @home.project_link_1 %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">推荐案例 2</div>
+      <div class="panel-body">
+        <p><%= @home.project_title_2 %></p>
+        <p><%= @home.project_subtitle_2 %></p>
+        <p><%= image_tag @home.project_img_2.url, width: '260' if @home.project_img_2_identifier.present? %></p>
+        <p><%= image_tag @home.project_phone_img_2.url, width: '260' if @home.project_phone_img_2_identifier.present? %></p>
+        <p><%= @home.project_alt_2 %></p>
+        <p><%= @home.project_link_2 %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">推荐案例 3</div>
+      <div class="panel-body">
+        <p><%= @home.project_title_3 %></p>
+        <p><%= @home.project_subtitle_3 %></p>
+        <p><%= image_tag @home.project_img_3.url, width: '260' if @home.project_img_3_identifier.present? %></p>
+        <p><%= image_tag @home.project_phone_img_3.url, width: '260' if @home.project_phone_img_3_identifier.present? %></p>
+        <p><%= @home.project_alt_3 %></p>
+        <p><%= @home.project_link_3 %></p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">新闻 1</div>
+      <div class="panel-body">
+        <p><%= @home.info_title_1 %></p>
+        <p><%= @home.info_subtitle_1 %></p>
+        <p><%= image_tag @home.info_img_1.url, width: '260' if @home.info_img_1_identifier.present? %></p>
+        <p><%= @home.info_alt_1 %></p>
+        <p><%= @home.info_link_1 %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">新闻 2</div>
+      <div class="panel-body">
+        <p><%= @home.info_title_2 %></p>
+        <p><%= @home.info_subtitle_2 %></p>
+        <p><%= image_tag @home.info_img_2.url, width: '260' if @home.info_img_2_identifier.present? %></p>
+        <p><%= @home.info_alt_2 %></p>
+        <p><%= @home.info_link_2 %></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">新闻 3</div>
+      <div class="panel-body">
+        <p><%= @home.info_title_3 %></p>
+        <p><%= @home.info_subtitle_3 %></p>
+        <p><%= image_tag @home.info_img_3.url, width: '260' if @home.info_img_3_identifier.present? %></p>
+        <p><%= @home.info_alt_3 %></p>
+        <p><%= @home.info_link_3 %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">首推新闻</div>
+      <div class="panel-body">
+        <p><%= @home.info_high_title %></p>
+        <p><%= @home.info_high_introduction %></p>
+        <p><%= image_tag @home.info_high_img.url, width: '260' if @home.info_high_img_identifier.present? %></p>
+        <p><%= image_tag @home.info_high_phone_img.url, width: '260' if @home.info_high_phone_img_identifier.present? %></p>
+        <p><%= @home.info_high_link %></p>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+

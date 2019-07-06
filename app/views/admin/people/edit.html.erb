@@ -1,0 +1,53 @@
+<%= link_to '返回', admin_people_path %>
+
+<h3>天华高管团队-修改</h3>
+<br>
+
+<div class="row">
+  <div class="col-md-8">
+    <%= form_for @person, url: admin_person_path(id: @person.id), html: { multipart: true } do |f| %>
+      <%#= render 'admin/shared/error_messages', object: @info %>
+
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :category, "管理/专业" %><br>
+          <%= f.select(:category, options_for_select([['管理团队', 1], ['专业团队', 2]], @person.category), {}, {class: "form-control"}) %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :line, "列表顺序排序" %>
+          <%= f.text_field :line, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :avatar, "列表照片上传" %>
+          <%= f.file_field :avatar %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :photo, "内页照片上传" %>
+          <%= f.file_field :photo %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :name, "姓名" %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <%= f.label :title, "职位" %>
+          <%= f.text_area :title, class: 'form-control', rows: "10" %>
+        </div>
+      </div>
+      <hr>
+      <%= f.label :introduce, "个人介绍" %>
+      <%= f.text_area :introduce, class: 'form-control', rows: "40", id: "editor" %>
+      <br>
+      <%= f.submit "修改", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,275 @@
+@media (min-width: 992px) {
+  .container-fluid {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .navbar-brand {
+    padding-right: 160px;
+  }
+
+  .navbar-toggle {
+    margin-right: 15px;
+  }
+
+  .navbar-right {
+    .navbar-nav {
+      margin: 0px 0px;
+    }
+  }
+
+  .footer-social {
+    position: absolute;
+    margin-right: 80px;
+  }
+
+
+  .core-main {
+    .list-inline > li {
+      padding-right: 30px;
+    }
+  }
+
+  .hoverCard p:hover {
+    background: #222222;
+    color: #FFFFFF;
+    padding-top: 200px;
+    height:100%;
+  }
+
+  .home-banner {
+    .carousel-caption {
+      margin-bottom: 200px;
+      h1, .h1 {
+        font-size: 46px;
+        font-weight: 50px;
+      }
+    }
+  }
+
+  .news-header {
+    position:relative;
+    .news-content {
+      position:absolute;
+      width: 100%;
+      height: 100%;
+      margin-top: 0px; //pc
+    }
+    .news-banner-text {
+      height: 100%;
+    }
+    .news-banner-text-b {
+      background-color: #000000;
+      background-color:rgba(0,0,0,0.4);
+      height: 100%;
+      margin-left: 10px;
+      margin-right: -10px;
+      padding-top: 60px;
+      padding-left: 20px;
+      padding-right: 20px;
+      max-height: 460px;
+      h4 {
+        color: #FFFFFF;
+        margin-bottom: 50px;
+      }
+      p {
+        color: #FFFFFF;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .news-group {
+    position: relative;
+    display: inline-block;
+  }
+  .news-tip {
+    position: absolute;
+    padding: 40px;
+    bottom: 0;
+    width: 30%;
+    height: 100%;
+    text-align: left;
+    right: 0;
+    background: #000;
+    color: #fff;
+    opacity: 0.6;
+     h4 {
+      text-align: left;
+        color: #FFFFFF;
+        margin-bottom: 50px;
+      }
+      p {
+        color: #FFFFFF;
+        line-height: 26px;
+        text-align:justify;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 100;
+        overflow: hidden;
+      }
+  }
+
+  /* info */
+  .info-container {
+    .container {
+      width: 900px;
+    }
+    .info {
+      margin-top: 100px;
+    }
+  }
+
+  /* about */
+
+  .about-content {
+    margin-top: 30px;
+    p {
+      margin-bottom: 30px;
+      text-indent:2em;
+    }
+    .col-xs-12 {
+      display: none;
+    }
+  }
+
+  .second-level-nav {
+    li {
+      font-size: 14px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-family: inherit;
+      font-weight: 500;
+      line-height: 1.1;
+    }
+    a {
+      color: #888888;
+    }
+    a:link {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: none; color: #888888;
+    }
+    .activity {
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-family: inherit;
+      font-weight: 500;
+      line-height: 1.1;
+      a {
+        color: #000000;
+      }
+    }
+  }
+
+  .about-img {
+    overflow: hidden;
+    position: relative;
+    .col-md-12 {
+      display: block;
+    }
+  }
+
+  .about-bg {
+    position:absolute;
+    font-size: 13px;
+    background: #222222;
+    color: #FFFFFF;
+    // height: inherit;
+    opacity: .7;
+    padding: 60px;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    margin-right: 15px;
+    height: 800px;
+    width: 500px;
+    z-index: 1;
+    h4 {
+      text-align: right;
+    }
+    p {
+      height:100px;
+      text-align:justify;
+      line-height: 1.6;
+    }
+  }
+
+  .iframe-map {
+    display: block;
+  }
+
+  .management {
+    small {
+      font-size: 10px;
+    }
+  }
+
+  .hoverCard-d p {
+    font-size: 16px;
+  }
+
+  /* case */
+
+  .cases {
+    .form-inline .form-control2 {
+      width: 120px;
+    }
+  }
+
+  .cases-line {
+    margin-bottom: 0px;
+    p {
+      font-size: 10px;
+    }
+  }
+
+  .case-banner {
+    margin-top: 80px;
+    .item {
+      background-color: #000000;
+      max-height: 780px;
+    }
+    .case-banner-img {
+      // width: 100%;
+      margin-left: auto;
+      margin-right:auto;
+      // display:block;
+    }
+  }
+
+  th {
+    text-align: center;
+  }
+
+  .privacy {
+    ul {
+      margin-bottom: 40px;
+    }
+    .lead-end {
+      margin-bottom: 200px;
+    }
+  }
+
+  .banner {
+    background:#000;
+  }
+}
+
+@media (max-width: 968px) {
+  .case-banner {
+    margin-top: 80px;
+    .item {
+      background-color: #000000;
+      max-height: 780px;
+    }
+    .case-banner-img {
+      width: 100%;
+      margin-left: auto;
+      margin-right:auto;
+      // display:block;
+    }
+  }
+}

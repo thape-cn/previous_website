@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>天华 | 控制台</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    "admin" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="logo-admin">
+          <%= image_tag("tianhualogowhite.png", height: '20', alt: "Logo image", class: "admin-logo") %> <span class="admin-title">天华集团网站管理后台</span>
+          </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <% if params[:locale] == "en" %>
+                <%= link_to "中文", locale: "cn" %>
+              <% else %>
+                <%= link_to "English", locale: "en" %>
+              <% end %>
+            </li>
+            <li><%= link_to "退出登录", admin_logout_path, method: "delete" %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <nav class="menu" id="accordion" role="tablist" aria-multiselectable="true">
+            <ul>
+              <li class="one"><%= link_to '首页', admin_home_path(1) %></li>
+              <li class="one"><%= link_to '关于天华', admin_about_path(1) %></li>
+              <li class="one"><%= link_to '管理团队', admin_people_path %></li>
+              <li class="one"><%= link_to '经典项目', admin_cases_path %></li>
+              <li class="one"><%= link_to '新闻中心', admin_infos_path %></li>
+              <li class="one"><%= link_to '专业服务', admin_service_file_path(1) %></li>
+              <li class="one"><%= link_to 'SEO', admin_seo_path(1) %></li>
+              <li class="one"><%= link_to '网站管理员', admin_users_path %></li>
+            </ul>
+          </nav>
+        </li>
+      </ul>
+
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

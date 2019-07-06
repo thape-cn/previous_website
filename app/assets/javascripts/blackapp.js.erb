@@ -1,0 +1,29 @@
+//= require flickity/dist/flickity.pkgd
+
+document.addEventListener("turbolinks:load", function() {
+
+  var carouselElement = document.querySelector(".nw-carousel__body");
+  if(carouselElement != null) {
+    var carousel = new Flickity(carouselElement, {
+      wrapAround: true,
+      cellAlign: "center",
+      pageDots: false,
+      percentPosition: false,
+      setGallerySize: true,
+      imagesLoaded: true,
+    });
+  }
+
+  if(location.pathname == "/") {
+    $(window).unbind("scroll");
+    $(window).scroll(function() {
+      if($(this).scrollTop() > 100) {
+        $('#logo').attr("src", "<%= asset_path("tianhualogo.png") %>");
+        $('.navbar-default').addClass('navbar-default-2');
+      } else {
+        $('#logo').attr("src", "<%= asset_path("tianhualogowhite.png") %>");
+        $('.navbar-default').removeClass('navbar-default-2');
+      }
+    });
+  }
+});

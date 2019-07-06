@@ -1,0 +1,58 @@
+<% provide(:title, "管理团队") %>
+
+<div class="container-fluid core-main management">
+  <ul class="list-inline second-level-nav">
+    <li><%= link_to t("about.aboutus"), about_us_path, class: 'tianhua-font' %></li>
+    <li class="activity"><%= link_to t("about.management"), management_index_path, class: 'tianhua-font' %></li>
+    <li><%= link_to t("about.designing"), designing_index_path, class: 'tianhua-font' %></li>
+    <li><%= link_to t("about.contact"), biz_map_path, class: 'tianhua-font' %></li>
+  </ul>
+
+
+ <% @people.each_slice(5) do |people| %>
+    <div class="row visible-lg-block visible-md-block visible-sm-block">
+      <% people.each do |person| %>
+        <div class="col-md-5ths col-xs-5ths col-sm-5ths">
+          <%= link_to management_path(person) do %>
+            <div class="imgbox">
+              <%= image_tag(person.avatar.url, class: "personal-photo") %>
+              <div class="text">
+                <div class="img-text">
+                  <h4><%= person.name %></h4>
+                  <small><%= person_title person.title %></small>
+                </div>
+              </div>
+              </p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% @people.each_slice(5) do |people| %>
+    <div class="row visible-xs-block cases-line">
+      <% people.each do |person| %>
+        <div class="col-md-5ths col-xs-5ths col-sm-5ths">
+          <%= link_to management_path(person) do %>
+            <div class="designing-img">
+              <%= image_tag(person.avatar.url, class: "personal-photo") %>
+                <div class="infos-title">
+                  <h4><%= person.name %></h4>
+                </div>
+              </p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="text-center visible-xs-block phone-paginate">
+    <%= paginate @people, hide_goto_page: true %>
+  </div>
+  <div class="visible-lg-block visible-md-block visible-sm-block">
+    <%= paginate @people %>
+  </div>
+
+</div>

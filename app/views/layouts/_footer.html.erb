@@ -1,0 +1,32 @@
+<hr>
+<div class="container-fluid">
+  <footer class="footer">
+    <div class="row">
+      <div class="col-md-12 footer-links">
+        <ul class="list-inline">
+          <li><%= link_to t("footer.contact"), biz_map_path, class: 'tianhua-font' %></li>
+          <li><%= link_to t("footer.statement"), statement_path, class: 'tianhua-font' %></li>
+          <li><%= link_to t("footer.policy"), privacy_path, class: 'tianhua-font' %></li>
+          <li><%= link_to t("footer.disclaimer"), disclaimer_path, class: 'tianhua-font' %></li>
+          <li><%= link_to t("footer.careers"), 'https://tianhua.gllue.com/portal/shezhao?gql=&page=1', class: 'tianhua-font', target: "_blank", rel: 'nofollow' %></li>
+        </ul>
+      </div>
+      <ul class="list-inline footer-social">
+        <li>
+          <a href="#"><i class="menu-icon fa fa-weixin fa-1x" data-rel="popover" data-placement="top" data-content="<img src='<%= image_url("core-qr.png") %>' width=100% height=100%>"></i></a>
+        </li>
+        <li>
+          <a href="http://weibo.com/thape" class="b" target="_blank"><%= fa_icon "weibo", class: "fa-1x" %></a>
+        </li>
+        <li>
+          <a href="https://www.zhihu.com/org/tian-hua-jian-zhu/activities" class="b" target="_blank"><%= image_tag('zhihu_logo.png', alt: 'Zhihu LOGO', class: 'icon') %></a>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <small><%= link_to t("footer.corporation"), '#' %></small>
+      </div>
+    </div>
+  </footer>
+</div>

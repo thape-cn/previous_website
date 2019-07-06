@@ -1,0 +1,14 @@
+<% provide(:title, "建筑设计咨询_民用建筑设计规划咨询") %>
+
+<div class="container-fluid core-main service">
+  <%= render partial: 'second_level_nav', locals: { activity: params[:action] } %>
+  <div class="row">
+    <div class="col-md-8">
+       <%= image_tag("consluting.jpg", style: 'width:100%;', alt: "建筑设计咨询_民用建筑设计规划咨询") %>
+    </div>
+    <div class="col-md-4">
+      <h3><%= t("services.consluting_title") %></h3>
+      <p><%= raw(t("services.consluting_content")) %></p>
+    </div>
+  </div>
+</div>

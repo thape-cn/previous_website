@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home_title: MyString
+  description: MyText
+  abstract: MyText
+  keywords: MyText
+
+two:
+  home_title: MyString
+  description: MyText
+  abstract: MyText
+  keywords: MyText

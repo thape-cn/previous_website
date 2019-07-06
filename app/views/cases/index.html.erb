@@ -1,0 +1,56 @@
+<% provide(:title, "经典项目") %>
+
+<div class="container-fluid core-main cases">
+  <ul class="list-inline second-level-nav">
+    <li class="activity"><%= link_to t("cases.cases_title"), cases_path, class: 'tianhua-font' %></li>
+
+  </ul>
+
+  <div class="row classify-line">
+    <div class="col-md-12">
+    <%= form_tag cases_path, method: :get, class: 'form-inline'  do -%>
+      <div class="btn-group classify">
+        <label class="mr-1" for="select-professional">按专业分类：</label>
+        <%= select_tag 'professional_id', options_for_select(Case.professional_options, params[:professional_id]), include_blank: '全部', class: 'form-control form-control2', id: 'select-professional' %>
+      </div>
+
+      <div class="btn-group classify">
+        <label class="mr-1" for="select-professional">按市场分类：</label>
+        <%= select_tag 'market_id', options_for_select(Case.market_options, params[:market_id]), include_blank: '全部', class: 'form-control form-control2', id: 'select-professional' %>
+      </div>
+      <div class="btn-group classify-search">
+        <div class="input-group">
+          <%= text_field_tag 'key_word', params[:key_word], class: 'form-control', id: 'text-key-word', placeholder: '关键词搜索' %>
+          <span class="input-group-btn">
+            <%= submit_tag '搜索', class: 'btn btn-default' %>
+          </span>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+
+
+  <% @cases.each_slice(5) do |cases| %>
+    <div class="row cases-line">
+      <% cases.each do |cas| %>
+        <div class="col-md-5ths col-xs-5ths col-sm-5ths">
+          <div class="cases-img">
+            <%= link_to (image_tag(cas.snapshot.url, class: 'cases-photo') if cas.snapshot_identifier.present?), case_path(cas) %>
+            <div class="cases-title">
+              <p><%= link_to truncate(cas.title, escape: false, length: 20), case_path(cas) %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="text-center visible-xs-block phone-paginate">
+    <%= paginate @cases, hide_goto_page: true %>
+  </div>
+  <div class="visible-lg-block visible-md-block visible-sm-block">
+    <%= paginate @cases %>
+  </div>
+</div>
+

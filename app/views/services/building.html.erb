@@ -1,0 +1,15 @@
+<% provide(:title, "建筑设计_住宅建筑设计网站_建筑施工图设计方案_城市建筑规划服务") %>
+
+<div class="container-fluid core-main service">
+  <%= render partial: 'second_level_nav', locals: { activity: params[:action] } %>
+  <div class="row">
+    <div class="col-md-8">
+       <%= image_tag("building.jpg", style: 'width:100%;', alt: "建筑设计_住宅建筑设计网站_建筑施工图设计方案_城市建筑规划服务") %>
+    </div>
+    <div class="col-md-4">
+      <h3><%= t("services.building_title") %></h3>
+      <p><%= raw(t("services.building_content")) %></p>
+    </div>
+  </div>
+</div>
+

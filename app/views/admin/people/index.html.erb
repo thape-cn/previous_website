@@ -1,0 +1,39 @@
+<h3>天华管理团队列表</h3>
+
+<br>
+
+
+<%= form_tag admin_people_path, method: :get, class: 'form-inline' do -%>
+  <%= link_to '创建管理者', new_admin_person_path, class: "btn btn-primary" %>
+  &nbsp;&nbsp;&nbsp;
+  <div class="form-group">
+    <label class="mr-1" for="text-name">姓名：</label>
+    <%= text_field_tag 'name', params[:name], class: 'form-control', id: 'text-name' %>
+  </div>
+  <%= submit_tag '搜索', class: 'btn btn-secondary' %>
+<% end -%>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h4>分组</h4></th>
+      <th><h4>姓名</h4></th>
+      <th><h4>职位</h4></th>
+      <th colspan="2"><h4>编辑</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @people.each do |person| %>
+      <tr>
+        <td><%= link_to full_category(person.category) %></td>
+        <td><%= link_to person.name, admin_person_path(person) %></td>
+        <td><%= link_to person.title, admin_person_path(person) %></td>
+        <td><%= link_to '修改', edit_admin_person_path(person) %></td>
+        <td><%= link_to '删除', admin_person_path(person), method: :delete, data: { confirm: '确认删除?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @people %>

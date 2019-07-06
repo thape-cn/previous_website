@@ -1,0 +1,36 @@
+<h3>天华经典项目列表</h3>
+
+<br>
+
+<%= link_to '创建项目', new_admin_case_path, class: "btn btn-primary" %>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h4>项目名称</h4></th>
+      <th><h4>专业分类</h4></th>
+      <th><h4>相关市场</h4></th>
+      <th colspan="2"><h4>编辑</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cases.each do |case2| %>
+      <tr>
+        <td><%= link_to case2.title, admin_case_path(case2) %></td>
+        <td><span class="label label-info"><%= case_market(case2.professional) %></span></td>
+        <td><span class="label label-info"><%= case_professional(case2.market) %></span></td>
+        <td>
+          <%= link_to fa_icon("long-arrow-up"), top_admin_case_path(case2), method: :patch %>
+          <%= link_to fa_icon("arrow-up"), up_admin_case_path(case2), method: :patch %>
+          <%= link_to fa_icon("arrow-down"), down_admin_case_path(case2), method: :patch %>
+          <%= link_to fa_icon("long-arrow-down"), bottom_admin_case_path(case2), method: :patch %>
+          <%= link_to fa_icon("pencil-square-o"), edit_admin_case_path(case2) %>
+          <%= link_to fa_icon("trash"), admin_case_path(case2), method: :delete, data: { confirm: '确认删除?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @cases %>

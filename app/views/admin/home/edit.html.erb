@@ -1,0 +1,196 @@
+<h3>首页信息修改</h3>
+<hr>
+
+<%= form_for @home, url: admin_home_path(@home), html: { multipart: true } do |f| %>
+  <%= render 'admin/shared/error_messages', object: @home %>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Banner 1</div>
+        <div class="panel-body">
+          <p><%= f.label :title_1, "Title" %><%= f.text_field :title_1, class: 'form-control' %></p>
+          <p><%= f.label :subtitle_1, "Subtitle" %><%= f.text_field :subtitle_1, class: 'form-control' %></p>
+          <p><%= f.label :banner_1, "PC banner" %> <small>尺寸W:2800*H:1600像素</small><%= f.file_field :banner_1 %></p>
+          <p><%= f.label :banner_phone_1, "Phone banner" %> <small>尺寸W:900*H:1600像素</small><%= f.file_field :banner_phone_1 %></p>
+          <p><%= f.label :banner_alt_1, "图片Alt描述" %><%= f.text_field :banner_alt_1, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Banner 2</div>
+        <div class="panel-body">
+          <p><%= f.label :title_2, "Title" %><%= f.text_field :title_2, class: 'form-control' %></p>
+          <p><%= f.label :subtitle_2, "Subtitle" %><%= f.text_field :subtitle_2, class: 'form-control' %></p>
+          <p><%= f.label :banner_2, "PC banner" %> <small>尺寸W:2800*H:1600像素</small><%= f.file_field :banner_2 %></p>
+          <p><%= f.label :banner_phone_2, "Phone banner" %> <small>尺寸W:900*H:1600像素</small><%= f.file_field :banner_phone_2 %></p>
+          <p><%= f.label :banner_alt_2, "图片Alt描述" %><%= f.text_field :banner_alt_2, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Banner 3</div>
+        <div class="panel-body">
+          <p><%= f.label :title_3, "Title" %><%= f.text_field :title_3, class: 'form-control' %></p>
+          <p><%= f.label :subtitle_3, "Subtitle" %><%= f.text_field :subtitle_3, class: 'form-control' %></p>
+          <p><%= f.label :banner_3, "PC banner" %> <small>尺寸W:2800*H:1600像素</small><%= f.file_field :banner_3 %></p>
+          <p><%= f.label :banner_phone_3, "Phone banner" %> <small>尺寸W:900*H:1600像素</small><%= f.file_field :banner_phone_3 %></p>
+          <p><%= f.label :banner_alt_3, "图片Alt描述" %><%= f.text_field :banner_alt_3, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Banner 4</div>
+        <div class="panel-body">
+          <p><%= f.label :title_4, "Title" %><%= f.text_field :title_4, class: 'form-control' %></p>
+          <p><%= f.label :subtitle_4, "Subtitle" %><%= f.text_field :subtitle_4, class: 'form-control' %></p>
+          <p><%= f.label :banner_4, "PC banner" %> <small>尺寸W:2800*H:1600像素</small><%= f.file_field :banner_4 %></p>
+          <p><%= f.label :banner_phone_4, "Phone banner" %> <small>尺寸W:900*H:1600像素</small><%= f.file_field :banner_phone_4 %></p>
+          <p><%= f.label :banner_alt_4, "图片Alt描述" %><%= f.text_field :banner_alt_4, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Banner 5</div>
+        <div class="panel-body">
+          <p><%= f.label :title_5, "Title" %><%= f.text_field :title_5, class: 'form-control' %></p>
+          <p><%= f.label :subtitle_5, "Subtitle" %><%= f.text_field :subtitle_5, class: 'form-control' %></p>
+          <p><%= f.label :banner_5, "PC banner" %> <small>尺寸W:2800*H:1600像素</small><%= f.file_field :banner_5 %></p>
+          <p><%= f.label :banner_phone_5, "Phone banner" %> <small>尺寸W:900*H:1600像素</small><%= f.file_field :banner_phone_5 %></p>
+          <p><%= f.label :banner_alt_5, "图片Alt描述" %><%= f.text_field :banner_alt_5, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">推荐项目 1</div>
+        <div class="panel-body">
+          <p><%= f.label :project_title_1, "Title" %><%= f.text_field :project_title_1, class: 'form-control' %></p>
+          <p><%= f.label :project_subtitle_1, "Subtitle" %><%= f.text_field :project_subtitle_1, class: 'form-control' %></p>
+          <p><%= f.label :project_img_1, "PC 图片" %> <small>尺寸W:1000*H:1000像素</small><%= f.file_field :project_img_1 %></p>
+          <p><%= f.label :project_phone_img_1, "Phone 图片" %> <small>尺寸W:900*H:492像素</small><%= f.file_field :project_phone_img_1 %></p>
+          <p><%= f.label :project_alt_1, "图片Alt描述" %><%= f.text_field :project_alt_1, class: 'form-control' %></p>
+          <p><%= f.label :project_link_1, "项目ID" %><%= f.text_field :project_link_1, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">推荐项目 2</div>
+        <div class="panel-body">
+          <p><%= f.label :project_title_2, "Title" %><%= f.text_field :project_title_2, class: 'form-control' %></p>
+          <p><%= f.label :project_subtitle_2, "Subtitle" %><%= f.text_field :project_subtitle_2, class: 'form-control' %></p>
+          <p><%= f.label :project_img_2, "PC 图片" %> <small>尺寸W:1000*H:1000像素</small><%= f.file_field :project_img_2 %></p>
+          <p><%= f.label :project_phone_img_2, "Phone 图片" %> <small>尺寸W:900*H:492像素</small><%= f.file_field :project_phone_img_2 %></p>
+          <p><%= f.label :project_alt_1, "图片Alt描述" %><%= f.text_field :project_alt_1, class: 'form-control' %></p>
+          <p><%= f.label :project_link_2, "项目ID" %><%= f.text_field :project_link_2, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">推荐项目 3</div>
+        <div class="panel-body">
+          <p><%= f.label :project_title_3, "Title" %><%= f.text_field :project_title_3, class: 'form-control' %></p>
+          <p><%= f.label :project_subtitle_3, "Subtitle" %><%= f.text_field :project_subtitle_3, class: 'form-control' %></p>
+          <p><%= f.label :project_img_3, "PC 图片" %> <small>尺寸W:1000*H:1000像素</small><%= f.file_field :project_img_3 %></p>
+          <p><%= f.label :project_phone_img_3, "Phone 图片" %> <small>尺寸W:900*H:492像素</small><%= f.file_field :project_phone_img_3 %></p>
+          <p><%= f.label :project_alt_3, "图片Alt描述" %><%= f.text_field :project_alt_3, class: 'form-control' %></p>
+          <p><%= f.label :project_link_3, "项目ID" %><%= f.text_field :project_link_3, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">新闻 1</div>
+        <div class="panel-body">
+          <p><%= f.label :info_title_1, "Title" %><%= f.text_field :info_title_1, class: 'form-control' %></p>
+          <p><%= f.label :info_subtitle_1, "Subtitle" %><%= f.text_field :info_subtitle_1, class: 'form-control' %></p>
+          <p><%= f.label :info_img_1, "图片" %> <small>尺寸W:956*H:668像素</small><%= f.file_field :info_img_1 %></p>
+          <p><%= f.label :info_alt_1, "图片Alt描述" %><%= f.text_field :info_alt_1, class: 'form-control' %></p>
+          <p><%= f.label :info_link_1, "新闻ID" %><%= f.text_field :info_link_1, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">新闻 2</div>
+        <div class="panel-body">
+          <p><%= f.label :info_title_2, "Title" %><%= f.text_field :info_title_2, class: 'form-control' %></p>
+          <p><%= f.label :info_subtitle_2, "Subtitle" %><%= f.text_field :info_subtitle_2, class: 'form-control' %></p>
+          <p><%= f.label :info_img_2, "图片" %> <small>尺寸W:956*H:668像素</small><%= f.file_field :info_img_2 %></p>
+          <p><%= f.label :info_alt_2, "图片Alt描述" %><%= f.text_field :info_alt_2, class: 'form-control' %></p>
+          <p><%= f.label :info_link_2, "新闻ID" %><%= f.text_field :info_link_2, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">新闻 3</div>
+        <div class="panel-body">
+          <p><%= f.label :info_title_3, "Title" %><%= f.text_field :info_title_3, class: 'form-control' %></p>
+          <p><%= f.label :info_subtitle_3, "Subtitle" %><%= f.text_field :info_subtitle_3, class: 'form-control' %></p>
+          <p><%= f.label :info_img_3, "图片" %> <small>尺寸W:956*H:668像素</small><%= f.file_field :info_img_3 %></p>
+          <p><%= f.label :info_alt_3, "图片Alt描述" %><%= f.text_field :info_alt_3, class: 'form-control' %></p>
+          <p><%= f.label :info_link_3, "新闻ID" %><%= f.text_field :info_link_3, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">首推新闻</div>
+        <div class="panel-body">
+          <p><%= f.label :info_high_title, "标题" %><%= f.text_field :info_high_title, class: 'form-control' %></p>
+          <p><%= f.label :info_high_introduction, "引言" %><%= f.text_field :info_high_introduction, class: 'form-control' %></p>
+          <p><%= f.label :info_high_img, "图片" %> <small>尺寸W:2000*H:668像素</small><%= f.file_field :info_high_img %></p>
+          <p><%= f.label :info_high_phone_img, "手机图片" %> <small>尺寸W:600*H:600像素</small><%= f.file_field :info_high_phone_img %></p>
+          <p><%= f.label :info_high_link, "新闻ID" %><%= f.text_field :info_high_link, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <%= f.submit "修改内容", class: "btn btn-primary" %>
+<% end %>

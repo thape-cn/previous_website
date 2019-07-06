@@ -1,0 +1,62 @@
+<p><%= link_to '返回', admin_people_path %>
+</p>
+
+
+<div class="container personal">
+  <div class="row">
+    <div class="col-md-4">
+      <%= image_tag(@person.avatar.url, class: "personal-img") if @person.avatar? %>
+      <hr>
+      <%= image_tag(@person.photo.url, class: "personal-img") if @person.photo? %>
+    </div>
+    <div class="col-md-8">
+      <h4><%= @person.name %></h4>
+      <hr>
+      <h5><%= @person.title %></h5>
+      <br>
+      <h5><%= full_category(@person.category) %></h5>
+      <br>
+      <h5>列表顺序排序: <%= @person.line %></h5>
+      <br>
+      <%= raw @person.introduce %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-4">
+      <h5>相关作品</h5>
+      <ul class="media-list">
+        <li class="media">
+          <div class="media-left">
+            <a href="#">
+              <%= image_tag("tianhau1-squashed.jpg", size: "80x80") %>
+            </a>
+          </div>
+          <div class="media-body">
+            <p>原来上海这么多顶级住宅都是这家公司设计的！——2016天华高端住宅系列专题之总览篇</p>
+          </div>
+        </li>
+        <li class="media">
+          <div class="media-left">
+            <a href="#">
+              <%= image_tag("tianhau1-squashed.jpg", size: "80x80") %>
+            </a>
+          </div>
+          <div class="media-body">
+            <p>原来上海这么多顶级住宅都是这家公司设计的！——2016天华高端住宅系列专题之总览篇</p>
+          </div>
+        </li>
+        <li class="media">
+          <div class="media-left">
+            <a href="#">
+              <%= image_tag("tianhau1-squashed.jpg", size: "80x80") %>
+            </a>
+          </div>
+          <div class="media-body">
+            <p>原来上海这么多顶级住宅都是这家公司设计的！——2016天华高端住宅系列专题之总览篇</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

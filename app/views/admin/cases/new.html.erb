@@ -1,0 +1,55 @@
+<%= link_to '返回', admin_cases_path %>
+
+<h3>天华经典案例-添加</h3>
+<hr>
+
+<div class="row">
+  <div class="col-md-8">
+    <%= form_for @case, url: admin_cases_path, html: { multipart: true } do |f| %>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :title, "项目名称" %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :professional, "专业分类" %>
+          <%= f.select(:professional, options_for_select(Case.professional_options), {prompt: '按专业分类'}, {class: "form-control"}) %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :market, "相关市场" %>
+          <%= f.select(:market, options_for_select(Case.market_options), {prompt: '按市场分类'}, {class: "form-control"}) %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :snapshot, "案例列表照片上传" %>
+          <%= f.file_field :snapshot %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :album, "案例照片上传 - 多选" %>
+          <%= f.file_field :album %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :other, "经典案例详细介绍" %>
+          <%= f.text_area :other, class: 'form-control', rows: "20" %>
+        </div>
+      </div>
+      <br>
+      <%= f.submit "创建", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

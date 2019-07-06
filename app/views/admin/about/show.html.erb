@@ -1,0 +1,18 @@
+<h3>关于天华信息    <small><%= link_to "修改", edit_admin_about_path(@about) %></small></h3>
+<hr>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">关于天华</div>
+      <div class="panel-body">
+        <p><%= @about.about_title %></p>
+        <p><%= @about.about_content %></p>
+        <p><%= image_tag @about.about_img.url, width: '260' if @about.about_img_identifier.present? %></p>
+        <p><%= @about.about_img_alt %></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+

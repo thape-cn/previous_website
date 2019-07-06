@@ -1,0 +1,28 @@
+<% provide(:title, "了解天华") %>
+
+<div class="container-fluid core-main about">
+  <ul class="list-inline second-level-nav">
+    <li class="activity"><%= link_to t("about.aboutus"), about_us_path, class: 'tianhua-font' %></li>
+    <li><%= link_to t("about.management"), management_index_path, class: 'tianhua-font' %></li>
+    <li><%= link_to t("about.designing"), designing_index_path, class: 'tianhua-font' %></li>
+    <li><%= link_to t("about.contact"), biz_map_path, class: 'tianhua-font' %></li>
+  </ul>
+  <div class="row">
+    <div class="col-xs-12 about-img">
+      <%= image_tag(@about.about_img.url, style: 'width:100%;', alt: @about_img_alt) if @about.about_img_identifier.present? %>
+      <%#= image_tag('about_01.jpg', style: 'width:100%;') %>
+      <div class="about-bg col-md-12 visible-lg-block visible-md-block visible-sm-block">
+        <h4><%= @about.about_title %></h4>
+        <p><%= simple_format @about.about_content %></p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row about-content">
+    <div class="col-xs-12 visible-xs-block">
+      <h4><%= @about.about_title %></h4>
+      <p><%= simple_format @about.about_content %></p>
+    </div>
+  </div>
+</div>

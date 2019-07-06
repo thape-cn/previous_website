@@ -1,0 +1,17 @@
+<div class="container">
+
+  <%= form_for :session, url: admin_login_path, html: { class: "form-signin" } do |f| %>
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+
+    <%= image_tag 'tianhualogowhite.png', width: 200 %>
+    <h3 class="form-signin-heading">天华集团网站管理控制台</h3>
+    <%= f.label :email, class: 'sr-only' %>
+    <%= f.email_field :email, class: 'form-control', placeholder: "邮箱" %>
+    <%= f.label :password,class: 'sr-only' %>
+    <%= f.password_field :password, class: 'form-control', placeholder: "密码" %>
+    <%= f.submit "登录", class: "btn btn-primary" %>
+  <% end %>
+
+</div>

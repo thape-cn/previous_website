@@ -1,0 +1,29 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<h3>管理员列表</h3>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th class="table-list-a"><h4>管理员</h4></th>
+      <th><h4>登录邮箱</h4></th>
+      <th colspan="2"><h4>编辑</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_users.each do |admin_user| %>
+      <tr>
+        <td><%= link_to admin_user.name, "#" %></td>
+        <td><%= link_to admin_user.email, "#" %></td>
+        <td><%= link_to '删除', admin_user_path(admin_user), method: :delete, data: { confirm: '确认删除?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '添加管理员', new_admin_user_path %>

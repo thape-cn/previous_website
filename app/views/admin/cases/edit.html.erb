@@ -1,0 +1,69 @@
+<%= link_to '返回', admin_cases_path %>
+
+<h3>天华经典案例-修改</h3>
+<hr>
+
+<div class="row">
+  <div class="col-md-8">
+    <%= form_for @case, url: admin_case_path(@case), html: { multipart: true } do |f| %>
+
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :title, "项目名称" %>
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :professional, "专业分类" %>
+          <%= f.select(:professional, options_for_select(Case.professional_options, @case.professional.scan(/\d+/).map(&:to_i)), { }, { multiple: true, class: "form-control" }) %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :market, "相关市场" %>
+          <%= f.select(:market, options_for_select(Case.market_options, @case.market.scan(/\d+/).map(&:to_i)), {}, { multiple: true, class: "form-control" }) %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :snapshot, "案例列表照片上传" %>
+          <br />
+          <%= image_tag(@case.snapshot.url, class: 'admin-preview') if @case.snapshot_identifier.present? %>
+          <%= f.file_field :snapshot %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+        <%= f.fields_for :case_pictures do |p| %>
+          <div class="field" id="<%= "admin-image-preview-#{f.object.id}-#{p.object.id}" -%>">
+            <% if p.object.album_identifier.present? %>
+              <%= image_tag(p.object.album.url, class: 'admin-preview') %>
+              <%= link_to destory_picture_admin_case_path(f.object, picture_id: p.object.id), remote: true, method: :delete do %>
+                <i class="fa fa-times" aria-hidden="true"></i>
+              <% end %>
+            <% else %>
+              <%= p.label :album, "案例照片上传 - 多选" %>
+              <%= p.file_field :album, :multiple => true, name: "case_pictures[album][]" %>
+            <% end %>
+          </div>
+        <% end %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :other, "经典案例详细介绍" %>
+          <%= f.text_area :other, class: 'form-control', rows: "20" %>
+        </div>
+      </div>
+      <br>
+      <%= f.submit "修改案例", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

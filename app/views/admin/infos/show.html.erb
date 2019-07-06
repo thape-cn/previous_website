@@ -1,0 +1,19 @@
+<p><%= link_to '返回', admin_infos_path %> | <%= link_to '修改', edit_admin_info_path(@info), data: { turbolinks: false } %></p>
+
+<div class="row info-content">
+   <div class="col-md-7">
+      <h3><%= @info.title %></h3> <br><br>
+      <span class="label label-info"><%= news_category(@info.category) %></span> <br><br>
+      <div class="article-date"><%= @info.created_at.strftime('%Y-%m-%d') %></div>
+      <%= image_tag(@info.snapshot.url, width: '160') if @info.snapshot_identifier.present? %>
+
+      <p class="article-subtitle"><%= @info.introduction %></p>
+
+      <br><br>
+      <%= image_tag(@info.banner.url) if @info.banner_identifier.present? %> <br><br>
+
+      <div class="article-text">
+        <%= raw(@info.content) %>
+      </div>
+    </div>
+</div>

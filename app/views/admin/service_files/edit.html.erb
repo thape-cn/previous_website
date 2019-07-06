@@ -1,0 +1,19 @@
+<h3>专业服务修改</h3>
+<hr>
+
+<%= form_for @service_file, url: admin_service_file_path(@service_file), html: { multipart: true } do |f| %>
+  <%= render 'admin/shared/error_messages', object: @service_file %>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">室内设计</div>
+        <div class="panel-body">
+          <p><%= f.label :interior_intro_file, "室内设计专业服务介绍文件" %><%= f.file_field :interior_intro_file %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= f.submit "修改", class: "btn btn-primary" %>
+<% end %>

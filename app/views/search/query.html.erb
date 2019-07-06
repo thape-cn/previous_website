@@ -1,0 +1,42 @@
+<div class="container-fluid core-main service">
+
+<!--   <div class="row">
+    <div class="col-md-6">
+      <%#= form_tag '/search', method: :get do %>
+        <div class="input-group">
+          <%#= text_field_tag 'q', params[:q], class: 'form-control', id: "search", placeholder: "搜索" %>
+          <span class="input-group-btn">
+            <%#= submit_tag "搜索", class: "btn btn-primary" %>
+          </span>
+        </div>
+      <%# end %>
+    </div>
+  </div> -->
+
+
+  <div class="row search-results">
+  <h3>搜索结果</h3>
+  <% @results.each do |result| %>
+    <% result.each do |model_res| %>
+      <% if model_res.is_a? Info %>
+        <ul class="media-list">
+          <li class="media">
+            <div class="media-body">
+              <h4 class="media-heading"><%= link_to model_res.title, info_path(model_res) %> <span class="badge badge-warning">新闻</span></h4>
+              <p><%= strip_tags(model_res.content.truncate(100)) %></p>
+            </div>
+          </li>
+        </ul>
+      <% elsif model_res.is_a? Case %>
+        <ul class="media-list">
+          <li class="media">
+            <div class="media-body">
+              <h4 class="media-heading"><%= link_to model_res.title, case_path(model_res) %> <span class="badge badge-info">案例</span></h4>
+            </div>
+          </li>
+        </ul>
+      <% end  %>
+    <% end %>
+  <% end %>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<h3>添加管理员</h3>
+<br>
+<div class="row">
+  <div class="col-md-6">
+    <%= form_for(@admin_user, url: admin_users_path) do |f| %>
+      <%= render 'admin/shared/error_messages', object: @admin_user %>
+      <div class="form-group">
+        <%= f.label :name, "管理员名字" %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :email, "登录邮箱" %>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password, "设置密码" %>
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation, "重复密码" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+      </div>
+
+      <br>
+      <%= f.submit "创建管理员", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
+<%= link_to '返回', admin_users_path %>

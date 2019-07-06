@@ -1,0 +1,20 @@
+<% provide(:title, @info.title) %>
+
+<div class="info-container">
+  <div class="container info">
+  <div class="row">
+    <div class="col-md-12">
+      <%= image_tag(@info.banner.url, class: "info-banner") if @info.banner_identifier.present? %>
+    </div>
+  </div>
+  <div class="row info-content">
+    <div class="col-md-12 text-center">
+      <h3><%= @info.title %></h3>
+      <div class="article-text container">
+          <%= raw @info.content %>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+

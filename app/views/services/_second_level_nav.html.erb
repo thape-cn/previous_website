@@ -1,0 +1,9 @@
+<ul class="list-inline second-level-nav">
+  <li class="<%= activity == 'building' ? 'activity' : '' %>"><%= link_to t("services.building"), building_path, class: 'tianhua-font' %></li>
+  <li class="<%= activity == 'interior' ? 'activity' : '' %>"><%= link_to t("services.interior"), interior_path, class: 'tianhua-font' %></li>
+  <li class="<%= activity == 'planning' ? 'activity' : '' %>"><%= link_to t("services.planning"), planning_path, class: 'tianhua-font' %></li>
+  <li class="<%= activity == 'landscape' ? 'activity' : '' %>"><%= link_to t("services.landscape"), landscape_path, class: 'tianhua-font' %></li>
+  <li class="<%= activity == 'vetting' ? 'activity' : '' %>"><%= link_to t("services.vetting"), vetting_path, class: 'tianhua-font' %></li>
+  <li class="<%= activity == 'consluting' ? 'activity' : '' %>"><%= link_to t("services.consluting"), consluting_path, class: 'tianhua-font' %></li>
+  <li class="<%= activity == 'vrtech' ? 'activity' : '' %>"><%= link_to t("services.vrtech"), vr_tech_path, class: 'tianhua-font' %></li>
+</ul>

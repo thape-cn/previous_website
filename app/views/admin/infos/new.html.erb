@@ -1,0 +1,43 @@
+<%= link_to '返回', admin_infos_path %>
+
+<h3>创建新闻</h3>
+<hr>
+
+<div class="row">
+  <div class="col-md-9">
+    <%= form_for @info, url: admin_infos_path, html: { multipart: true } do |f| %>
+      <%= render 'admin/shared/error_messages', object: @info %>
+
+      <%= f.label :category, "管理/专业" %><br>
+      <%= f.select(:category, options_for_select(Info.category_options), {}, {class: "form-control"}) %>
+      <br>
+
+      <%= f.label :title, "标题" %>
+      <%= f.text_field :title, class: 'form-control' %>
+      <br>
+
+      <%= f.label :introduction, "引言" %>
+      <%= f.text_area :introduction, class: 'form-control', rows: "4" %>
+      <br>
+
+      <%= f.label :snapshot, "列表图片上传" %> <small>尺寸W:600*H:600像素</small>
+      <%= f.file_field :snapshot %>
+      <br>
+
+      <%= f.label :banner, "正文大图上传" %> <small>尺寸W:1000*H:500像素</small>
+      <%= f.file_field :banner %>
+      <br>
+
+      <%= f.label :content, "正文" %>
+      <%= f.text_area :content, class: 'form-control', rows: "40", id: "editor" %>
+      <br>
+
+      <%= f.label :created_at, "创建时间" %>
+      <%= f.text_field :created_at, class: 'form-control' %>
+      <br>
+
+      <%= f.submit "创建新闻", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

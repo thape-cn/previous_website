@@ -1,0 +1,36 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<h3>新闻中心列表</h3>
+
+<br>
+<%= link_to '创建新闻', new_admin_info_path, class: "btn btn-primary", data: { turbolinks: false } %>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h4>主题</h4></th>
+      <th><h4>分类</h4></th>
+      <th><h4>编辑</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @infos.each do |info| %>
+      <tr>
+        <td><%= link_to info.title, admin_info_path(info) %></td>
+        <td><%= news_category(info.category) %></td>
+        <td>
+          <%= link_to fa_icon("long-arrow-up"), top_admin_info_path(info), method: :patch %>
+          <%= link_to fa_icon("arrow-up"), up_admin_info_path(info), method: :patch %>
+          <%= link_to fa_icon("arrow-down"), down_admin_info_path(info), method: :patch %>
+          <%= link_to fa_icon("long-arrow-down"), bottom_admin_info_path(info), method: :patch %>
+          <%= link_to fa_icon("pencil-square-o"), edit_admin_info_path(info), data: { turbolinks: false } %>
+          <%#= link_to fa_icon("trash"), admin_info_path(info), method: :delete, data: { confirm: '确定删除?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,184 @@
+---
+en:
+  activerecord:
+    errors:
+      models:
+        info:
+          attributes:
+            introduction:
+              blank: "Introudction can not being blank."
+            content:
+              blank: "Content can not being blank."
+  helpers:
+    page_entries_info:
+      more_pages:
+        display_entries: Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total
+      one_page:
+        display_entries:
+          one: Displaying <b>%{count}</b> %{entry_name}
+          other: Displaying <b>all %{count}</b> %{entry_name}
+          zero: No %{entry_name} found
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      next: "&rsaquo;"
+      previous: "&lsaquo;"
+      truncate: "&hellip;"
+  kaminari:
+    paginator:
+      display_total: "%{total} in total."
+      goto_page_before: "Goto"
+      goto_page_after: "page"
+      go: "Go"
+  menu:
+    about: "ABOUT"
+    projects: "PROJECTS"
+    expertise: "EXPERTISE"
+    news: "NEWS"
+    careers: "CAREERS"
+  footer:
+    contact: "CONTACT US"
+    statement: "WEBSITE STATEMENT"
+    policy: "PRIVACY POLICY"
+    disclaimer: "DISCLAIMER"
+    careers: "CAREERS"
+    corporation: "© 2017 Tianhua Group，All Rights Reserved."
+  home:
+    banner: "CHONG QING LONGHU ONE CITY HALL"
+    subtitle: "TIANHUA LATEST PROJECTS"
+    more: "MORE"
+  about:
+    aboutus: "About Tianhua"
+    about_title: "The perfect blend of creativity and design"
+    about_content: "Tianhua Creative Design provides a range of professional services including urban planning, architectural design, interior design, landscape design, technology consultation, architectural drawing review, and VR technology. Leveraging our expertise and financial strength, we are dedicated to delivering comprehensive and customized solutions to governments and commercial clients while ensuring premium front-to-end customer experience. We have 5,100 employees working at 30 subsidiaries in 16 cities across China. We cooperate with clients and partners to create a new way of life and drive the sustainable development of cities."
+    management: "Management"
+    designing: "Professional"
+    contact: "Contact"
+  biz_maps:
+    modal:
+      close: "Close"
+  cases:
+    cases_title: "Cases"
+  services:
+    building: "Architectural"
+    building_title: "Architectural Design"
+    building_content: "Tianhua Architectural Design encompasses architectural design and urban design, as well as structural and mechanical & electrical engineering consulting and design. We specialize in the fields of residential building, commercial property, office block, city complex, cultural and healthcare facilities. With 16 branches distributed in major cities across the country, we provide services for clients and projects nationwide. At the same time, we collaborate with academic institutions both at home and abroad, to promote research and practical work in frontier areas of China's urban development. With a mission of propelling urban development and improving the quality of workplace and living space in China, we never waver in our relentless pursuit of outstanding design, innovation and technical capacity."
+    interior: "Interior"
+    interior_title: "Interior Design"
+    interior_content: "As a significant part of Tianhua Architectural Design, Tianhua Interior Design has seen rapid development over recent years. It has won recognition and trust across the industry for its excellence in creative design, project management, cost control, and service response. With the support of Tianhua Architectural Design, we are dedicated to achieving integrated design across multiple specialties and striking a balance between function, technology and art.<br>We strive to achieve unity in the following three areas:<br>- Unity between interior, architecture and landscape design, blending well with each other<br>- Unity between interior design and structural and electromechanical engineering, demonstrating the fusion of art and technology<br>-Unity between hard finishes, soft decoration, and artwork, contributing to the overall effect<br>We will maintain our dedication to trend-setting living, working and consumption solutions with our clients and will, as always, provide them with high-quality services."
+    planning: "Planning"
+    planning_title: "Urban Planning"
+    planning_content: "Tianhua Urban Planning is committed to sustainable development powered by conscientious urban planning. Based on experience drawn from the advanced development of international metropolises, we encourage cross-sectoral and multidimensional collaboration, in pursuit of maximized resource integration. And we aim to be the best consulting partner in urban development worldwide. Our young and vibrant team consists of graduates from world-class universities, exhibiting broad vision, in-depth professional background, and global presence. More than two thirds of them hold Master's degree, and many have Ph.Ds. or postdoctoral experience. We have achieved great success in the following fields: industrial economy, urban center, community development, ecological environment, heritage protection, transport planning, and leisure & tourism."
+    landscape: "Landscape"
+    landscape_title: "Landscape Design"
+    landscape_content: "By virtue of excellent design quality and professional services, Tianhua Landscape Design has gathered a handful of well-known long-term partners, with projects covering residential landscape, public building landscape and green parks. Our newly-built team boasts globalized vision, technological competence, end-to-end service, and rigorous work process. Our design work focuses on project essence and maximizes site potential. Based on scientific analysis, innovative ideas and rational work procedures, the landscape design team is dedicated to offering the most reasonable, cost-effective and sustainable design solutions."
+    vetting: "Drawing Review"
+    vetting_title: "Architectural Drawing Review"
+    vetting_content: "Honghe Architectural Drawing Review, mainly engaged in construction project drawing review, is one of the top 11 drawing review organizations in Shanghai. We were certified by Shanghai Urban Construction and Communications Commission in 2011 for review and approval of construction drawings and design documents. We have established an all-round quality assurance system and management standards, and we were accredited with ISO 9001 certification in December 2006. In overall terms we lead the industry in Shanghai and have been awarded the title of outstanding organization by the relevant authorities for years."
+    consluting: "Consulting"
+    consluting_title: "Technical Consulting"
+    consluting_content: "Based on decades of unwavering effort in civil architectural design, Tianhua Technical Consulting is poised to go far beyond design. We provide technical consulting services throughout the entire life cycle of the project, covering the optimization of model selection, effect realization, cost pre-control, above-standard height & limit analysis, new technology R&D and applications (such as PC, BIM, steel structure, etc.), standard compiling, third-party review & audit, earthquake resistance review & audit, and renewal and reconstruction. Leveraging our advanced technology, efficient organization, and outstanding service, we help our clients meet their value targets and make their contribution to an energy-saving and environment-friendly society."
+    vrtech: "VR Technology"
+    vrtech_title: "VR Technology"
+    vrtech_content: "One of the most popular cutting-edge technologies in our time, Virtual Reality (VR) has now been applied to the field of architecture, and brought refreshing ways of thinking and new work processes to the real estate industry. EVAR, a pioneer in the field of architectural VR, mainly targets the vertical market segments for new technologies including VR and AR, for example, the real estate and design markets. Through integrating emerging technologies and industry-leading architectural aesthetics, we aim to satisfy industrial needs and reform existing ways of expression with high-quality VR products and services. Relying on the Group’s comprehensive understanding of the real estate industry, we are able to build an accurate perception of industrial needs, and offer innovative work methods and effective solutions to improve the work efficiency of the whole industry."
+  infos:
+    news: "News"
+    event: "Conference"
+    award: "Awards"
+    contact: "Contact"
+  privacy:
+    title: "PRIVACY"
+    h41: "Personal Identity Information"
+    p1: "This website may contain links to websites operated by third parties for your convenience. TIANHUA has no control over third-party websites and assumes no responsibility for their content. The existence of links to such websites does not imply an endorsement of the materials by TIANHUA or any relationship between TIANHUA and the operators. TIANHUA assumes no responsibility for the privacy or content of such other websites."
+    h42: "Cookies and Other Tracking Technologies"
+    p2: "Some of our Web pages utilize cookies and other tracking technologies. A cookie is a small data file that certain Web sites write to your hard drive when you visit them. A cookie file can contain information such as a user ID that the site uses to track the pages you've visited, but the only personal information a cookie can contain is information you supply yourself. A cookie can't read data off your hard disk or read cookie files created by other sites. Some parts of TIANHUA Web site use cookies to track user traffic patterns. We do this in order to determine the usefulness of TIANHUA information to our users and to see how effective our navigational structure is in helping users reach that information. TIANHUA does not correlate this information with data about individual users, nor does it share this information or sell it to any third party. <br>You may set most browsers to notify you if you receive a cookie or you may choose to block cookies with your browser, but please note that if you choose to erase or block your cookies, you will need to re-enter your original user ID and password to gain access to certain parts of the Web site.<br>Tracking technologies may record information such as Internet domain and host names; Internet protocol (IP) addresses; browser software and operating system types; clickstream patterns; and dates and times that our site is accessed. Our use of cookies and other tracking technologies allows us to improve our Web site and your Web experience. We may also analyze information that does not contain Personal Information for trends and statistics."
+    h43: "Security"
+    p3: "In order to ensure that the website is available to all users, TIANHUA adopts industry standard technologies to safeguard the security of its controlled information as well as a variety of security technologies to prevent your personal information from unauthorized access by external and internal users. Unauthorized attempts to upload or change the server/website information, which could lead to legal sanctions, are prohibited. In addition, please understand that there is no “one hundred percent secure” on the Internet. Although we surely will take appropriate measures to prevent the unauthorized disclosure of information, we can not guarantee that the disclosure of your information (including but not limited to personal identity information), which violates this policy, will not occur. We do not make any statements or warranties with reference to the adequacy of security measures."
+  statement:
+    title: "STATEMENT"
+    p1: "The information and materials on this website are provided by TIANHUA for reference only. Please carefully read the following terms and conditions before visiting and using this website. <br>Once you access and use this website or download the materials of this website, you are deemed to agree to abide by the terms and conditions set forth below and elsewhere on this website. If you do not agree to these terms and conditions, please stop visiting this website or downloading the materials of this website. If you continue to access the site, you will be deemed to have read, understand and agree to abide by the terms and conditions, and to comply with all relevant laws and regulations. <br>TIANHUA is entitled to amend the terms and conditions relating to this website from time to time. We recommend that you occasionally re-read them in order to understand the changes of the terms and conditions. Once you access the website after we release the changes, you are deemed to agree to the amended terms and conditions. "
+    h42: "Intellectual Property Rights"
+    p2: "TIANHUA reserved all rights. All content on this website, including but not limited to graphics, text, images, logos, icons, audio and video, and content editing/structure, are owned by TIANHUA or its associated companies and are protected by Chinese and international copyright laws. Unauthorized use of any proprietary materials and information on this website, including but not limited to copying, reproducing, modifying, publishing, republishing, uploading, downloading, posting, transmitting and distributing, may violate the copyright laws, trademark laws and other laws applicable to the materials of this website. Visiting this website does not enable you to obtain any license of intellectual property rights of TIANHUA or third parties. <br>All trademarks, service marks, trade names and logos, including all TIANHUA logos and pictures on this website, are proprietary to TIANHUA and/or their respective owners. Any content of this website shall not be construed as any license or right granted to you, through implication, estoppel or other ways, to allow you to use the trademarks on this website without the written permission of TIANHUA . Unauthorized use of all trademarks on this website is prohibited."
+    h43: "Other Links"
+    p3: "This site may contain links to websites operated by third parties only for your convenience. TIANHUA has no control over third-party websites and assumes no responsibility for their content. The existence of the links to such websites does not imply an endorsement of the materials by TIANHUA and any relationship between TIANHUA and the operators. TIANHUA assumes no responsibility for the privacy or content of such websites."
+  disclaimer:
+    title: "TERMS OF DISCLAIMER"
+    h41: "Disclaimer"
+    p1: "The information on this website may include inaccuracies or typographical errors. All information is provided “as-is” and without warranty of any kind, expressed or implied, including but not limited to: (i) warranties in relation to accuracy, completeness, merchantability, non-infringement of intellectual property rights and fitness for any particular purpose; or (ii) warranties of the reliability of any advice, opinion, statement or other information displayed or distributed through the website. You acknowledge that any reliance on any such advice, opinion, statement, memorandum or information shall be at your sole risk. TIANHUA is entitled to correct any error or omission in any portion of the website in its sole discretion. TIANHUA may make any other changes to the website, materials, products or information on the website at any time without notice. TIANHUA or its licensors/suppliers are not liable for any damages (including but not limited to loss of profits, business interruption and loss of information) resulting from the use of or failure to use information, even if TIANHUA is informed in advance of the possibility of such damages. TIANHUA does not warrant that the site functions will be uninterrupted or error-free, such defects will be corrected, and the website or the server does not have viruses or other harmful components. You understand and agree that you download and access information through the website at your sole discretion and relevant risks shall be born on your own. In addition, you are liable for any damages to your computer system or loss of data resulting from the downloading of information. TIANHUA does not provide any warranties for the goods purchased and obtained through the website and the transactions reached through the website."
+    h42: "International Use"
+    p2: "This website is operated and controlled by China TIANHUA. Users of countries/regions outside China may access this website owing to the global nature of the Internet. We do not warrant that the materials on this website are appropriate or available for these locations. If the access to and use of this website constitutes unlawful or prohibited conduct in your countries/regions, please do not engage in such conduct. If you access this website outside China, such conduct is of your own free will and you are liable to abide by all local laws and regulations."
+  blackapp:
+    project: "New Projects"
+    news: "News"
+    top: "Back to top"
+  map:
+    tianhua-map: "Tianhua's office location"
+    address: "Address"
+    tel: "Tel"
+    fax: "Fax"
+    contact-1: "Shanghai"
+    contact-1-name: "Shanghai Tianhua Architectural Design Co., Ltd."
+    contact-1-address: "West Zhongshan Road, Xuhui District, Shanghai, 27F, Zhaofeng Universe Building, No. 1800 200235"
+    contact-1-2-address: "No. 1188, North Qinzhou Road, Shanghai, 9F, Huajing Building 200233"
+    contact-1-3-address: "2nd Floor, Building 2, 1062 Yangshupu Road, Yangpu District, Shanghai"
+    contact-1-2-name: "Shanghai Tianhua Interior Design Co., Ltd."
+    contact-1-3-name: "Shanghai Enhance Photovoltaic Technology Co., Ltd."
+    contact-1-4-address: "West Zhongshan Road, Xuhui District, Shanghai, 27F, Zhaofeng Universe Building, No. 1800 200235"
+    contact-1-4-name: "Shanghai Tianhua Urban Planning Design Co., Ltd."
+    contact-1-5-name: "Shanghai Tianhua Landscape Co., Ltd."
+    contact-1-5-address: "No. 928, Liuzhou Road, Shanghai, 3F, BeLLE International Plaza 200235"
+    contact-1-6-name: "Shanghai Honghe Engineering Drawing Review Co., Ltd."
+    contact-1-6-address: "No. 159, Tianzhou Road, Shanghai, 603-604, Unit 15"
+    contact-2: "Shenyang"
+    contact-2-name: "Shenyang Tianhua Architectural Design Co., Ltd."
+    contact-2-address: "20F, Tower B, Zhonghui Plaza, No. 21, Beiling Street, Huanggu District, Shenyang"
+    contact-3: "Beijing"
+    contact-3-name: "Beijing Tianhua Northern Architectural Design Co., Ltd."
+    contact-3-address: "5th Floor, Building 2, Fengke Center, No. 2, Auto Museum East Road, Fengtai District, Beijing 100044"
+    contact-4: "Xi'an"
+    contact-4-name: "Xi'an Tianhua Architectural Design Co., Ltd."
+    contact-4-address: "8th Floor, Block F, Qujiang Creative Valley, No. 3369, Yanxiang Road, Qujiang New District, Xi'an 710061"
+    contact-5: "Chengdu"
+    contact-5-name: "Chengdu Tianhua Southwest Architectural Design Co., Ltd."
+    contact-5-address: "35th Floor, Aerospace Science and Technology Building, 7 Xinguanghua Street, Jinjiang District, Chengdu 610016"
+    contact-6: "Chongqing"
+    contact-6-name: "Chongqing Tianhua Architectural Design Co., Ltd."
+    contact-6-address: "10F, No. 2, Hualongqiao Business World, Yuzhong District, Chongqing"
+    contact-7: "Wuhan"
+    contact-7-1-name: "Wuhan Tianhua Central China Architectural Design Co., Ltd."
+    contact-7-2-name: "Wuhan Tianhua Jiayi Architectural Design Co., Ltd."
+    contact-7-address: "32F, Minsheng Bank Building, No. 396, Xinhua Road, Wuhan 430022"
+    contact-8: "Xiamen"
+    contact-8-name: "Xiamen Tianhua Architectural Design Co., Ltd."
+    contact-8-address: "Room 803, No. 50, 2nd Anling Road, Huli District, Xiamen"
+    contact-9: "Shenzhen"
+    contact-9-name: "Shenzhen Tianhua Architectural Design Co., Ltd."
+    contact-9-address: "20F, Viatech Building, No. 9966, Shennan Avenue, Nanshan District, Shenzhen"
+    contact-10: "Jinan"
+    contact-10-name: "???"
+    contact-10-address: "???"
+    contact-11: "Tianjin"
+    contact-11-name: "Tianjin Tianhua Northern Architectural Design Co., Ltd."
+    contact-11-address: "Intersection of the Changjiang Road and the 3rd Nankai Road, Nankai District, Tianjin 16F, Tower B, Nankai Center, Financial Street"
+    contact-12: "Qingdao"
+    contact-12-name: "Qingdao Tianhua Yijing Architectural Design Co., Ltd."
+    contact-12-address: "7F, HNA Wanbang Center, No. 2, Middle Hong Kong Road, Shinan District, Qingdao"
+    contact-13: "Nanjing"
+    contact-13-name: "Nanjing Tianhua Jiangnan Architectural Design Co., Ltd."
+    contact-13-address: "9F, Tower A, Zhonghang Science & Technology Building, No. 218, Middle Longpan Road, Nanjing, Jiangsu"
+    contact-14: "Hong Kong"
+    contact-14-name: "???"
+    contact-14-address: "???"
+    contact-15: "Zhengzhou"
+    contact-15-name: "Zhengzhou Tianhua Architectural Design Co., Ltd."
+    contact-15-address: "North Tower of the Twin Towers, Greenland Central Plaza, Intersection of Dongfeng South Road and Chuangye Road, Zhengdong New District, Zhengzhou"
+    contact-16: "Hangzhou"
+    contact-16-name: "Hangzhou Tianhua Architectural Design Co., Ltd."
+    contact-16-address: "9th Floor, Tower C, Ocean International Center, No. 355 Jinhua South Road, Gongshu District, Hangzhou"
+    contact-17: "Guangzhou"
+    contact-17-name: "Guangzhou Tianhua Architectural Design Co., Ltd."
+    contact-17-address: "31st Floor, Sunrich Plaza, No. 988, Guangzhou Avenue, Tianhe District, Guangzhou"
+    contact-18: "Hefei"
+    contact-18-name: "Hefei Tianhua Architectural Design Co., Ltd."
+    contact-18-address: "Room 3906, Block B, China Resources Building, Xiyou Road, Laoshan District, Hefei, Anhui, China"

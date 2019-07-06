@@ -1,0 +1,396 @@
+<% provide(:title, @seo.home_title) %>
+
+<div id="searchModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <%= form_tag '/search', method: :get do %>
+      <div class="form-group">
+          <%= text_field_tag 'q', params[:q], class: 'form-control top-search', id: "Search", placeholder: "搜索" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to (image_tag "tianhualogowhite.png", class: "navbar-brand", id: "logo"), "/" %>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-center">
+          <li><%= link_to t("menu.about"), about_us_path, class: 'tianhua-font' %></li>
+          <li><%= link_to t("menu.projects"), cases_path, class: 'tianhua-font' %></li>
+          <li><%= link_to t("menu.expertise"), building_path, class: 'tianhua-font' %></li>
+          <li><%= link_to t("menu.news"), infos_path, class: 'tianhua-font' %></li>
+          <li><%= link_to t("menu.careers"), 'https://tianhua.gllue.com/portal/shezhao?gql=&page=1', class: 'tianhua-font', target: "_blank", rel: 'nofollow' %></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="#searchModal" data-toggle="modal"> <%= fa_icon "search" %> </a></li>
+            <li><%= link_to 'CN', locale: "cn" %></li>
+            <li><%= link_to 'EN', locale: "en" %></li>
+          </ul>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+<div class="row  header-banner visible-lg-block visible-md-block visible-sm-block">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <!-- Carousel
+    ================================================== -->
+    <div id="carouselFade" class="carousel slide carousel-fade home-banner-black" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag(@home.banner_1.url, alt: @home.banner_alt_1, class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font"><%= @home.title_1 -%></h1>
+              <h1><%= @home.subtitle_1 -%></h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag(@home.banner_2.url, alt: @home.banner_alt_2, class: "") %>
+          <%#= image_tag("homes_banner_02.jpg", srcset: [["homes_banner_02_768ac.jpg", "768w"],["homes_banner_02.jpg", "1980w"]], sizes: "100vw", alt: "First slide", class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font"><%= @home.title_2 -%></h1>
+              <h1><%= @home.subtitle_2 -%></h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+           <%= image_tag(@home.banner_3.url, alt: @home.banner_alt_3, class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font"><%= @home.title_3 -%></h1>
+              <h1><%= @home.subtitle_3 -%></h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+           <%= image_tag(@home.banner_4.url, alt: @home.banner_alt_4, class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font"><%= @home.title_4 -%></h1>
+              <h1><%= @home.subtitle_4 -%></h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag(@home.banner_5.url, alt: @home.banner_alt_5, class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font"><%= @home.title_5 -%></h1>
+              <h1><%= @home.subtitle_5 -%></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carouselFade" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carouselFade" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row  header-banner visible-xs-block">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <!-- Carousel
+    ================================================== -->
+    <div id="carousel-fade-mobile" class="carousel slide carousel-fade home-banner-black" data-ride="carousel">
+      <div class="carousel-inner visible-xs-block" role="listbox">
+        <div class="item active">
+
+          <%= image_tag(@home.banner_phone_1.url, alt: @home.banner_alt_1, class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font"><%= @home.title_1 -%></h1>
+              <h1><%= @home.subtitle_1 -%></h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag(@home.banner_phone_2.url, alt: @home.banner_alt_2, class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font"><%= @home.title_2 -%></h1>
+              <h1><%= @home.subtitle_2 -%></h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+           <%= image_tag(@home.banner_phone_3.url, alt: @home.banner_alt_3, class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font"><%= @home.title_3 -%></h1>
+              <h1><%= @home.subtitle_3 -%></h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+           <%= image_tag(@home.banner_phone_4.url, alt: @home.banner_alt_4, class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font"><%= @home.title_4 -%></h1>
+              <h1><%= @home.subtitle_4 -%></h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag(@home.banner_phone_5.url, alt: @home.banner_alt_5, class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font"><%= @home.title_5 -%></h1>
+              <h1><%= @home.subtitle_5 -%></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carousel-fade-mobile" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-fade-mobile" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid-news visible-lg-block visible-md-block visible-sm-bloc">
+  <div class="news-line-title">
+    <div class="row">
+      <div class="col-md-6 col-xs-6"><%= image_tag("line.png", size: "110x110", class: "black-line") %></div>
+      <div class="col-md-6 col-xs-6"><h2 class="tianhua-font black-home-news-title"><span><%= link_to t("blackapp.project"), cases_path %></span></h2></div>
+    </div>
+  </div>
+</div>
+
+<div class="nw-carousel visible-lg-block visible-md-block visible-sm-bloc">
+  <div class="nw-carousel__body">
+    <div class="nw-carousel__item">
+      <div class="row">
+        <div class="col-md-6 col-xs-6">
+          <%= image_tag(@home.project_img_1.url, alt: @home.project_alt_1, class: "carousel-item-image") %>
+        </div>
+        <div class="col-md-6 col-xs-6 black-home-carousel">
+          <h2 class="tianhua-font"><%= @home.project_title_1 -%></h2>
+          <p><%= @home.project_subtitle_1 -%></p>
+          <a class="btn btn-default btn-sm" href="<%= info_path(id: @home.project_link_1) -%>" role="button"><%= t("home.more") %></a>
+        </div>
+      </div>
+    </div>
+    <div class="nw-carousel__item">
+      <div class="row">
+        <div class="col-md-6 col-xs-6">
+          <%= image_tag(@home.project_img_2.url, alt: @home.project_alt_2, class: "carousel-item-image") %>
+        </div>
+        <div class="col-md-6 col-xs-6 black-home-carousel">
+          <h2 class="tianhua-font"><%= @home.project_title_2 -%></h2>
+          <p><%= @home.project_subtitle_2 -%></p>
+          <a class="btn btn-default btn-sm" href="<%= info_path(id: @home.project_link_2) -%>" role="button"><%= t("home.more") %></a>
+        </div>
+      </div>
+    </div>
+    <div class="nw-carousel__item">
+      <div class="row">
+        <div class="col-md-6 col-xs-6">
+          <%= image_tag(@home.project_img_3.url, alt: @home.project_alt_3, class: "carousel-item-image") %>
+        </div>
+        <div class="col-md-6 col-xs-6 black-home-carousel">
+          <h2 class="tianhua-font"><%= @home.project_title_3 -%></h2>
+          <p><%= @home.project_subtitle_3 -%></p>
+          <a class="btn btn-default btn-sm" href="<%= case_path(id: @home.project_link_3) -%>" role="button"><%= t("home.more") %></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container-fluid-news visible-lg-block visible-md-block visible-sm-bloc">
+    <div class="news-line-title">
+      <div class="row">
+        <div class="col-md-6 col-xs-6"><%= image_tag("line.png", size: "110x110", class: "black-line") %></div>
+        <div class="col-md-6 col-xs-6"><h2 class="tianhua-font black-home-news-title"><span><%= link_to t("blackapp.news"), infos_path %></span></h2></div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row black-home-news">
+        <div class="col-md-4">
+          <%= image_tag(@home.info_img_1.url, alt: @home.info_alt_1, class: 'black_news_img') %>
+        </div>
+        <div class="col-md-8 black-home-content">
+          <h4><%= @home.info_title_1 -%></h4>
+          <p><%= @home.info_subtitle_1 -%></p>
+
+          <a class="btn btn-default btn-sm" href="<%= info_path(id: @home.info_link_1) -%>" role="button"><%= t("home.more") %></a>
+        </div>
+      </div>
+      <br>
+      <div class="row black-home-news">
+        <div class="col-md-4">
+          <%= image_tag(@home.info_img_2.url, alt: @home.info_alt_2, class: 'black_news_img') %>
+        </div>
+        <div class="col-md-8 black-home-content">
+          <h4><%= @home.info_title_2 -%></h4>
+          <p><%= @home.info_subtitle_2 -%></p>
+
+          <a class="btn btn-default btn-sm" href="<%= info_path(id: @home.info_link_2) -%>" role="button"><%= t("home.more") %></a>
+        </div>
+      </div>
+      <br>
+      <div class="row black-home-news">
+        <div class="col-md-4">
+          <%= image_tag(@home.info_img_3.url, alt: @home.info_alt_3, class: 'black_news_img') %>
+        </div>
+        <div class="col-md-8 black-home-content">
+          <h4><%= @home.info_title_3 -%></h4>
+          <p><%= @home.info_subtitle_3 -%></p>
+
+          <a class="btn btn-default btn-sm" href="<%= info_path(id: @home.info_link_3) -%>" role="button"><%= t("home.more") %></a>
+        </div>
+      </div>
+
+      <p class="pull-right back-top"><a href="#"><%= t("blackapp.top") %></a><span class="glyphicon glyphicon-menu-up"></span></p>
+    </div>
+  </div>
+
+
+  <div class="visible-xs-block visible-sm-block visible-xs-phone">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="visible-xs-project-title">
+          <%= image_tag("line.png", size: "30x30", class: "visible-xs-black-line") %>
+          <h4 class="tianhua-font"><%= t("blackapp.project") %></h4>
+        </div>
+
+        <div class="visible-xs-project visible-xs-project-one">
+          <a href="<%= info_path(id: @home.project_link_1) -%>">
+            <div class="project-img">
+              <%= image_tag(@home.project_phone_img_1.url, alt: @home.project_alt_1, class: 'img-responsive') %>
+              <div class="project-title project-gradient">
+                <p><%= @home.project_title_1 %></p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="visible-xs-project">
+          <a href="<%= info_path(id: @home.project_link_2) -%>">
+            <div class="project-img">
+              <%= image_tag(@home.project_phone_img_2.url, alt: @home.project_alt_2, class: 'img-responsive') %>
+              <div class="project-title project-gradient">
+                <p><%= @home.project_title_2 %></p>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="visible-xs-project">
+          <a href="<%= case_path(id: @home.project_link_3) -%>">
+          <div class="project-img">
+            <%= image_tag(@home.project_phone_img_3.url, alt: @home.project_alt_3, class: 'img-responsive') %>
+            <div class="project-title project-gradient">
+             <p><%= @home.project_title_3 %></p>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row visible-xs-news">
+      <div class="col-xs-12 visible-xs-news-title">
+        <%= image_tag("line.png", size: "30x30", class: "visible-xs-black-line") %>
+        <h4 class="tianhua-font"><%= t("blackapp.news") %></h4>
+      </div>
+      <div class="container-fluid">
+        <div class="col-xs-12">
+          <ul class="media-list">
+            <li class="media">
+              <div class="media-left">
+                <a href="<%= info_path(id: @home.info_link_1) -%>">
+                  <%= image_tag(@home.info_img_1.url, alt: @home.info_alt_1, class: 'visible-xs-img') %>
+                </a>
+              </div>
+              <div class="media-body">
+                <p><a href="<%= info_path(id: @home.info_link_1) -%>"><%= @home.info_title_1 %></a></p>
+              </div>
+            </li>
+
+            <li class="media">
+              <div class="media-left">
+                <a href="<%= info_path(id: @home.info_link_2) -%>">
+                  <%= image_tag(@home.info_img_2.url, alt: @home.info_alt_2, class: 'visible-xs-img') %>
+                </a>
+              </div>
+              <div class="media-body">
+                <p><a href="<%= info_path(id: @home.info_link_2) -%>"><%= @home.info_title_2 %></a></p>
+              </div>
+            </li>
+
+            <li class="media">
+              <div class="media-left">
+                <a href="<%= info_path(id: @home.info_link_3) -%>">
+                  <%= image_tag(@home.info_img_3.url, alt: @home.info_alt_3, class: 'visible-xs-img') %>
+                </a>
+              </div>
+              <div class="media-body">
+                <p><a href="<%= info_path(id: @home.info_link_3) -%>"><%= @home.info_title_3 %></a></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <div class="container-fluid">
+    <footer class="footer blackfooter">
+      <div class="row">
+        <div class="col-md-12 footer-links">
+          <ul class="list-inline">
+            <li><%= link_to t("footer.contact"), biz_map_path, class: 'tianhua-font' %></li>
+            <li><%= link_to t("footer.statement"), statement_path, class: 'tianhua-font' %></li>
+            <li><%= link_to t("footer.policy"), privacy_path, class: 'tianhua-font' %></li>
+            <li><%= link_to t("footer.disclaimer"), disclaimer_path, class: 'tianhua-font' %></li>
+            <li><%= link_to t("footer.careers"), 'http://tianhuagp.com/cn/recruit/campus', class: 'tianhua-font', target: "_blank" %></li>
+          </ul>
+        </div>
+        <ul class="list-inline footer-social">
+          <li>
+            <a href="#"><i class="menu-icon fa fa-weixin fa-1x" data-rel="popover" data-placement="top" data-content="<img src='<%= image_url("core-qr.png") %>' width=100% height=100%>"></i></a>
+          </li>
+          <li>
+            <a href="http://weibo.com/thape" class="b" target="_blank"><%= fa_icon "weibo", class: "fa-1x" %></a>
+          </li>
+          <li>
+            <a href="https://www.zhihu.com/org/tian-hua-jian-zhu/activities" class="b" target="_blank"><%= image_tag('zhihu_logo_b.png', alt: 'Zhihu LOGO', class: 'icon') %></a>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <small><%= link_to t("footer.corporation"), '#' %></small>
+        </div>
+      </div>
+    </footer>
+  </div>

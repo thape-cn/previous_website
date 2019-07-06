@@ -1,0 +1,196 @@
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to (image_tag "tianhualogowhite.png", class: "navbar-brand", id: "logo"), "/" %>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-center">
+          <li><%= link_to t("menu.about"), about_us_path %></li>
+          <li><%= link_to t("menu.projects"), cases_path %></li>
+          <li><%= link_to t("menu.expertise"), service_path %></li>
+          <li><%= link_to t("menu.news"), news_list_path %></li>
+          <li><%= link_to t("menu.careers"), '#' %></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'CN', locale: "cn" %></li>
+            <li><%= link_to 'EN', locale: "en" %></li>
+          </ul>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+
+<div class="row header-banner">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <!-- Carousel
+    ================================================== -->
+    <div id="carouselFade" class="carousel slide carousel-fade home-banner-black" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+
+          <%= image_tag("homes_banner.jpg", srcset: [["homes_banner_768a.jpg", "768w"],["homes_banner.jpg", "1980w"]], sizes: "100vw", alt: "First slide", class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font">重庆龙湖昱湖壹号城市展厅</h1>
+              <h1>WATERFRONT CITY</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag("homes_banner_02.jpg", srcset: [["homes_banner_02_768a.jpg", "768w"],["homes_banner_02.jpg", "1980w"]], sizes: "100vw", alt: "First slide", class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font">苏州高新区文体中心</h1>
+              <h1>SND Culture & Sports Center</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+           <%= image_tag("homes_banner_03.jpg", srcset: [["homes_banner_03_768a.jpg", "768w"],["homes_banner_03.jpg", "1980w"]], sizes: "100vw", alt: "First slide", class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font">南昌新力中心</h1>
+              <h1>Sinic Center</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+           <%= image_tag("homes_banner_04.jpg", srcset: [["homes_banner_04_768a.jpg", "768w"],["homes_banner_04.jpg", "1980w"]], sizes: "100vw", alt: "First slide", class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font">石家庄万象城</h1>
+              <h1>Shijiazhuang The Mixc</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <%= image_tag("homes_banner_05.jpg", srcset: [["homes_banner_05_768a.jpg", "768w"],["homes_banner_05.jpg", "1980w"]], sizes: "100vw", alt: "First slide", class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font">瑞虹天地月亮湾</h1>
+              <h1>HALL OF THE MOON</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carouselFade" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carouselFade" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <!-- Carousel
+    ================================================== -->
+    <div id="carouselFade" class="carousel slide carousel-fade home-banner-black" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag("tianhua_01.jpg", alt: "First slide", class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font">秦皇岛滨海国际旅游度假中心</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <!-- Carousel
+    ================================================== -->
+    <div id="carouselFade" class="carousel slide carousel-fade home-banner-black" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%= image_tag("tianhua_02.jpg", alt: "First slide", class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font">泰禾青云小镇</h1>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+           <%= image_tag("tianhua_03.jpg", alt: "First slide", class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font">武汉福星惠誉福莱中心</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <!-- Carousel
+    ================================================== -->
+    <div id="carouselFade" class="carousel slide carousel-fade home-banner-black" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+           <%= image_tag("tianhua_03.jpg", alt: "First slide", class: "") %>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="tianhua-font">武汉福星惠誉福莱中心</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <hr>
+  <div class="container-fluid">
+    <footer class="footer blackfooter">
+      <div class="row">
+        <div class="col-md-12 footer-links">
+          <ul class="list-inline">
+            <li><%= link_to t("footer.contact"), biz_map_path, class: 'tianhua-font' %></li>
+            <li><%= link_to t("footer.statement"), statement_path, class: 'tianhua-font' %></li>
+            <li><%= link_to t("footer.policy"), privacy_path, class: 'tianhua-font' %></li>
+            <li><%= link_to t("footer.disclaimer"), disclaimer_path, class: 'tianhua-font' %></li>
+            <li><%= link_to t("footer.careers"), 'http://tianhuagp.com/cn/recruit/campus', class: 'tianhua-font', target: "_blank" %></li>
+          </ul>
+        </div>
+        <ul class="list-inline footer-social">
+          <li>
+            <a href="#"><i class="menu-icon fa fa-weixin fa-1x" data-rel="popover" data-placement="top" data-content="<img src='<%= image_url("core-qr.png") %>' width=100% height=100%>"></i></a>
+          </li>
+          <li>
+            <a href="http://weibo.com/thape" class="b" target="_blank"><%= fa_icon "weibo", class: "fa-1x" %></a>
+          </li>
+          <li>
+            <a href="https://www.zhihu.com/org/tian-hua-jian-zhu/activities" class="b" target="_blank"><%= image_tag('zhihu_logo.png', alt: 'Zhihu LOGO', class: 'icon') %></a>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <small><%= link_to t("footer.corporation"), '#' %></small>
+        </div>
+      </div>
+    </footer>
+  </div>

@@ -1,0 +1,23 @@
+<h3>关于天华修改</h3>
+<hr>
+
+<%= form_for @about, url: admin_about_path(@about), html: { multipart: true } do |f| %>
+  <%= render 'admin/shared/error_messages', object: @about %>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">关于天华</div>
+        <div class="panel-body">
+          <p><%= f.label :about_title, "标题" %><%= f.text_field :about_title, class: 'form-control' %></p>
+          <p><%= f.label :about_content, "内容" %><%= f.text_area :about_content, class: 'form-control', rows: "5" %></p>
+          <p><%= f.label :about_img, "背景图" %> <small>尺寸W:2800*H:1600像素</small><%= f.file_field :about_img %></p>
+          <p><%= f.label :about_img_alt, "图片Alt描述" %><%= f.text_field :about_img_alt, class: 'form-control' %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <%= f.submit "修改内容", class: "btn btn-primary" %>
+<% end %>

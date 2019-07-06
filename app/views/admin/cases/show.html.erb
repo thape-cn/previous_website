@@ -1,0 +1,18 @@
+<p><%= link_to '返回', admin_cases_path %>
+</p>
+
+<div class="row info-content">
+   <div class="col-md-7">
+      <h3><%= @case.title %></h3> <br><br>
+      专业分类:  <span class="label label-info"><%= case_market(@case.professional) %></span> <br><br>
+      相关市场:  <span class="label label-info"><%= case_professional(@case.market) %></span> <br><br>
+
+      <%= image_tag(@case.snapshot.url, class: 'admin-preview') if @case.snapshot_identifier.present? %> <br><br>
+      <% @case.case_pictures.each do |case_picture| %>
+        <%= image_tag(case_picture.album.url, class: 'admin-preview') if case_picture.album_identifier.present? %> <br><br>
+      <% end %>
+      <div class="article-text">
+        <%= simple_format(@case.other) %>
+      </div>
+    </div>
+</div>
