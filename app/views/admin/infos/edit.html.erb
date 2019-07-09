@@ -17,6 +17,11 @@
         <label class="form-check-label" for="info_hide_in_design_staff_news">在设计团队人员相关新闻中隐藏</label>
       </div>
 
+      <div class="form-group form-check">
+        <%= f.check_box :hide_in_index_news, class: 'form-check-input' %>
+        <label class="form-check-label" for="info_hide_in_index_news">在新闻列表中隐藏</label>
+      </div>
+
       <%= f.label :title, "标题" %>
       <%= f.text_field :title, class: 'form-control' %>
       <br>

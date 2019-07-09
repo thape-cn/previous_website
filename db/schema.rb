@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_12_010937) do
+ActiveRecord::Schema.define(version: 2019_07_09_083301) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -134,7 +134,8 @@ ActiveRecord::Schema.define(version: 2019_06_12_010937) do
     t.integer "position", default: 0
     t.string "snapshot_alt"
     t.string "banner_alt"
-    t.text "hide_in_design_staff_news", default: "f"
+    t.boolean "hide_in_design_staff_news", default: false
+    t.boolean "hide_in_index_news", default: false
   end
 
   create_table "people", force: :cascade do |t|
