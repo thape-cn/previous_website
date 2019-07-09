@@ -27,7 +27,7 @@
           <%= link_to fa_icon("arrow-down"), down_admin_info_path(info), method: :patch %>
           <%= link_to fa_icon("long-arrow-down"), bottom_admin_info_path(info), method: :patch %>
           <%= link_to fa_icon("pencil-square-o"), edit_admin_info_path(info), data: { turbolinks: false } %>
-          <%#= link_to fa_icon("trash"), admin_info_path(info), method: :delete, data: { confirm: '确定删除?' } %>
+          <%= link_to fa_icon("trash"), admin_info_path(info), method: :delete, data: { confirm: '确定删除?' } %>
         </td>
       </tr>
     <% end %>
