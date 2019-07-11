@@ -66,7 +66,7 @@ GEM
       execjs
     bcrypt (3.1.13)
     bcrypt (3.1.13-java)
-    bindex (0.7.0)
+    bindex (0.8.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
     bootsnap (1.4.4-java)
@@ -192,6 +192,7 @@ GEM
       net-ssh (>= 2.6.5, < 6.0.0)
     net-ssh (5.2.0)
     nio4r (2.4.0)
+    nio4r (2.4.0-java)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     nokogiri (1.10.3-java)
