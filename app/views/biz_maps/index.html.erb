@@ -7,9 +7,9 @@
     <li><%= link_to t("about.designing"), designing_index_path, class: 'tianhua-font' %></li>
     <li class="activity"><%= link_to t("about.contact"), biz_map_path, class: 'tianhua-font' %></li>
   </ul>
-  <div class="row">
+  <div class="row div-map">
     <div class="col-md-12 iframe-map">
-      <%= image_tag("map2.png", alt: "First slide", width: '1042px', height: '809px', id: 'img-biz-map') %>
+      <%= image_tag("map2.png", alt: "First slide", id: 'img-biz-map') %>
         <div class="map-item" id="map1">
           <%= link_to modal_biz_map_path(id: 1), remote: true do %>
             <div class="icon"><%= t("map.contact-1") -%></div>

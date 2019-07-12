@@ -893,85 +893,93 @@ footer {
 
 /* maps */
 
+#img-biz-map {
+  width: 80%;
+  height: 80%;
+}
 .biz-map {
+  .div-map {
+    position: relative;
+    text-align: center;
+  }
   .map-item{
     position: absolute;
   }
   #map1{
-    left: 840px;
-    top: 490px;
+    left:70%;
+    top:60%;
   }
   #map2{
-    left:860px;
-    top:230px;
+    left:70%;
+    top:34%;
   }
   #map3{
-    left:760px;
-    top: 320px;
+    left:64%;
+    top:40%;
   }
   #map4{
-    left:586px;
-    top:347px;
+    left:46%;
+    top:56%;
   }
   #map5{
-    left:520px;
-    top: 500px;
+    left:40%;
+    top:62%;
   }
   #map6{
-    left:560px;
-    top: 520px;
+    left:44%;
+    top:64%;
   }
   #map7{
-    left: 700px;
-    top: 500px;
+    left:54%;
+    top:60%;
   }
   #map8{
-    left: 815px;
-    top: 610px;
+    left:68%;
+    top:80%;
   }
   #map9{
-    left: 700px;
-    top: 715px;
+    left:66%;
+    top:84%;
   }
   #map10{
     left: 742px;
     top: 322px;
   }
   #map11{
-    left: 775px;
-    top: 335px;
+    left:66%;
+    top:42%;
   }
   #map12{
-    left: 816px;
-    top: 386px;
+    left:71%;
+    top:42%;
   }
   #map13{
-    left: 767px;
-    top: 432px;
+    left:67%;
+    top:56%;
   }
   #map14{
     left: 685px;
     top: 635px;
   }
   #map15{
-    left: 682px;
-    top: 359px;
+    left:54%;
+    top:54%;
   }
   #map16{
-    left: 827px;
-    top: 510px;
+    left:68%;
+    top:64%;
   }
   #map17{
-    left: 670px;
-    top: 700px;
+    left:64%;
+    top:82%;
   }
   #map18{
-    left: 750px;
-    top: 410px;
+    left:64%;
+    top:60%;
   }
   #map19{
-    left: 806px;
-    top: 372px;
+    left:64%;
+    top:50%;
   }
 
   .map-item .icon{
