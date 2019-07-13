@@ -37,3 +37,6 @@ yarn-debug.log*
 .yarn-integrity
 thape_web.sublime-workspace
 config/credentials.yml.enc
+workspace.xml
+dataSources.local.xml
+.idea/dataSources
