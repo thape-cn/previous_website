@@ -1,68 +1,113 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The page you were looking for doesn't exist (404)</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-  .rails-default-error-page {
-    background-color: #EFEFEF;
-    color: #2E2F30;
-    text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
-  }
+  <head>
+    <title>The page you were looking for doesn't exist (404)</title>
+    <link rel="shortlink" href="http://www.thape.com/cn" />
+    <link rel="canonical" href="http://www.thape.com/cn" />
+    <meta name="description" content="上海天华建筑设计公司，服务范围涵盖城市规划、建筑设计、城市住宅房屋设计、室内设计、景观设计、技术咨询到建筑审图、VR科技等。我们智融结合，为政府和企业客户等提供全面而专业的综合解决方案与全程卓越客户体验。" />
+    <meta name="abstract" content="天华建筑设计公司，服务范围涵盖城市规划、建筑设计、住宅设计、室内设计、景观设计、技术咨询到建筑审图、VR科技等。我们智融结合，为政府和企业客户等提供全面而专业的综合解决方案与全程卓越客户体验。" />
+    <meta name="keywords" content="建筑设计,住宅设计,景观设计,房屋室内设计,城市规划设计,上海建筑设计公司,建筑设计网,天华建筑" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="all" href="https://thape-assets.oss-cn-shanghai.aliyuncs.com/assets/application-e440a2c50d1a30db6518225eedaccb48b7d5e35a7bead50b5f1e3ee92cb4933a.css" data-turbolinks-track="reload" />
+    <script src="https://thape-assets.oss-cn-shanghai.aliyuncs.com/assets/application-b0de3b006bda2b84aae25b5e73ea423345fe5e358495acb7c083b28f37dc50de.js" data-turbolinks-track="reload"></script>
+  </head>
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
-  }
-
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
-  }
-
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
-  </style>
-</head>
-
-<body class="rails-default-error-page">
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+  <body>
+    <div id="searchModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <form action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <div class="form-group">
+          <input type="text" name="q" id="Search" class="form-control top-search" placeholder="搜索" />
+      </div>
+    </form>
   </div>
-  <script src="https://hm.baidu.com/hm.js?dd080d712bbe176cb9ab961a5d9501e0" async="true"></script>
-</body>
+    </div>
+
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="/"><img class="navbar-brand" src="https://thape-assets.oss-cn-shanghai.aliyuncs.com/assets/tianhualogo-8e69f7f0044ca0a32302c86d0c2cbdeeb702585898f33366b13ae478ae5a2fe1.png" /></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-center">
+        <li><a class="tianhua-font" href="/cn/about-us">了解天华</a></li>
+        <li><a class="tianhua-font" href="/cn/cases">经典项目</a></li>
+        <li><a class="tianhua-font" href="/cn/building">专业服务</a></li>
+        <li><a class="tianhua-font" href="/cn/news">新闻中心</a></li>
+        <li><a class="tianhua-font" target="_blank" rel="nofollow" href="https://tianhua.gllue.com/portal/shezhao?gql=&amp;page=1">招贤纳士</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav">
+          <li><a href="#searchModal" data-toggle="modal"> <i class="fa fa-search"></i> </a></li>
+          <li><a href="/cn/news/587">CN</a></li>
+          <li><a href="/en/news/587">EN</a></li>
+        </ul>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="info-container">
+  <div class="container info">
+  <div class="row">
+    <div class="col-md-12">
+      <img class="info-banner" src="https://thape-upload.oss-cn-shanghai.aliyuncs.com/uploads/info/banner/587/dongfang2.png" />
+    </div>
+  </div>
+  <div class="row info-content">
+    <div class="col-md-12 text-center">
+      <h1>您要查找的页面不存在（404）</h1>
+      <h1>The page you were looking for doesn't exist (404)</h1>
+    </div>
+  </div>
+</div>
+</div>
+
+
+    <hr>
+<div class="container-fluid">
+  <footer class="footer">
+    <div class="row">
+      <div class="col-md-12 footer-links">
+        <ul class="list-inline">
+          <li><a class="tianhua-font" href="/cn/biz-map">联系方式</a></li>
+          <li><a class="tianhua-font" href="/cn/statement">网站声明</a></li>
+          <li><a class="tianhua-font" href="/cn/privacy">隐私政策</a></li>
+          <li><a class="tianhua-font" href="/cn/disclaimer">免责条款</a></li>
+          <li><a class="tianhua-font" target="_blank" rel="nofollow" href="https://tianhua.gllue.com/portal/shezhao?gql=&amp;page=1">职业发展</a></li>
+        </ul>
+      </div>
+      <ul class="list-inline footer-social">
+        <li>
+          <a href="#"><i class="menu-icon fa fa-weixin fa-1x" data-rel="popover" data-placement="top" data-content="<img src='https://thape-assets.oss-cn-shanghai.aliyuncs.com/assets/core-qr-4a56e574afaa6dfc493b18bb8f42f960ff5e1935ed013af71654d5eba8eb172a.png' width=100% height=100%>"></i></a>
+        </li>
+        <li>
+          <a href="http://weibo.com/thape" class="b" target="_blank"><i class="fa fa-weibo fa-1x"></i></a>
+        </li>
+        <li>
+          <a href="https://www.zhihu.com/org/tian-hua-jian-zhu/activities" class="b" target="_blank"><img alt="Zhihu LOGO" class="icon" src="https://thape-assets.oss-cn-shanghai.aliyuncs.com/assets/zhihu_logo-aa1814df270949afe0ba07588eaef62f5702e2147f7f69e651b3c6c4710c11ea.png" /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <small><a href="#">© 2017 天华集团，保留所有权利 沪ICP备08027138号-1 公安部备案号 31010402005733</a></small>
+      </div>
+    </div>
+  </footer>
+</div>
+
+    <script src="https://hm.baidu.com/hm.js?dd080d712bbe176cb9ab961a5d9501e0" async="true"></script>
+  </body>
 </html>
