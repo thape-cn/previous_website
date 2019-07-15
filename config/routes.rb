@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     get 'news-list', to: redirect { |params, req| "/#{params[:locale]}/news" }
     get 'info', to: 'static_pages#info'
     get 'case', to: 'static_pages#case'
+    get '/case/jianzhu/:id', to: redirect { |params, req| "/#{params[:locale]}/cases/#{params[:id]}" }
+    get '/case/jingguan/:id', to: redirect { |params, req| "/#{params[:locale]}/cases/#{params[:id]}" }
+    get '/case/shinei/:id', to: redirect { |params, req| "/#{params[:locale]}/cases/#{params[:id]}" }
+
     get 'service', to: 'static_pages#service'
     get 'biz-map', to: 'biz_maps#index'
     resources :biz_maps, only: %i[] do
