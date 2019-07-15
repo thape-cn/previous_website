@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get 'about-us', to: 'static_pages#about_us'
     get 'personal', to: 'static_pages#personal'
     get 'news-list', to: redirect { |params, req| "/#{params[:locale]}/news" }
+    get '/node/:id', to: redirect { |params, req| "/#{params[:locale]}/news/#{params[:id]}" }
     get 'info', to: 'static_pages#info'
     get 'case', to: 'static_pages#case'
     get '/case/jianzhu/:id', to: redirect { |params, req| "/#{params[:locale]}/cases/#{params[:id]}" }
