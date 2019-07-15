@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get 'home', to: 'static_pages#home'
     get 'about-us', to: 'static_pages#about_us'
     get 'personal', to: 'static_pages#personal'
-    get 'news_list', to: 'static_pages#news_list'
+    get 'news-list', to: redirect { |params, req| "/#{params[:locale]}/news" }
     get 'info', to: 'static_pages#info'
     get 'case', to: 'static_pages#case'
     get 'service', to: 'static_pages#service'
