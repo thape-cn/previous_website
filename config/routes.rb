@@ -33,10 +33,13 @@ Rails.application.routes.draw do
     get 'landscape', to: "services#landscape"
     get 'vetting', to: "services#vetting"
     get 'consluting', to: "services#consluting"
-    get 'vr_tech', to: "services#vrtech"
+    get 'vr-tech', to: "services#vrtech"
+
+    get '/service/:name', to: redirect { |params, req| "/#{params[:locale]}/#{params[:name]}" }
 
     get 'banner', to: 'static_pages#banner'
   end
+  get '/service/:name', to: redirect { |params, req| "/cn/#{params[:name]}" }
 
   namespace :admin do
     root 'home#show', as: 'root'
