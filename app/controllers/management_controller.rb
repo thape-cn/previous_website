@@ -4,6 +4,6 @@ class ManagementController < ApplicationController
   end
 
   def show
-    @person = Person.find(params[:id])
+    @person = Person.find_by(id: params[:id]) || Person.find_by!(url_name: params[:id])
   end
 end

@@ -4,7 +4,7 @@ class DesigningController < ApplicationController
   end
 
   def show
-    @person = Person.find(params[:id])
+    @person = Person.find_by(id: params[:id]) || Person.find_by!(url_name: params[:id])
     @infos = Info.order(position: :asc).where(hide_in_design_staff_news: false).limit(5)
     @infos = @infos.where('title LIKE ?', "%#{@person.name}%").or(@infos.where('content LIKE ?', "%#{@person.name}%"))
   end
