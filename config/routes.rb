@@ -4,6 +4,15 @@ Rails.application.routes.draw do
   localized do
     resources :management, only: [:index, :show]
     resources :designing, only: [:index, :show]
+    get '/people/:id', to: (redirect do |params, req|
+      person = Person.find_by(id: params[:id]) || Person.find_by!(url_name: params[:id])
+      if person.category == 1
+        "/#{params[:locale]}/management/#{params[:id]}"
+      else
+        "/#{params[:locale]}/designing/#{params[:id]}"
+      end
+    end)
+
     resources :infos, only: [:index, :show], path: :news
     resources :cases, only: [:index, :show]
 
