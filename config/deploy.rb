@@ -17,6 +17,7 @@ set :repo_url, 'git@git.dev.tencent.com:ericguo/thape_web.git'
 # You can configure the Airbrussh format using :format_options.
 # These are the defaults.
 # set :format_options, command_output: true, log_file: "log/capistrano.log", color: :auto, truncate: :auto
+set :format_options, truncate: false
 
 # Default value for :pty is false
 # set :pty, true
