@@ -257,9 +257,12 @@ GEM
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
+    rmmseg-cpp-new (0.3.1)
     route_translator (7.0.0)
       actionpack (>= 5.0.0.1, < 6.1)
       activesupport (>= 5.0.0.1, < 6.1)
+    ruby-pinyin (0.5.0)
+      rmmseg-cpp-new (~> 0.3.1)
     ruby_dep (1.5.0)
     rubyzip (1.2.3)
     sassc (2.0.1)
@@ -363,6 +366,7 @@ DEPENDENCIES
   puma
   rails (~> 5.2.3)
   route_translator
+  ruby-pinyin
   sassc-rails
   selenium-webdriver
   simditor
