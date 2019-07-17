@@ -13,7 +13,7 @@
     <div class="row visible-lg-block visible-md-block visible-sm-block">
       <% people.each do |person| %>
         <div class="col-md-5ths col-xs-5ths col-sm-5ths">
-          <%= link_to designing_path(person) do %>
+          <%= link_to designing_path(id: person.url_name) do %>
             <div class="imgbox">
               <%= image_tag(person.avatar.url, class: "personal-photo") %>
               <div class="text">
