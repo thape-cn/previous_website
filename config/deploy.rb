@@ -26,7 +26,7 @@ set :format_options, truncate: false
 append :linked_files, *%w[puma.rb config/database.yml config/master.key config/secrets.yml db/thape_prod.sqlite3 config/credentials.yml.enc]
 
 # Default value for linked_dirs is []
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'public/news_images', 'node_modules'
+append :linked_dirs, *%w[log tmp/pids tmp/cache tmp/sockets public/system public/uploads public/news_images node_modules]
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
