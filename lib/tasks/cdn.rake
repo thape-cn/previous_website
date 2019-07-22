@@ -37,7 +37,10 @@ namespace :cdn do
 
     FileUtils.mkdir_p download_dir
 
-    # image = MiniMagick::Image::open(image_uploader.url.to_s)
-    # image.write(image_current_path)
+    internal_url = image_uploader.url.to_s
+        .sub('https://thape-upload.oss-cn-shanghai.aliyuncs.com/',
+             'https://thape-upload.oss-cn-shanghai-internal.aliyuncs.com')
+    image = MiniMagick::Image::open(internal_url)
+    image.write(image_current_path)
   end
 end
