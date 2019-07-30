@@ -1,13 +1,6 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  about_title: MyString
-  about_content: MyText
+---
+only_one:
+  about_title: 创意与设计完美融合
+  about_content: 天华创意板块，服务范围涵盖城市规划、建筑设计、室内设计、景观设计、技术咨询到建筑审图、VR科技等。我们智融结合，为政府和企业客户等提供全面而专业的综合解决方案与全程卓越客户体验。目前，天华30个子公司遍布于全国16个城市，5100名员工。我们与客户，上下游合作伙伴一起，助力城市持续发展。
   about_img: MyString
-  about_img_alt: MyString
-
-two:
-  about_title: MyString
-  about_content: MyText
-  about_img: MyString
-  about_img_alt: MyString
+  about_img_alt: 关于天华
