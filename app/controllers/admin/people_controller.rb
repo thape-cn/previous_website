@@ -1,10 +1,10 @@
 module Admin
   class PeopleController < Admin::ApplicationController
     before_action :logged_in_user
-    before_action :set_person, only: [:show, :edit, :update, :destroy]
+    before_action :set_person, only: [:show, :edit, :update, :destroy, :top, :bottom, :up, :down]
 
     def index
-      @people = Person.with_translations('cn').all
+      @people = Person.with_translations('cn').all.order(position: :asc)
       @people = @people.where('person_translations.name LIKE ?', "%#{params[:name]}%") if params[:name].present?
       @people = @people.page(params[:page]).per(params[:per_page])
     end
@@ -51,17 +51,41 @@ module Admin
     end
 
     def top
+      @person.update(position: 0)
+      Person.where.not(id: @person.id).order(position: :asc).pluck(:id).each_with_index do |id, index|
+        person = Person.find(id)
+        person.update(position: index + 1)
+      end
+      redirect_to admin_people_url, notice: '置顶成功！'
     end
 
     def bottom
+      Person.where.not(id: @person.id).order(position: :asc).pluck(:id).each_with_index do |id, index|
+        person = Person.find(id)
+        person.update(position: index)
+      end
+      @person.update(position: Person.count - 1)
+      redirect_to admin_people_url, notice: '置底成功！'
     end
     
     def up
+      up_position = @person.position - 1
+      return redirect_to admin_people_url, notice: '已经最高了，你不要逼我！' if up_position <= 0
+
+      Info.find_by!(position: up_position).update(position: @person.position)
+      @person.update(position: up_position)
+      redirect_to admin_people_url, notice: '已经up一位！'
     end
 
     def down
+      down_position = @person.position + 1
+      return redirect_to admin_people_url, notice: '我是咸鱼，躺在最底了。。。' if down_position > Info.count - 1
+
+      Info.find_by!(position: down_position).update(position: @person.position)
+      @person.update(position: down_position)
+      redirect_to admin_people_url, notice: '已经踩了一位！'
     end
-    
+
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_person

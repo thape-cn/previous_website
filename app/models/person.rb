@@ -4,4 +4,12 @@ class Person < ApplicationRecord
 
   mount_uploader :avatar, AvatarUploader
   mount_uploader :photo, PhotoUploader
+
+  before_create :set_new_position
+
+  private
+
+  def set_new_position
+    self.position = Person.count
+  end
 end
