@@ -1,27 +1,32 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+---
 one:
-  title: MyString
-  name: MyString
-  market: MyString
-  area: MyString
-  address: MyString
-  service: MyString
-  schedule: MyString
-  start: MyString
-  team: MyString
-  album: MyString
+  title: 远洋天津宜兴埠4A地块
   snapshot: MyString
+  market: '["2"]'
+  professional: '["1"]'
+  other: >
+    客户名称：远洋集团
+    相关市场：商业建筑
+    建筑面积：72371.0㎡
+    项目地点：天津市北辰区
+    服务范围：概念、方案、建筑单专业扩初
+    设计进度：方案阶段
+    设计起始时间：2017年4月
+    建筑团队：吴欣、王聪、杨辛、马曌辉、方志强
+  position: 1
 
 two:
-  title: MyString
-  name: MyString
-  market: MyString
-  area: MyString
-  address: MyString
-  service: MyString
-  schedule: MyString
-  start: MyString
-  team: MyString
-  album: MyString
+  title: 武汉福星惠誉福莱中心
   snapshot: MyString
+  market: '["3"]'
+  professional: '["1"]'
+  other: >
+    客户名称：福星惠誉
+    相关市场：办公建筑, 超高层建筑
+    建筑面积：113759㎡
+    项目地点：武汉，湖北
+    设计起止时间： 2012年 3 月 至 2014年 10 月
+    竣工时间：2017 年8月
+    服务范围：概念-方案-扩初-外立面控制
+    建筑团队：叶如丹、陈浩、杨文杰、黄干就、许聪、丁磊、李岑
+  position: 2

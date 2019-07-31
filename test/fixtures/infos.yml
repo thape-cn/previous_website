@@ -1,21 +1,11 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+---
 one:
-  title: MyString
-  introduction: MyText
-  content: MyText
-  picture: MyString
-  category: 1
-  pushlist: 1
+  title: 金奖银奖大满贯 | 天华斩获19项2018-2019地产设计大奖！
+  introduction: 2018-2019年度第五届“地产设计大奖 · 中国”结果正式发布！
+  content: >
+    <p>本年度共有来自323家机构的1117个作品参赛，面对众多知名地产商和国内外一流建筑事务所，<b>天华经过层层角逐，最终斩获1项金奖（全国共10项）、1项银奖（全国共10项）、17项优秀奖（含2项业主申报项目）！</b>继2018年之后，天华又一次斩获地产设计大奖金奖、银奖、优秀奖大满贯！<br></p>
+  category: 3
+  pushlist: 0
   banner: MyString
   snapshot: MyString
-
-two:
-  title: MyString
-  introduction: MyText
-  content: MyText
-  picture: MyString
-  category: 1
-  pushlist: 1
-  banner: MyString
-  snapshot: MyString
+  position: 1
