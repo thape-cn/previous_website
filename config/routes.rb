@@ -59,7 +59,14 @@ Rails.application.routes.draw do
     root 'home#show', as: 'root'
     resources :home, only: [:show, :edit, :update]
     resources :about, only: [:show, :edit, :update]
-    resources :people
+    resources :people do
+      member do
+        patch :top
+        patch :bottom
+        patch :up
+        patch :down
+      end
+    end
     resources :seos, only: [:show, :edit, :update]
     resources :users, except: [:show, :edit, :update]
     resources :service_files, only: [:show, :edit, :update]

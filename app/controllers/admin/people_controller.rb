@@ -50,6 +50,18 @@ module Admin
       end
     end
 
+    def top
+    end
+
+    def bottom
+    end
+    
+    def up
+    end
+
+    def down
+    end
+    
     private
       # Use callbacks to share common setup or constraints between actions.
       def set_person

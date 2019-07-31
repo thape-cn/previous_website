@@ -29,8 +29,14 @@
         <td><%= link_to full_category(person.category) %></td>
         <td><%= link_to person.name, admin_person_path(person) %></td>
         <td><%= link_to person.title, admin_person_path(person) %></td>
-        <td><%= link_to '修改', edit_admin_person_path(person) %></td>
-        <td><%= link_to '删除', admin_person_path(person), method: :delete, data: { confirm: '确认删除?' } %></td>
+        <td>
+          <%= link_to fa_icon("long-arrow-up"), top_admin_person_path(person), method: :patch %>
+          <%= link_to fa_icon("arrow-up"), up_admin_person_path(person), method: :patch %>
+          <%= link_to fa_icon("arrow-down"), down_admin_person_path(person), method: :patch %>
+          <%= link_to fa_icon("long-arrow-down"), bottom_admin_person_path(person), method: :patch %>
+          <%= link_to fa_icon("pencil-square-o"), edit_admin_person_path(person) %>
+          <%= link_to fa_icon("trash"), admin_person_path(person), method: :delete, data: { confirm: '确定删除?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
