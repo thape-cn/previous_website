@@ -1,52 +1,53 @@
 ---
 only_one:
-  banner_1: MyString
+  id: 1
+  banner_1: tianhualogo.png
   title_1: 苏南万科湖西玲珑
   subtitle_1: EXQUISITE VILLA VANKE
-  banner_2: MyString
+  banner_2: tianhualogo.png
   title_2: 苏州高新区文体中心
   subtitle_2: SND CULTURE & SPORTS CENTER
-  banner_3: MyString
+  banner_3: tianhualogo.png
   title_3: 南昌新力中心
   subtitle_3: SINIC CENTER
-  banner_4: MyString
+  banner_4: tianhualogo.png
   title_4: 石家庄万象城
   subtitle_4: SHIJIAZHANG THE MIXC
-  banner_5: MyString
+  banner_5: tianhualogo.png
   title_5: 瑞虹天地月亮湾
   subtitle_5: HALL OF THE MOON
-  project_img_1: MyString
+  project_img_1: tianhualogo.png
   project_title_1: 秦皇岛滨海国际旅游度假中心
   project_subtitle_1: 一场自然与技艺的邂逅，建筑师心中海边的阿狄丽娜。
   project_link_1: 1
-  project_img_2: MyString
+  project_img_2: tianhualogo.png
   project_title_2: 泰禾青云小镇
   project_subtitle_2: 诠释宋代极简美学与儒禅文化的世外桃源。
   project_link_2: 2
-  project_img_3: MyString
+  project_img_3: tianhualogo.png
   project_title_3: 武汉福星惠誉福莱中心
   project_subtitle_3: 背江面湖，承天启地；暮霭红隘，华灯万象。
   project_link_3: 3
-  info_img_1: MyString
+  info_img_1: tianhualogo.png
   info_title_1: 金奖银奖大满贯 | 天华斩获19项2018-2019地产设计大奖！
   info_subtitle_1: 2018-2019年度第五届“地产设计大奖 · 中国”结果正式发布！
   info_link_1: 1
-  info_img_2: MyString
+  info_img_2: tianhualogo.png
   info_title_2: 天华全国化布局再添一城，广州天华正式成立
   info_subtitle_2: 聚焦建筑智造，共筑活力花城
   info_link_2: 2
-  info_img_3: MyString
+  info_img_3: tianhualogo.png
   info_title_3: 天华与哈佛大学GSD联合举办“城市建设的理念：过去与未来”论坛
   info_subtitle_3: 深入后世博发展，共议城市未来。
   info_link_3: 3
-  banner_phone_1: MyString
-  banner_phone_2: MyString
-  banner_phone_3: MyString
-  banner_phone_4: MyString
-  banner_phone_5: MyString
-  project_phone_img_1: MyString
-  project_phone_img_2: MyString
-  project_phone_img_3: MyString
+  banner_phone_1: tianhualogo.png
+  banner_phone_2: tianhualogo.png
+  banner_phone_3: tianhualogo.png
+  banner_phone_4: tianhualogo.png
+  banner_phone_5: tianhualogo.png
+  project_phone_img_1: tianhualogo.png
+  project_phone_img_2: tianhualogo.png
+  project_phone_img_3: tianhualogo.png
   banner_alt_1:
   banner_alt_2:
   banner_alt_3:
@@ -58,8 +59,8 @@ only_one:
   info_alt_1:
   info_alt_2:
   info_alt_3:
-  info_high_img: MyString
+  info_high_img: tianhualogo.png
   info_high_title: 天华发布全新LOGO 迎来品牌升级元年
   info_high_introduction: 5月10日是第三个“中国品牌日”，在品牌强国战略的政策倡导下，作为中国“城市建设领域的专业服务领导品牌”的天华迎来品牌升级，并于5月16日官方宣布正式启用全新品牌视觉形象，与此同时，全新品牌理念也应运而生。
   info_high_link: 4
-  info_high_phone_img: MyString
+  info_high_phone_img: tianhualogo.png
