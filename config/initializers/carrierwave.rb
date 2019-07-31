@@ -1,5 +1,10 @@
 CarrierWave.configure do |config|
-  config.storage           = :aliyun
+  if Rails.env.test?
+    config.storage = :file
+    config.enable_processing = false
+  else
+    config.storage = :aliyun
+  end
   config.aliyun_access_key_id  = Rails.application.credentials.dig(:aliyun, :access_key_id)
   config.aliyun_access_key_secret = Rails.application.credentials.dig(:aliyun, :secret_access_key)
   # 你需要在 Aliyun OSS 上面提前创建一个 Bucket
