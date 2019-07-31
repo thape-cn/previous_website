@@ -72,7 +72,7 @@ module Admin
       up_position = @person.position - 1
       return redirect_to admin_people_url, notice: '已经最高了，你不要逼我！' if up_position <= 0
 
-      Info.find_by!(position: up_position).update(position: @person.position)
+      Person.find_by!(position: up_position).update(position: @person.position)
       @person.update(position: up_position)
       redirect_to admin_people_url, notice: '已经up一位！'
     end
@@ -81,7 +81,7 @@ module Admin
       down_position = @person.position + 1
       return redirect_to admin_people_url, notice: '我是咸鱼，躺在最底了。。。' if down_position > Info.count - 1
 
-      Info.find_by!(position: down_position).update(position: @person.position)
+      Person.find_by!(position: down_position).update(position: @person.position)
       @person.update(position: down_position)
       redirect_to admin_people_url, notice: '已经踩了一位！'
     end
