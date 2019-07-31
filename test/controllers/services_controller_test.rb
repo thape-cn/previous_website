@@ -2,8 +2,7 @@ require 'test_helper'
 
 class ServicesControllerTest < ActionDispatch::IntegrationTest
   test "should get building" do
-    get services_building_url
+    get building_path
     assert_response :success
   end
-
 end
