@@ -1,9 +1,5 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+---
 one:
-  name: MyString
-  email: MyString
-
-two:
-  name: MyString
-  email: MyString
+  name: 过纯中
+  email: guochunzhong@thape.com.cn
+  password_digest: $2a$12$2A8VYKEBBsaO1MMkW.1MBODV8PUFawqlDC1ytCiydhvAYHciZ3nUq

@@ -1,21 +1,16 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+---
 one:
+  id: 1
   category: 1
   line: 1
   avatar: MyString
   photo: MyString
-  name: MyString
-  title: MyString
-  introduce: MyText
-  works: MyString
+  url_name: huangdingye
 
 two:
+  id: 2
   category: 1
   line: 1
   avatar: MyString
   photo: MyString
-  name: MyString
-  title: MyString
-  introduce: MyText
-  works: MyString
+  url_name: zhaoyunliang
