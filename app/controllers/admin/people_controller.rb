@@ -6,7 +6,6 @@ module Admin
     def index
       @people = Person.with_translations('cn').all.order(position: :asc)
       @people = @people.where('person_translations.name LIKE ?', "%#{params[:name]}%") if params[:name].present?
-      @people = @people.page(params[:page]).per(params[:per_page])
     end
 
     def show
@@ -70,7 +69,7 @@ module Admin
     
     def up
       up_position = @person.position - 1
-      return redirect_to admin_people_url, notice: '已经最高了，你不要逼我！' if up_position <= 0
+      return redirect_to admin_people_url, notice: '已经最高了，你不要逼我！' if up_position < 0
 
       Person.find_by!(position: up_position).update(position: @person.position)
       @person.update(position: up_position)
@@ -79,7 +78,7 @@ module Admin
 
     def down
       down_position = @person.position + 1
-      return redirect_to admin_people_url, notice: '我是咸鱼，躺在最底了。。。' if down_position > Info.count - 1
+      return redirect_to admin_people_url, notice: '我是咸鱼，躺在最底了。。。' if down_position > Person.count - 1
 
       Person.find_by!(position: down_position).update(position: @person.position)
       @person.update(position: down_position)

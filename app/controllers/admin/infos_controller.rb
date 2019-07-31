@@ -73,7 +73,7 @@ module Admin
 
     def up
       up_position = @info.position - 1
-      return redirect_to admin_infos_url, notice: '已经最高了，你不要逼我！' if up_position <= 0
+      return redirect_to admin_infos_url, notice: '已经最高了，你不要逼我！' if up_position < 0
 
       Info.find_by!(position: up_position).update(position: @info.position)
       @info.update(position: up_position)
