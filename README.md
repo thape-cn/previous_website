@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/thape-cn/website.svg?style=svg)](https://circleci.com/gh/thape-cn/website)
+
 # The THAPE official web
 
 ## Steps to build the local dev.
