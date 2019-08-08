@@ -1,8 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  image: MyString
+  image: test.png
   info: one
+  id: 1
 
 two:
   image: MyString
