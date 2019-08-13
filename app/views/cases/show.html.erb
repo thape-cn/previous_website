@@ -6,7 +6,7 @@
     <% @case.case_pictures.each do |case_picture| %>
       <% next unless case_picture.album_identifier.present? %>
       <div class="item <%= active_showed == true ? nil : 'active' %>">
-        <%= image_tag(case_picture.album.url(thumb: '?x-oss-process=image/auto-orient,1/resize,m_lfit,h_780/quality,q_90'), alt: @case.title, class: "case-banner-img img-responsive") %>
+        <%= image_tag(case_picture.album.url(thumb: '?x-oss-process=style/cb'), alt: @case.title, class: "case-banner-img img-responsive") %>
         <div class="container">
           <div class="carousel-caption">
           </div>
