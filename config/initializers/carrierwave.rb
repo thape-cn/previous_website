@@ -24,5 +24,5 @@ CarrierWave.configure do |config|
   # Bucket 为私有读取请设置 true，默认 false，以便得到的 URL 是能带有 private 空间访问权限的逻辑
   # Tell SDK the privacy of you Bucket, if private CarrierWave xxx.url will generate URL with a expires parameter, default: :public.
   # config.aliyun_mode = :private
-  config.aliyun_mode = :private
+  config.aliyun_mode = :public
 end
