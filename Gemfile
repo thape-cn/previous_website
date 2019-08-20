@@ -39,7 +39,7 @@ gem 'sassc-rails'
 gem 'jquery-rails'
 gem 'mini_magick'
 gem 'simditor'
-gem 'carrierwave'
+gem "carrierwave", "~> 1.3.1"
 gem 'carrierwave-aliyun'
 gem 'http'
 
