@@ -16,8 +16,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require simditor
+//= require cable
 //= require admin/infos
-//= require_tree .
+//= require blackapp
 
 document.addEventListener("turbolinks:load", function() {
 
