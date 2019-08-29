@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock '~> 3.11.0'
+lock '~> 3.11.1'
 
 set :application, 'thape_web'
 # deploy using 'https://github.com/thape-cn/website.git' is too slow
