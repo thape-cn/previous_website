@@ -123,7 +123,7 @@ GEM
     carrierwave-aliyun (1.1.0)
       aliyun-sdk (>= 0.6.0)
       carrierwave (>= 1)
-    childprocess (1.0.1)
+    childprocess (2.0.0)
       rake (< 13.0)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
@@ -302,8 +302,8 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (3.142.3)
-      childprocess (>= 0.5, < 2.0)
+    selenium-webdriver (3.142.4)
+      childprocess (>= 0.5, < 3.0)
       rubyzip (~> 1.2, >= 1.2.2)
     simditor (2.3.6)
     simplecov (0.17.0)
