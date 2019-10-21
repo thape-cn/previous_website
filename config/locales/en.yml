@@ -113,6 +113,9 @@ en:
     news: "News"
     top: "Back to top"
   map:
+    telephone_exchange: "Telephone exchange"
+    contact_hotline: "Design project contact and complaint hotline"
+    media_hotline: "Media hotline"
     tianhua-map: "Tianhua's office location"
     address: "Address"
     tel: "Tel"
