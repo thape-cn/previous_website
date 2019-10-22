@@ -81,8 +81,10 @@
             <div class="icon"><%= t("map.contact-9") -%></div>
           <% end %>
         </div>
-        <div class="map-item" id="map10" style="display:none;">
-          <a href="#contact-10"><div class="icon"><%= t("map.contact-10") -%></div></a>
+        <div class="map-item" id="map10">
+          <%= link_to modal_biz_map_path(id: 10), remote: true do %>
+            <div class="icon"><%= t("map.contact-10") -%></div>
+          <% end %>
         </div>
         <div class="map-item" id="map11">
           <%= link_to modal_biz_map_path(id: 11), remote: true do %>
@@ -184,8 +186,7 @@
         <%= render partial: 'contact_18', locals: { need_collapse_in: false } %>
 
         <%# 济南 %>
-        <%= render partial: 'contact_19', locals: { need_collapse_in: false } %>
-
+        <%= render partial: 'contact_10', locals: { need_collapse_in: false } %>
 
       </table>
       </div>
