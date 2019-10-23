@@ -1,3 +1,3 @@
 class MapContact < ApplicationRecord
-  translates :name, :address, :tel, :fax
+  translates :name, :long_name, :address, :tel, :fax
 end
