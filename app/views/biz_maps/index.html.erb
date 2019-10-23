@@ -43,27 +43,27 @@
         </div>
         <div class="map-item" id="map2">
           <%= link_to modal_biz_map_path(id: 2), remote: true do %>
-            <div class="icon"><%= t("map.contact-2") -%></div>
+            <div class="icon"><%= @contact2.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map3">
           <%= link_to modal_biz_map_path(id: 3), remote: true do %>
-            <div class="icon"><%= t("map.contact-3") -%></div>
+            <div class="icon"><%= @contact3.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map4">
           <%= link_to modal_biz_map_path(id: 4), remote: true do %>
-            <div class="icon"><%= t("map.contact-4") -%></div>
+            <div class="icon"><%= @contact4.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map5">
           <%= link_to modal_biz_map_path(id: 5), remote: true do %>
-            <div class="icon"><%= t("map.contact-5") -%></div>
+            <div class="icon"><%= @contact5.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map6">
           <%= link_to modal_biz_map_path(id: 6), remote: true do %>
-            <div class="icon"><%= t("map.contact-6") -%></div>
+            <div class="icon"><%= @contact6.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map7">
@@ -73,55 +73,55 @@
         </div>
         <div class="map-item" id="map8">
           <%= link_to modal_biz_map_path(id: 8), remote: true do %>
-            <div class="icon"><%= t("map.contact-8") -%></div>
+            <div class="icon"><%= @contact8.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map9">
           <%= link_to modal_biz_map_path(id: 9), remote: true do %>
-            <div class="icon"><%= t("map.contact-9") -%></div>
+            <div class="icon"><%= @contact9.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map10">
           <%= link_to modal_biz_map_path(id: 10), remote: true do %>
-            <div class="icon"><%= t("map.contact-10") -%></div>
+            <div class="icon"><%= @contact10.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map11">
           <%= link_to modal_biz_map_path(id: 11), remote: true do %>
-            <div class="icon"><%= t("map.contact-11") -%></div>
+            <div class="icon"><%= @contact11.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map12">
           <%= link_to modal_biz_map_path(id: 12), remote: true do %>
-            <div class="icon"><%= t("map.contact-12") -%></div>
+            <div class="icon"><%= @contact12.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map13">
           <%= link_to modal_biz_map_path(id: 13), remote: true do %>
-            <div class="icon"><%= t("map.contact-13") -%></div>
+            <div class="icon"><%= @contact13.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map14" style="display:none;">
-          <a href="#contact-14"><div class="icon"><%= t("map.contact-14") -%></div></a>
+          <a href="#contact-14"><div class="icon"><%= @contact14.name -%></div></a>
         </div>
         <div class="map-item" id="map15">
           <%= link_to modal_biz_map_path(id: 15), remote: true do %>
-            <div class="icon"><%= t("map.contact-15") -%></div>
+            <div class="icon"><%= @contact15.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map16">
           <%= link_to modal_biz_map_path(id: 16), remote: true do %>
-            <div class="icon"><%= t("map.contact-16") -%></div>
+            <div class="icon"><%= @contact16.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map17">
           <%= link_to modal_biz_map_path(id: 17), remote: true do %>
-            <div class="icon"><%= t("map.contact-17") -%></div>
+            <div class="icon"><%= @contact17.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map18">
           <%= link_to modal_biz_map_path(id: 18), remote: true do %>
-            <div class="icon"><%= t("map.contact-18") -%></div>
+            <div class="icon"><%= @contact18.name -%></div>
           <% end %>
         </div>
     </div>
@@ -136,52 +136,52 @@
         <%= render partial: 'contact_1', locals: { need_collapse_in: true } %>
 
         <%# 北京 %>
-        <%= render partial: 'contact_3', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact3 } %>
 
         <%# 广州 %>
-        <%= render partial: 'contact_17', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact17 } %>
 
         <%# 深圳 %>
-        <%= render partial: 'contact_9', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact9 } %>
 
         <%# 杭州 %>
-        <%= render partial: 'contact_16', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact16 } %>
 
         <%# 天津 %>
-        <%= render partial: 'contact_11', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact11 } %>
 
         <%# 南京 %>
-        <%= render partial: 'contact_13', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact13 } %>
 
         <%# 武汉 %>
         <%= render partial: 'contact_7', locals: { need_collapse_in: false } %>
 
         <%# 成都 %>
-        <%= render partial: 'contact_5', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact5 } %>
 
         <%# 重庆 %>
-        <%= render partial: 'contact_6', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact6 } %>
 
         <%# 厦门 %>
-        <%= render partial: 'contact_8', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact8 } %>
 
         <%# 沈阳 %>
-        <%= render partial: 'contact_2', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact2 } %>
 
         <%# 郑州 %>
-        <%= render partial: 'contact_15', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact15 } %>
 
         <%# 青岛 %>
-        <%= render partial: 'contact_12', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact12 } %>
 
         <%# 西安 %>
-        <%= render partial: 'contact_4', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact4 } %>
 
         <%# 合肥 %>
-        <%= render partial: 'contact_18', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact18 } %>
 
         <%# 济南 %>
-        <%= render partial: 'contact_10', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact10 } %>
 
       </table>
       </div>

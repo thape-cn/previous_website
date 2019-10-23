@@ -1,0 +1,19 @@
+<thead>
+  <tr class="table-header" id="contact-<%= map_contact.id -%>" role="button"  data-toggle="collapse" href="#collapseMap<%= map_contact.id -%>" aria-expanded="false" aria-controls="collapseMap<%= map_contact.id -%>">
+    <th colspan="4"><strong><%= fa_icon "chevron-down" %><%= map_contact.name -%></strong></th>
+  </tr>
+</thead>
+<tbody class="collapse <%= need_collapse_in ? 'in' : '' -%>" id="collapseMap<%= map_contact.id -%>">
+  <tr>
+    <th><strong><%= map_contact.name -%></strong></th>
+    <th><strong><%= t("map.address") -%></strong></th>
+    <th><strong><%= t("map.tel") -%></strong></th>
+    <th><strong><%= t("map.fax") -%></strong></th>
+  </tr>
+  <tr>
+    <td><strong><%= map_contact.long_name -%></strong></td>
+    <td><%= map_contact.address -%></td>
+    <td><%= map_contact.tel -%></td>
+    <td><%= map_contact.fax -%></td>
+  </tr>
+</tbody>
