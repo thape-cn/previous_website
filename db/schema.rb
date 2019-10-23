@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_15_012144) do
+ActiveRecord::Schema.define(version: 2019_10_23_011425) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -136,6 +136,26 @@ ActiveRecord::Schema.define(version: 2019_08_15_012144) do
     t.string "banner_alt"
     t.boolean "hide_in_design_staff_news", default: false
     t.boolean "hide_in_index_news", default: false
+  end
+
+  create_table "map_contact_translations", force: :cascade do |t|
+    t.integer "map_contact_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.string "address"
+    t.string "tel"
+    t.string "fax"
+    t.index ["locale"], name: "index_map_contact_translations_on_locale"
+    t.index ["map_contact_id"], name: "index_map_contact_translations_on_map_contact_id"
+  end
+
+  create_table "map_contacts", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "tel"
+    t.string "fax"
   end
 
   create_table "people", force: :cascade do |t|
