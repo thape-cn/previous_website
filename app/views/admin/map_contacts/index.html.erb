@@ -1,0 +1,36 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<h3>天华子公司地址列表</h3>
+
+<br>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h4>ID</h4></th>
+      <th><h4>短名</h4></th>
+      <th><h4>全名</h4></th>
+      <th><h4>地址</h4></th>
+      <th><h4>电话</h4></th>
+      <th><h4>编辑</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @map_contacts.each do |map_contact| %>
+      <tr>
+        <td><%= map_contact.id %></td>
+        <td><%= map_contact.name %></td>
+        <td><%= map_contact.long_name %></td>
+        <td><%= map_contact.address %></td>
+        <td><%= map_contact.tel %></td>
+        <td>
+          <%= link_to fa_icon("edit"), edit_admin_map_contact_path(map_contact) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

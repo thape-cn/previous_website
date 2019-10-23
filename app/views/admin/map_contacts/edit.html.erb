@@ -1,0 +1,43 @@
+<%= link_to '返回', admin_map_contacts_path %>
+
+<h3>子公司地址-修改</h3>
+<br>
+
+<div class="row">
+  <div class="col-md-10">
+    <%= form_for @map_contact, url: admin_map_contact_path(id: @map_contact.id) do |f| %>
+      <%#= render 'admin/shared/error_messages', object: @info %>
+
+      <div class="row">
+        <div class="col-md-4">
+          <%= f.label :name, "短名" %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+        <div class="col-md-8">
+          <%= f.label :long_name, "全名" %>
+          <%= f.text_field :long_name, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :address, "地址" %>
+          <%= f.text_field :address, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :tel, "电话" %>
+          <%= f.text_field :tel, class: 'form-control' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :fax, "传真" %>
+          <%= f.text_field :fax, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+      <%= f.submit "修改", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
