@@ -1,9 +1,8 @@
 [![CircleCI](https://circleci.com/gh/thape-cn/website.svg?style=svg)](https://circleci.com/gh/thape-cn/website)
 
-# The THAPE official web
+# [The THAPE official web](https://www.thape.com)
 
 ## Steps to build the local dev.
-
 
 ### Generate dummy settings
 
@@ -30,7 +29,9 @@ wechat_encoding_aes_key: g
 ### Migrate DB and initial DB
 
 ```yml
+bundle exec rails db:create
 bundle exec rails db:migrate
+bundle exec rails db:seed
 bundle exec rails c
 irb(main):001:0> Home.create
 Seo.create
