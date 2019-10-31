@@ -1,7 +1,7 @@
 namespace :convert_img do
   desc "Decode base64 img and save in files"
-  task convert_img: :environment do
-    Info.where(id: 600).find_each do |k|
+  task convert_jpeg: :environment do
+    Info.all.find_each do |k|
       doc = Nokogiri::HTML(k.content.to_s)
       imgs = doc.xpath("//img")
       imgs.each_with_index do |img, index|
