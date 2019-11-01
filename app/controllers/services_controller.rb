@@ -3,6 +3,7 @@ class ServicesController < ApplicationController
   end
 
   def interior
+    @service_file = ServiceFile.first
   end
 
   def planning
