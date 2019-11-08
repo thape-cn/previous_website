@@ -30,6 +30,27 @@
       <br>
       <div class="row">
         <div class="col-md-8">
+          <%= f.label :seo_title, "SEO 标题（空则使用默认）" %>
+          <%= f.text_field :seo_title, class: 'form-control' %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :seo_keywords, "SEO 关键字（空则使用默认）" %>
+          <%= f.text_field :seo_keywords, class: 'form-control' %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :seo_description, "SEO 描述（空则使用默认）" %>
+          <%= f.text_field :seo_description, class: 'form-control' %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
           <%= f.label :snapshot, "案例列表照片上传" %>
           <br />
           <%= image_tag(@case.snapshot.url, class: 'admin-preview') if @case.snapshot_identifier.present? %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_23_012337) do
+ActiveRecord::Schema.define(version: 2019_11_08_053029) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -50,6 +50,9 @@ ActiveRecord::Schema.define(version: 2019_10_23_012337) do
     t.string "professional"
     t.text "other"
     t.integer "position", default: 0
+    t.string "seo_title"
+    t.string "seo_keywords"
+    t.string "seo_description"
   end
 
   create_table "homes", force: :cascade do |t|
@@ -136,6 +139,9 @@ ActiveRecord::Schema.define(version: 2019_10_23_012337) do
     t.string "banner_alt"
     t.boolean "hide_in_design_staff_news", default: false
     t.boolean "hide_in_index_news", default: false
+    t.string "seo_title"
+    t.string "seo_keywords"
+    t.string "seo_description"
   end
 
   create_table "map_contact_translations", force: :cascade do |t|

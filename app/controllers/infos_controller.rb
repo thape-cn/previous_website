@@ -6,5 +6,9 @@ class InfosController < ApplicationController
 
   def show
     @info = Info.find(params[:id])
+
+    @seo.abstract = @info.seo_title if @info.seo_title.present?
+    @seo.keywords = @info.seo_keywords if @info.seo_keywords.present?
+    @seo.description = @info.seo_description if @info.seo_description.present?
   end
 end

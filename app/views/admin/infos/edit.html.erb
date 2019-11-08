@@ -30,6 +30,18 @@
       <%= f.text_area :introduction, class: 'form-control', rows: "4" %>
       <br>
 
+      <%= f.label :seo_title, "SEO 标题（空则使用默认）" %>
+      <%= f.text_field :seo_title, class: 'form-control' %>
+      <br>
+
+      <%= f.label :seo_keywords, "SEO 关键字（空则使用默认）" %>
+      <%= f.text_field :seo_keywords, class: 'form-control' %>
+      <br>
+
+      <%= f.label :seo_description, "SEO 描述（空则使用默认）" %>
+      <%= f.text_field :seo_description, class: 'form-control' %>
+      <br>
+
       <%= f.label :snapshot, "列表图片上传" %> <small>尺寸W:600*H:600像素</small>
       <br>
       <% if f.object.snapshot_identifier.present? %>
