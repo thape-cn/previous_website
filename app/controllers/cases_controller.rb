@@ -13,7 +13,7 @@ class CasesController < ApplicationController
     @first_case = Case.find two_random_case[0]
     @second_case = Case.find two_random_case[1]
 
-    @seo.abstract = @case.seo_title if @case.seo_title.present?
+    @seo.home_title = @case.seo_title if @case.seo_title.present?
     @seo.keywords = @case.seo_keywords if @case.seo_keywords.present?
     @seo.description = @case.seo_description if @case.seo_description.present?
   end
