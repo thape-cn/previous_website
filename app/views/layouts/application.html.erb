@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= full_title(yield(:title)) %></title>
-    <meta name="title" content="<%= yield(:meta_title) -%>" />
+    <meta name="title" content="<%= full_title(yield(:meta_title)) -%>" />
     <link rel="shortlink" href="http://www.thape.com/cn" />
     <link rel="canonical" href="http://www.thape.com/cn" />
     <meta name="description" content="<%= @seo.description -%>" />
