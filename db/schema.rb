@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_08_053029) do
+ActiveRecord::Schema.define(version: 2019_12_16_075406) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -179,6 +179,7 @@ ActiveRecord::Schema.define(version: 2019_11_08_053029) do
     t.datetime "updated_at", null: false
     t.string "url_name"
     t.integer "position", default: 0
+    t.date "leaving_date"
   end
 
   create_table "person_translations", force: :cascade do |t|

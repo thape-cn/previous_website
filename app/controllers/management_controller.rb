@@ -1,9 +1,11 @@
 class ManagementController < ApplicationController
   def index
-    @people = Person.where(category: 1).order(position: :asc).page(params[:page]).per(params[:per_page])
+    @people = Person.where(leaving_date: nil).where(category: 1)
+      .order(position: :asc).page(params[:page]).per(params[:per_page])
   end
 
   def show
-    @person = Person.find_by(id: params[:id]) || Person.find_by!(url_name: params[:id])
+    @person = Person.where(leaving_date: nil).find_by(id: params[:id]) \
+      || Person.where(leaving_date: nil).find_by!(url_name: params[:id])
   end
 end

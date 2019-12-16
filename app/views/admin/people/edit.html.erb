@@ -9,13 +9,17 @@
       <%#= render 'admin/shared/error_messages', object: @info %>
 
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <%= f.label :category, "管理/专业" %><br>
           <%= f.select(:category, options_for_select([['管理团队', 1], ['专业团队', 2]], @person.category), {}, {class: "form-control"}) %>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <%= f.label :line, "列表顺序排序" %>
           <%= f.text_field :line, class: 'form-control' %>
+        </div>
+        <div class="col-md-4">
+          <%= f.label :leaving_date, "退休日期" %>
+          <%= f.date_field :leaving_date, class: 'form-control' %>
         </div>
       </div>
       <hr>
