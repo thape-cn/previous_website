@@ -125,6 +125,16 @@
             <div class="icon"><%= @contact18.name -%></div>
           <% end %>
         </div>
+        <div class="map-item" id="map19">
+          <%= link_to modal_biz_map_path(id: 19), remote: true do %>
+            <div class="icon"><%= @contact19.name -%></div>
+          <% end %>
+        </div>
+        <div class="map-item" id="map20">
+          <%= link_to modal_biz_map_path(id: 20), remote: true do %>
+            <div class="icon"><%= @contact20.name -%></div>
+          <% end %>
+        </div>
     </div>
   </div>
   <div class="row">
@@ -184,6 +194,11 @@
         <%# 济南 %>
         <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact10 } %>
 
+        <%# 贵阳 %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact19 } %>
+
+        <%# 昆明 %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact20 } %>
       </table>
       </div>
     </div>
