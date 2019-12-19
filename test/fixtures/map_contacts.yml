@@ -110,3 +110,17 @@ hefei:
   long_name: "Hefei Tianhua Architectural Design Co., Ltd."
   address: "Room 3906, Block B, China Resources Building, Xiyou Road, Laoshan District, Hefei, Anhui, China"
   tel: "18556508125"
+
+guiyang:
+  id: 19
+  name: "Guiyang"
+  long_name: "Guiyang Tianhua Architectural Design Co., Ltd."
+  address: "812, block A, Financial Max, Financial city, Guanshanhu District, Guiyang City"
+  tel: "0851-87974158"
+
+kunming:
+  id: 20
+  name: "Kunming"
+  long_name: "Kunming Tianhua Architectural Design Co., Ltd."
+  address: "4301, North Tower, Wanda twin tower, Xishan District, Kunming"
+  tel: "18206859407  Mr. Ran"

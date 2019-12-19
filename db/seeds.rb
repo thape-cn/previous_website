@@ -54,6 +54,12 @@ MapContact.create(id: 17, name: "Guangzhou", long_name: "Guangzhou Tianhua Archi
 MapContact.create(id: 18, name: "Hefei", long_name: "Hefei Tianhua Architectural Design Co., Ltd.",
   address: "Room 3906, Block B, China Resources Building, Xiyou Road, Laoshan District, Hefei, Anhui, China",
   tel: "18556508125")
+MapContact.create(id: 19, name: "Guiyang", long_name: "Guiyang Tianhua Architectural Design Co., Ltd.",
+  address: "812, block A, Financial Max, Financial city, Guanshanhu District, Guiyang City",
+  tel: "0851-87974158")
+MapContact.create(id: 20, name: "Kunming", long_name: "Kunming Tianhua Architectural Design Co., Ltd.",
+  address: "4301, North Tower, Wanda twin tower, Xishan District, Kunming",
+  tel: "18206859407  Mr. Ran")
 
 
 I18n.locale = :cn
@@ -103,4 +109,10 @@ MapContact.find_by(id: 17).update(name: "广州", long_name: "广州天华建筑
 MapContact.find_by(id: 18).update(name: "合肥", long_name: "合肥天华建筑设计有限公司",
   address: "安徽省合肥市蜀山区习友路华润大厦B座3906室",
   tel: "18556508125")
+MapContact.find_by(id: 19).update(name: "贵阳", long_name: "贵阳天华建筑设计有限公司",
+  address: "贵阳市观山湖区金融城金融Max · A座812",
+  tel: "0851-87974158")
+MapContact.find_by(id: 20).update(name: "昆明", long_name: "昆明天华建筑设计有限公司",
+  address: "昆明市西山区万达双塔北塔4301",
+  tel: "18206859407  冉先生")
 
