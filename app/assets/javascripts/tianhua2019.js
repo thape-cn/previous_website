@@ -7,19 +7,19 @@ function setElementGlobal(hypeDocument) {
       }
   }
 
-  setElement('page2-year', 2020, hypeDocument);
-  setElement('page2-age', 6, hypeDocument);
-  setElement('page2-day', 1301, hypeDocument);
+  setElement('page2-year', tianhua2019.page2_year, hypeDocument);
+  setElement('page2-age', tianhua2019.page2_age, hypeDocument);
+  setElement('page2-day', tianhua2019.page2_day, hypeDocument);
 
-  setElement('page3-busy-percent', '92%', hypeDocument);
-  setElement('page3-busy-month', 10, hypeDocument);
-  setElement('page3-busy-workday', '周三', hypeDocument);
-  setElement('page3-filling-rate', '99%', hypeDocument);
+  setElement('page3-busy-percent', tianhua2019.page3_busy_percent, hypeDocument);
+  setElement('page3-busy-month', tianhua2019.page3_busy_month, hypeDocument);
+  setElement('page3-busy-workday', tianhua2019.page3_busy_workday, hypeDocument);
+  setElement('page3-filling-rate', tianhua2019.page3_filling_rate, hypeDocument);
 
-  setElement('page4-project-num', 7, hypeDocument);
-  setElement('page4-project-owner', '碧桂园', hypeDocument);
-  setElement('page4-project-name', '瑞虹新城月亮湾', hypeDocument);
-  setElement('page4-work-day', 249, hypeDocument);
+  setElement('page4-project-num', tianhua2019.page4_project_num, hypeDocument);
+  setElement('page4-project-owner', tianhua2019.page4_project_owner, hypeDocument);
+  setElement('page4-project-name', tianhua2019.page4_project_name, hypeDocument);
+  setElement('page4-work-day', tianhua2019.page4_work_day, hypeDocument);
 
   setElement('page5-complete-area', '6666平方米', hypeDocument);
   setElement('page5-football-num', 500, hypeDocument);
