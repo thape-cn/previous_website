@@ -5,7 +5,7 @@ namespace :tianhua_bill do
   task :tianhua2019, [:csv_file_path] => [:environment] do |_task, args|
     csv_file_path = args[:csv_file_path]
     CSV.foreach(csv_file_path, headers: true) do |csv|
-      byebug
+      Tianhua2019.create(csv.to_hash)
     end
   end
 end
