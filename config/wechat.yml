@@ -1,7 +1,8 @@
 ---
 default: &default
-  appid: <%= Rails.application.credentials.wechat_appid! %>
-  secret: <%= Rails.application.credentials.wechat_secret! %>
+  corpid: <%= Rails.application.credentials.wechat_corpid! %>
+  corpsecret: <%= Rails.application.credentials.wechat_corpsecret! %>
+  agentid: <%= Rails.application.credentials.wechat_agentid! %>
   token: <%= Rails.application.credentials.wechat_token! %>
   access_token: "tmp/wechat_access_token"
   encrypt_mode: true
