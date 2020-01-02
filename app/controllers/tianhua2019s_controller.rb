@@ -10,6 +10,8 @@ class Tianhua2019sController < ApplicationController
     page3_filling_rate = if r.fill_rate.present?
       "#{(r.fill_rate*100).to_i}%"
     end
+    @name = r.name
+    @clerkcode = r.clerkcode
     @tianhua2019 = {
       page2_year: 2020,
       page2_age: years_between_dates(r.firstday),
