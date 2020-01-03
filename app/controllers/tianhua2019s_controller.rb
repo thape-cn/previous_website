@@ -27,6 +27,9 @@ class Tianhua2019sController < ApplicationController
     else
       r.max_parter_project1.presence
     end
+    page10_hours = if r.max_parter_hours.present?
+      "#{r.max_parter_hours}小时"
+    end
 
     @name = r.name
     @clerkcode = r.clerkcode
@@ -48,7 +51,7 @@ class Tianhua2019sController < ApplicationController
       page5_working_city: r.work_place,
       page5_hometown: r.home_town,
       page6_course_num: r.learn_course,
-      page6_course_hour: r.study_hours,
+      page6_course_hour: r.study_hours.to_i,
       page6_course_percent: page6_course_percent,
       page7_award: r.micro_course,
       page8_my_students: 6000,
@@ -58,7 +61,7 @@ class Tianhua2019sController < ApplicationController
       page9_plugin_name: 'X战机<br >蓝色小光剑'.html_safe,
       page10_name: r.max_parter_name,
       page10_project_name: page10_project_name,
-      page10_hours: r.max_parter_hours,
+      page10_hours: page10_hours,
       page11_name: nil,
       page12_name: r.teacher,
       page13_call_count: nil,
