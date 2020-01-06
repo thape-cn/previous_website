@@ -86,7 +86,7 @@ class Tianhua2019sController < ApplicationController
   private
 
   def years_between_dates(date_from, date_to = Date.today)
-    ((date_to - date_from) / 365).ceil
+    ((date_to - date_from) / 365).ceil + 1
   end
 
   def max_month(r)
