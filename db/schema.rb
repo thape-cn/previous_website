@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_08_025722) do
+ActiveRecord::Schema.define(version: 2020_01_08_044952) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -230,7 +230,7 @@ ActiveRecord::Schema.define(version: 2020_01_08_025722) do
     t.decimal "mean"
     t.decimal "rank"
     t.date "max_month"
-    t.decimal "max_weekday"
+    t.string "max_weekday"
     t.string "workno"
     t.integer "prjno"
     t.string "work_place"

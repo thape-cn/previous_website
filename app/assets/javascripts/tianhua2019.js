@@ -15,7 +15,7 @@ function showOrSkipNextSceneGlobal(hypeDocument) {
         hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page8_my_students) {
         hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
-      } else if (tianhua2019.page9_nickname) {
+      } else if (tianhua2019.page9_plugin_name) {
         hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page10_hours) {
         hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
@@ -40,7 +40,7 @@ function showOrSkipNextSceneGlobal(hypeDocument) {
         hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page8_my_students) {
         hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
-      } else if (tianhua2019.page9_nickname) {
+      } else if (tianhua2019.page9_plugin_name) {
         hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page10_hours) {
         hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
@@ -63,7 +63,7 @@ function showOrSkipNextSceneGlobal(hypeDocument) {
         hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page8_my_students) {
         hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
-      } else if (tianhua2019.page9_nickname) {
+      } else if (tianhua2019.page9_plugin_name) {
         hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page10_hours) {
         hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
@@ -84,7 +84,7 @@ function showOrSkipNextSceneGlobal(hypeDocument) {
         hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page8_my_students) {
         hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
-      } else if (tianhua2019.page9_nickname) {
+      } else if (tianhua2019.page9_plugin_name) {
         hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page10_hours) {
         hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
@@ -103,7 +103,7 @@ function showOrSkipNextSceneGlobal(hypeDocument) {
         hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page8_my_students) {
         hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
-      } else if (tianhua2019.page9_nickname) {
+      } else if (tianhua2019.page9_plugin_name) {
         hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page10_hours) {
         hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
@@ -120,7 +120,7 @@ function showOrSkipNextSceneGlobal(hypeDocument) {
     case '微课大赛获奖页':
       if (tianhua2019.page8_my_students) {
         hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
-      } else if (tianhua2019.page9_nickname) {
+      } else if (tianhua2019.page9_plugin_name) {
         hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page10_hours) {
         hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
@@ -135,7 +135,7 @@ function showOrSkipNextSceneGlobal(hypeDocument) {
       }
       break;
     case '微课大赛统计页':
-      if (tianhua2019.page9_nickname) {
+      if (tianhua2019.page9_plugin_name) {
         hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       } else if (tianhua2019.page10_hours) {
         hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushBottomToTop, 1.1);

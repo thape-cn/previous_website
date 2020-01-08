@@ -10,8 +10,8 @@ class Tianhua2019sController < ApplicationController
     page3_filling_rate = if r.fill_rate.present?
       "#{(r.fill_rate*100).to_i}%"
     end
-    page3_busy_month = max_month(r)
-    page3_busy_workday = max_workday(r)
+    page3_busy_month = r.max_month.month
+    page3_busy_workday = max_workday(r.max_weekday)
 
     page5_complete_area = if r.prj_area.present?
       "#{r.prj_area.to_i}平方米"
@@ -42,6 +42,7 @@ class Tianhua2019sController < ApplicationController
       page3_busy_month: page3_busy_month,
       page3_busy_workday: page3_busy_workday,
       page3_filling_rate: page3_filling_rate,
+      page3_max_month_unit: r.max_month_unit,
       page4_project_num: r.prjno,
       page4_project_owner: r.max_serve_client,
       page4_project_name: r.max_projectname,
@@ -54,21 +55,21 @@ class Tianhua2019sController < ApplicationController
       page6_course_hour: r.study_hours.to_i,
       page6_course_percent: page6_course_percent,
       page7_award: r.micro_course,
-      page8_my_students: 6000,
-      page8_my_course: '如何建构一个和谐的大家庭',
-      page8_my_attendance: 7888,
+      page8_my_students: r.student_no,
+      page8_my_course: r.pop_course,
+      page8_my_attendance: r.learn_times,
       page9_nickname: 'Sky Walker',
-      page9_plugin_name: 'X战机<br >蓝色小光剑'.html_safe,
+      page9_plugin_name: r.skywalker,
       page10_name: r.max_parter_name,
       page10_project_name: page10_project_name,
       page10_hours: page10_hours,
-      page11_name: nil,
+      page11_name: r.old_folk,
       page12_name: r.teacher,
-      page13_call_count: nil,
+      page13_call_count: r.service_times,
       page14_mobile_rate: "90%",
       page14_ai_tools_count: 25,
-      page14_ai_tools_major: '划水专业',
-      page14_ai_tools_name: '人工智能画图'
+      page14_ai_tools_major: r.major,
+      page14_ai_tools_name: r.best_addin
     }
   end
 
@@ -89,53 +90,14 @@ class Tianhua2019sController < ApplicationController
     ((date_to - date_from) / 365).ceil + 1
   end
 
-  def max_month(r)
-    max_key = {
-      jan: r.jan,
-      feb: r.feb,
-      mar: r.mar,
-      apr: r.apr,
-      may: r.may,
-      jun: r.jun,
-      jul: r.jul,
-      aug: r.aug,
-      sep: r.sep,
-      oct: r.oct,
-      nov: r.nov,
-      dec: r.dec
-    }.max_by{ |k,v| v||0 }[0]
-
+  def max_workday(max_key)
+    return '周四' unless max_key.present?
     {
-      jan: '1',
-      feb: '2',
-      mar: '3',
-      apr: '4',
-      may: '5',
-      jun: '6',
-      jul: '7',
-      aug: '8',
-      sep: '9',
-      oct: '10',
-      nov: '11',
-      dec: '12'
-    }[max_key]
-  end
-
-  def max_workday(r)
-    max_key = {
-      monday: r.monday,
-      tuesday: r.tuesday,
-      wednesday: r.wednesday,
-      thursday: r.thursday,
-      friday: r.friday,
-    }.max_by{ |k,v| v||0 }[0]
-
-    {
-      monday: '周一',
-      tuesday: '周二',
-      wednesday: '周三',
-      thursday: '周四',
-      friday: '周五',
-    }[max_key]
+      Monday: '周一',
+      Tuesday: '周二',
+      Wednesday: '周三',
+      Thursday: '周四',
+      Friday: '周五',
+    }[max_key.to_sym]
   end
 end
