@@ -1,6 +1,5 @@
 function showOrSkipNextSceneGlobal(hypeDocument) {
   var currentScene = hypeDocument.currentSceneName();
-  console.log(currentScene);
   switch (currentScene) {
     case '工龄页':
       if (tianhua2019.page3_filling_rate) {
@@ -201,6 +200,208 @@ function showOrSkipNextSceneGlobal(hypeDocument) {
       } else {
         hypeDocument.showNextScene(hypeDocument.kSceneTransitionPushBottomToTop, 1.1);
       }
+      break;
+  }
+}
+
+function showOrSkipPreviousSceneGlobal(hypeDocument) {
+  var currentScene = hypeDocument.currentSceneName();
+  switch (currentScene) {
+    case 'IT成就页':
+      if (tianhua2019.page13_call_count) {
+        hypeDocument.showSceneNamed('7777页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page12_name) {
+        hypeDocument.showSceneNamed('导师页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page11_name) {
+        hypeDocument.showSceneNamed('结识老乡页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page10_hours) {
+        hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page9_plugin_name) {
+        hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page8_my_students) {
+        hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page7_award) {
+        hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page6_course_num) {
+        hypeDocument.showSceneNamed('参加课程页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page5_football_num) {
+        hypeDocument.showSceneNamed('参与项目面积页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page4_project_num) {
+        hypeDocument.showSceneNamed('参与项目统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case '7777页':
+      if (tianhua2019.page12_name) {
+        hypeDocument.showSceneNamed('导师页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page11_name) {
+        hypeDocument.showSceneNamed('结识老乡页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page10_hours) {
+        hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page9_plugin_name) {
+        hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page8_my_students) {
+        hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page7_award) {
+        hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page6_course_num) {
+        hypeDocument.showSceneNamed('参加课程页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page5_football_num) {
+        hypeDocument.showSceneNamed('参与项目面积页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page4_project_num) {
+        hypeDocument.showSceneNamed('参与项目统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case '导师页':
+      if (tianhua2019.page11_name) {
+        hypeDocument.showSceneNamed('结识老乡页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page10_hours) {
+        hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page9_plugin_name) {
+        hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page8_my_students) {
+        hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page7_award) {
+        hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page6_course_num) {
+        hypeDocument.showSceneNamed('参加课程页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page5_football_num) {
+        hypeDocument.showSceneNamed('参与项目面积页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page4_project_num) {
+        hypeDocument.showSceneNamed('参与项目统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case '结识老乡页':
+      if (tianhua2019.page10_hours) {
+        hypeDocument.showSceneNamed('亲密战友页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page9_plugin_name) {
+        hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page8_my_students) {
+        hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page7_award) {
+        hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page6_course_num) {
+        hypeDocument.showSceneNamed('参加课程页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page5_football_num) {
+        hypeDocument.showSceneNamed('参与项目面积页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page4_project_num) {
+        hypeDocument.showSceneNamed('参与项目统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case '亲密战友页':
+      if (tianhua2019.page9_plugin_name) {
+        hypeDocument.showSceneNamed('CAD插件页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page8_my_students) {
+        hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page7_award) {
+        hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page6_course_num) {
+        hypeDocument.showSceneNamed('参加课程页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page5_football_num) {
+        hypeDocument.showSceneNamed('参与项目面积页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page4_project_num) {
+        hypeDocument.showSceneNamed('参与项目统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case 'CAD插件页':
+      if (tianhua2019.page8_my_students) {
+        hypeDocument.showSceneNamed('微课大赛统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page7_award) {
+        hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page6_course_num) {
+        hypeDocument.showSceneNamed('参加课程页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page5_football_num) {
+        hypeDocument.showSceneNamed('参与项目面积页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page4_project_num) {
+        hypeDocument.showSceneNamed('参与项目统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case '微课大赛统计页':
+      if (tianhua2019.page7_award) {
+        hypeDocument.showSceneNamed('微课大赛获奖页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page6_course_num) {
+        hypeDocument.showSceneNamed('参加课程页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page5_football_num) {
+        hypeDocument.showSceneNamed('参与项目面积页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page4_project_num) {
+        hypeDocument.showSceneNamed('参与项目统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case '微课大赛获奖页':
+      if (tianhua2019.page6_course_num) {
+        hypeDocument.showSceneNamed('参加课程页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page5_football_num) {
+        hypeDocument.showSceneNamed('参与项目面积页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page4_project_num) {
+        hypeDocument.showSceneNamed('参与项目统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case '参加课程页':
+      if (tianhua2019.page5_football_num) {
+        hypeDocument.showSceneNamed('参与项目面积页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page4_project_num) {
+        hypeDocument.showSceneNamed('参与项目统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case '参与项目面积页':
+      if (tianhua2019.page4_project_num) {
+        hypeDocument.showSceneNamed('参与项目统计页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case '参与项目统计页':
+      if (tianhua2019.page3_filling_rate) {
+        hypeDocument.showSceneNamed('忙碌时间页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      } else {
+        hypeDocument.showSceneNamed('工龄页', hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      }
+      break;
+    case '忙碌时间页':
+      hypeDocument.showPreviousScene(hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      break;
+    case '工龄页':
+      hypeDocument.showPreviousScene(hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
+      break;
+    default:
+      hypeDocument.showPreviousScene(hypeDocument.kSceneTransitionPushTopToBottom, 1.1);
       break;
   }
 }
