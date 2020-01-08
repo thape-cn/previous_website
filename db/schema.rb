@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_02_024310) do
+ActiveRecord::Schema.define(version: 2020_01_08_025722) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -230,23 +230,6 @@ ActiveRecord::Schema.define(version: 2020_01_02_024310) do
     t.decimal "mean"
     t.decimal "rank"
     t.date "max_month"
-    t.decimal "jan"
-    t.decimal "feb"
-    t.decimal "mar"
-    t.decimal "apr"
-    t.decimal "may"
-    t.decimal "jun"
-    t.decimal "jul"
-    t.decimal "aug"
-    t.decimal "sep"
-    t.decimal "oct"
-    t.decimal "nov"
-    t.decimal "dec"
-    t.decimal "monday"
-    t.decimal "tuesday"
-    t.decimal "wednesday"
-    t.decimal "thursday"
-    t.decimal "friday"
     t.decimal "max_weekday"
     t.string "workno"
     t.integer "prjno"
@@ -271,6 +254,15 @@ ActiveRecord::Schema.define(version: 2020_01_02_024310) do
     t.string "upgrade_postname"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "max_month_unit"
+    t.integer "student_no"
+    t.decimal "learn_times"
+    t.string "pop_course"
+    t.string "old_folk"
+    t.integer "service_times"
+    t.string "skywalker"
+    t.string "major"
+    t.string "best_addin"
   end
 
   create_table "users", force: :cascade do |t|

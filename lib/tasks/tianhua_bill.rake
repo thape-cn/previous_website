@@ -4,6 +4,7 @@ namespace :tianhua_bill do
   desc 'Import the tianhua 2019'
   task :import_tianhua2019_data, [:csv_file_path] => [:environment] do |_task, args|
     csv_file_path = args[:csv_file_path]
+    Tianhua2019.delete_all
     CSV.foreach(csv_file_path, headers: true) do |csv|
       Tianhua2019.create(csv.to_hash)
     end
