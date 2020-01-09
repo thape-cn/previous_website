@@ -9,23 +9,6 @@ one:
   mean: 9.99
   rank: 9.99
   max_month: 2020-01-02
-  jan: 9.99
-  feb: 9.99
-  mar: 9.99
-  apr: 9.99
-  may: 9.99
-  jun: 9.99
-  jul: 9.99
-  aug: 9.99
-  sep: 9.99
-  oct: 9.99
-  nov: 9.99
-  dec: 9.99
-  monday: 9.99
-  tuesday: 9.99
-  wednesday: 9.99
-  thursday: 9.99
-  friday: 9.99
   max_weekday: 9.99
   workno: MyString
   prjno: 1
@@ -58,23 +41,6 @@ two:
   mean: 9.99
   rank: 9.99
   max_month: 2020-01-02
-  jan: 9.99
-  feb: 9.99
-  mar: 9.99
-  apr: 9.99
-  may: 9.99
-  jun: 9.99
-  jul: 9.99
-  aug: 9.99
-  sep: 9.99
-  oct: 9.99
-  nov: 9.99
-  dec: 9.99
-  monday: 9.99
-  tuesday: 9.99
-  wednesday: 9.99
-  thursday: 9.99
-  friday: 9.99
   max_weekday: 9.99
   workno: MyString
   prjno: 1

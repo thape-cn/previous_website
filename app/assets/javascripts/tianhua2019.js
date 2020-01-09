@@ -1,3 +1,44 @@
+function setLeaveWorkdayGlobal(hypeDocument) {
+  var leave_workday_mon = document.getElementById("leave-workday-mon");
+  var leave_workday_tue = document.getElementById("leave-workday-tue");
+  var leave_workday_wed = document.getElementById("leave-workday-wed");
+  var leave_workday_thu = document.getElementById("leave-workday-thu");
+  var leave_workday_fri = document.getElementById("leave-workday-fri");
+
+  switch (tianhua2019.page3_busy_workday) {
+    case '周一':
+      leave_workday_tue.parentNode.removeChild(leave_workday_tue);
+      leave_workday_wed.parentNode.removeChild(leave_workday_wed);
+      leave_workday_thu.parentNode.removeChild(leave_workday_thu);
+      leave_workday_fri.parentNode.removeChild(leave_workday_fri);
+      break;
+    case '周二':
+      leave_workday_mon.parentNode.removeChild(leave_workday_mon);
+      leave_workday_wed.parentNode.removeChild(leave_workday_wed);
+      leave_workday_thu.parentNode.removeChild(leave_workday_thu);
+      leave_workday_fri.parentNode.removeChild(leave_workday_fri);
+      break;
+    case '周三':
+      leave_workday_mon.parentNode.removeChild(leave_workday_mon);
+      leave_workday_tue.parentNode.removeChild(leave_workday_tue);
+      leave_workday_thu.parentNode.removeChild(leave_workday_thu);
+      leave_workday_fri.parentNode.removeChild(leave_workday_fri);
+      break;
+    case '周四':
+      leave_workday_mon.parentNode.removeChild(leave_workday_mon);
+      leave_workday_tue.parentNode.removeChild(leave_workday_tue);
+      leave_workday_wed.parentNode.removeChild(leave_workday_wed);
+      leave_workday_fri.parentNode.removeChild(leave_workday_fri);
+      break;
+    case '周五':
+      leave_workday_mon.parentNode.removeChild(leave_workday_mon);
+      leave_workday_tue.parentNode.removeChild(leave_workday_tue);
+      leave_workday_wed.parentNode.removeChild(leave_workday_wed);
+      leave_workday_thu.parentNode.removeChild(leave_workday_thu);
+      break;
+  }
+}
+
 function showOrSkipNextSceneGlobal(hypeDocument) {
   var currentScene = hypeDocument.currentSceneName();
   switch (currentScene) {
