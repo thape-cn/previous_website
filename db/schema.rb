@@ -256,7 +256,7 @@ ActiveRecord::Schema.define(version: 2020_01_08_044952) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "max_month_unit"
     t.integer "student_no"
-    t.decimal "learn_times"
+    t.integer "learn_times"
     t.string "pop_course"
     t.string "old_folk"
     t.integer "service_times"
