@@ -497,7 +497,6 @@ function setElementGlobal(hypeDocument) {
 
   setElement('page13-call-count', tianhua2019.page13_call_count, hypeDocument);
 
-  setElement('page14-mobile-rate', tianhua2019.page14_mobile_rate, hypeDocument);
   setElement('page14-ai-tools-count', tianhua2019.page14_ai_tools_count, hypeDocument);
   setElement('page14-ai-tools-major', tianhua2019.page14_ai_tools_major, hypeDocument);
   setElement('page14-ai-tools-name', tianhua2019.page14_ai_tools_name, hypeDocument);

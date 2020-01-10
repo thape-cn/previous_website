@@ -66,8 +66,7 @@ class Tianhua2019sController < ApplicationController
       page11_name: r.old_folk,
       page12_name: r.teacher,
       page13_call_count: r.service_times,
-      page14_mobile_rate: "90%",
-      page14_ai_tools_count: 25,
+      page14_ai_tools_count: 26,
       page14_ai_tools_major: r.major,
       page14_ai_tools_name: r.best_addin
     }
