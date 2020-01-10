@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_08_044952) do
+ActiveRecord::Schema.define(version: 2020_01_10_023840) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
