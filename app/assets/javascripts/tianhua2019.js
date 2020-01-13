@@ -492,6 +492,7 @@ function setElementGlobal(hypeDocument) {
   setElement('page10-hours', tianhua2019.page10_hours, hypeDocument);
 
   setElement('page11-name', tianhua2019.page11_name, hypeDocument);
+  setElement('page11-folk-course', tianhua2019.page11_folk_course, hypeDocument);
 
   setElement('page12-name', tianhua2019.page12_name, hypeDocument);
 

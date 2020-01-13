@@ -31,6 +31,10 @@ class Tianhua2019sController < ApplicationController
       "#{r.max_parter_hours}小时"
     end
 
+    page11_folk_course = if r.old_folk_course.present?
+      "是你#{r.old_folk_course}的同学"
+    end
+
     @name = r.name
     @clerkcode = r.clerkcode
 
@@ -64,6 +68,8 @@ class Tianhua2019sController < ApplicationController
       page10_project_name: page10_project_name,
       page10_hours: page10_hours,
       page11_name: r.old_folk,
+      page11_folk_course: page11_folk_course,
+      page11_folk_alumni: r.folk_alumni_sign,
       page12_name: r.teacher,
       page13_call_count: r.service_times,
       page14_ai_tools_count: 26,

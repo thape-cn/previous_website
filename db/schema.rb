@@ -263,6 +263,8 @@ ActiveRecord::Schema.define(version: 2020_01_10_023840) do
     t.string "skywalker"
     t.string "major"
     t.string "best_addin"
+    t.string "old_folk_course"
+    t.integer "folk_alumni_sign"
   end
 
   create_table "users", force: :cascade do |t|
