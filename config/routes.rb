@@ -98,4 +98,5 @@ Rails.application.routes.draw do
   resources :tianhua2019s, only: [:show, :index]
 
   resource :wechat, only: [:show, :create]
+  resource :wechat_hulaquan, only: [:show, :create]
 end
