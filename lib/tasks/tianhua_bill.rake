@@ -12,7 +12,7 @@ namespace :tianhua_bill do
 
   desc 'Sent tianhua 2019 bill notification'
   task sent_notification: :environment do |_task, args|
-    Tianhua2019.where("clerkcode > '000081'").order(clerkcode: :desc).find_each do |t|
+    Tianhua2019.where(clerkcode: ['002091','002980','003812','008162','008460','008867','010061','011511','011623','012409','012484','012757','013072','014197','014342','015867','016454','016704','017372','017525','017589','018194','019314','019324','019580','019819','019828','020063','020109','020146','000081']).order(clerkcode: :desc).find_each do |t|
       next if t.email.blank?
       wechar_user_id = t.email.split('@')[0]
       puts "#{t.clerkcode}: #{t.name} #{wechar_user_id}"
