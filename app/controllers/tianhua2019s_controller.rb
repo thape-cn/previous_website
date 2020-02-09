@@ -3,9 +3,10 @@ class Tianhua2019sController < ApplicationController
   layout "tianhua2019"
 
   def show
+    release_date = Date.new(2020, 1, 20)
     r = Tianhua2019.find_by!(clerkcode: params[:id])
     page2_age = years_between_dates(r.firstday)
-    page2_day = "#{(Date.today - r.firstday).floor}<span style='caret-color: rgb(57, 106, 141); color: rgb(57, 106, 141); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, STHeiti, &quot;Microsoft YaHei&quot;, &quot;Microsoft JhengHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;Source Han Sans CN&quot;, &quot;Noto Sans SC&quot;, &quot;Source Han Sans TC&quot;, &quot;Noto Sans CJK TC&quot;, &quot;WenQuanYi Micro Hei&quot;, SimSun, sans-serif; font-size: 24px; font-weight: normal;'>天</span>".html_safe
+    page2_day = "#{(release_date - r.firstday).floor}<span style='caret-color: rgb(57, 106, 141); color: rgb(57, 106, 141); font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, Arial, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, STHeiti, &quot;Microsoft YaHei&quot;, &quot;Microsoft JhengHei&quot;, &quot;Source Han Sans SC&quot;, &quot;Noto Sans CJK SC&quot;, &quot;Source Han Sans CN&quot;, &quot;Noto Sans SC&quot;, &quot;Source Han Sans TC&quot;, &quot;Noto Sans CJK TC&quot;, &quot;WenQuanYi Micro Hei&quot;, SimSun, sans-serif; font-size: 24px; font-weight: normal;'>天</span>".html_safe
     page2_comment = if page2_age >= 3
       '我们之间的默契，旁人无法了解'
     elsif page2_age > 1 && page2_age < 3
@@ -142,7 +143,7 @@ class Tianhua2019sController < ApplicationController
 
   private
 
-  def years_between_dates(date_from, date_to = Date.today)
+  def years_between_dates(date_from, date_to = Date.new(2020, 1, 20))
     ((date_to - date_from) / 365).ceil
   end
 
