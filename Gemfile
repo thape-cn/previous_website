@@ -36,6 +36,7 @@ gem 'bootstrap-sass', '~> 3.4.1'
 gem 'kaminari'
 
 gem 'sassc-rails'
+gem 'ffi', '~> 1.11.3'
 gem 'jquery-rails'
 gem 'mini_magick'
 gem 'simditor'
