@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/Eric-Guo/wechat
-  revision: c443d67c03ab723c8a20f112565327ce95e63f47
+  revision: 57bb331d6a181f587de0cd2ef8711464d2d83fcc
   branch: master
   specs:
-    wechat (0.11.7)
+    wechat (0.11.8)
       activesupport (>= 3.2, < 7)
       http (>= 1.0.4, < 5)
       nokogiri (>= 1.6.0)
@@ -154,7 +154,7 @@ GEM
     http-accept (1.7.0)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    http-form_data (2.2.0)
+    http-form_data (2.3.0)
     http-parser (1.2.1)
       ffi-compiler (>= 1.0, < 2.0)
     i18n (1.8.2)
