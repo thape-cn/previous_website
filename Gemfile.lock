@@ -288,7 +288,7 @@ GEM
       addressable (~> 2.7)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
-    rubyzip (2.2.0)
+    rubyzip (2.3.0)
     sassc (2.2.1)
       ffi (~> 1.9)
     sassc (2.2.1-x64-mingw32)
