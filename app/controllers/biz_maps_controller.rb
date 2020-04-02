@@ -18,6 +18,8 @@ class BizMapsController < ApplicationController
     @contact18 = MapContact.find 18
     @contact19 = MapContact.find 19
     @contact20 = MapContact.find 20
+    @contact21 = MapContact.find 21
+    @contact22 = MapContact.find 22
   end
 
   def modal
@@ -30,7 +32,7 @@ class BizMapsController < ApplicationController
     when 3
       @contact_title = @contact.name
       @contact_subtitle = '建筑、规划'
-    when 2,4,5,6,8,9,11,12,13,15,16,17,19,20
+    when 2,4,5,6,8,9,11,12,13,15,16,17,19,20,21,22
       @contact_title = @contact.name
       @contact_subtitle = '建筑'
     when 7
