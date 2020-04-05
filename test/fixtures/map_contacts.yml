@@ -124,3 +124,17 @@ kunming:
   long_name: "Kunming Tianhua Architectural Design Co., Ltd."
   address: "4301, North Tower, Wanda twin tower, Xishan District, Kunming"
   tel: "18206859407  Mr. Ran"
+
+changsha:
+  id: 21
+  name: "长沙"
+  long_name: "长沙天华建筑设计有限公司"
+  address: "长沙市芙蓉区解放西路188号国金中心 1IFS 19楼"
+  tel: "15974199958"
+
+taoyuan:
+  id: 22
+  name: "太原"
+  long_name: "太原天华建筑设计有限公司"
+  address: "太原市万柏林区晋祠路一段中海国际中心B座20层2003-2006"
+  tel: "0351-7739178"
