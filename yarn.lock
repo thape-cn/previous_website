@@ -37,9 +37,9 @@ get-size@^2.0.3:
   integrity sha1-VKHQJWsg6nrGRlFnViAnaZQa0u8=
 
 unidragger@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.npm.taobao.org/unidragger/download/unidragger-2.3.0.tgz#ab9d9fd62106f3252d88fae5f3a99575e6d31d02"
-  integrity sha1-q52f1iEG8yUtiPrl86mVdebTHQI=
+  version "2.3.1"
+  resolved "https://registry.npm.taobao.org/unidragger/download/unidragger-2.3.1.tgz#2e8c34feff61affa96dc895234ddfc1ea4ec7515"
+  integrity sha1-Low0/v9hr/qW3IlSNN38HqTsdRU=
   dependencies:
     unipointer "^2.3.0"
 
