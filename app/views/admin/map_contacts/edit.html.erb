@@ -43,6 +43,28 @@
         </div>
       </div>
       <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :marketing_phone, "市场营销电话" %>
+          <%= f.text_field :marketing_phone, class: 'form-control' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :media_phone, "媒体电话" %>
+          <%= f.text_field :media_phone, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :website_name, "网址名称" %>
+          <%= f.text_field :website_name, class: 'form-control' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :website_url, "网址URL" %>
+          <%= f.text_field :website_url, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
       <%= f.submit "修改", class: "btn btn-primary" %>
     <% end %>
   </div>

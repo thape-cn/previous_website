@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_18_062955) do
+ActiveRecord::Schema.define(version: 2020_05_18_073414) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -155,6 +155,7 @@ ActiveRecord::Schema.define(version: 2020_05_18_062955) do
     t.string "fax"
     t.string "long_name"
     t.string "alt_name"
+    t.string "website_name"
     t.index ["locale"], name: "index_map_contact_translations_on_locale"
     t.index ["map_contact_id"], name: "index_map_contact_translations_on_map_contact_id"
   end
@@ -166,6 +167,9 @@ ActiveRecord::Schema.define(version: 2020_05_18_062955) do
     t.string "fax"
     t.string "long_name"
     t.string "alt_name"
+    t.string "media_phone"
+    t.string "marketing_phone"
+    t.string "website_url"
   end
 
   create_table "people", force: :cascade do |t|
