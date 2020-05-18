@@ -13,9 +13,15 @@
           <%= f.label :name, "短名" %>
           <%= f.text_field :name, class: 'form-control' %>
         </div>
-        <div class="col-md-8">
+      </div>
+      <div class="row">
+        <div class="col-md-6">
           <%= f.label :long_name, "全名" %>
           <%= f.text_field :long_name, class: 'form-control' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :alt_name, "第二个全名" %>
+          <%= f.text_field :alt_name, class: 'form-control' %>
         </div>
       </div>
       <hr>

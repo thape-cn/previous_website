@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_10_023840) do
+ActiveRecord::Schema.define(version: 2020_05_18_062955) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -153,7 +153,8 @@ ActiveRecord::Schema.define(version: 2020_01_10_023840) do
     t.string "address"
     t.string "tel"
     t.string "fax"
-    t.text "long_name"
+    t.string "long_name"
+    t.string "alt_name"
     t.index ["locale"], name: "index_map_contact_translations_on_locale"
     t.index ["map_contact_id"], name: "index_map_contact_translations_on_map_contact_id"
   end
@@ -164,6 +165,7 @@ ActiveRecord::Schema.define(version: 2020_01_10_023840) do
     t.string "tel"
     t.string "fax"
     t.string "long_name"
+    t.string "alt_name"
   end
 
   create_table "people", force: :cascade do |t|
@@ -219,52 +221,6 @@ ActiveRecord::Schema.define(version: 2020_01_10_023840) do
     t.string "interior_intro_file"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "tianhua2019s", force: :cascade do |t|
-    t.string "name"
-    t.string "clerkcode"
-    t.string "email"
-    t.date "firstday"
-    t.decimal "fill_rate"
-    t.decimal "mean"
-    t.decimal "rank"
-    t.date "max_month"
-    t.string "max_weekday"
-    t.string "workno"
-    t.integer "prjno"
-    t.string "work_place"
-    t.string "max_serve_client"
-    t.string "max_projectname"
-    t.integer "max_workdays"
-    t.string "home_town"
-    t.string "max_parter_no"
-    t.string "max_parter_project1"
-    t.integer "max_parter_hours"
-    t.string "max_parter_project2"
-    t.string "max_parter_project3"
-    t.string "max_parter_name"
-    t.decimal "study_hours"
-    t.integer "learn_course"
-    t.decimal "study_rank"
-    t.string "certificate"
-    t.string "micro_course"
-    t.decimal "prj_area"
-    t.string "teacher"
-    t.string "upgrade_postname"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "max_month_unit"
-    t.integer "student_no"
-    t.integer "learn_times"
-    t.string "pop_course"
-    t.string "old_folk"
-    t.integer "service_times"
-    t.string "skywalker"
-    t.string "major"
-    t.string "best_addin"
-    t.string "old_folk_course"
-    t.integer "folk_alumni_sign"
   end
 
   create_table "users", force: :cascade do |t|
