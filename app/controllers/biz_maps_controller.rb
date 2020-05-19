@@ -20,11 +20,12 @@ class BizMapsController < ApplicationController
     @contact20 = MapContact.find 20
     @contact21 = MapContact.find 21
     @contact22 = MapContact.find 22
+    @contact32 = MapContact.find 32
   end
 
   def modal
     @contact_id = params[:id].to_i
-    @contact = MapContact.find params[:id] unless @contact_id.in?([1,7])
+    @contact = MapContact.find params[:id] unless @contact_id.in?([1])
     case @contact_id
     when 1
       @contact_title = '上海'
@@ -32,11 +33,8 @@ class BizMapsController < ApplicationController
     when 3
       @contact_title = @contact.name
       @contact_subtitle = '建筑、规划'
-    when 2,4,5,6,8,9,11,12,13,15,16,17,19,20,21,22
+    when 2,4,5,6,32,8,9,11,12,13,15,16,17,19,20,21,22
       @contact_title = @contact.name
-      @contact_subtitle = '建筑'
-    when 7
-      @contact_title = '武汉'
       @contact_subtitle = '建筑'
     when 18
       @contact_title = @contact.name

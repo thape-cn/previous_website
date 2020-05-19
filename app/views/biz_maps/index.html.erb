@@ -68,8 +68,8 @@
           <% end %>
         </div>
         <div class="map-item" id="map7">
-          <%= link_to modal_biz_map_path(id: 7), remote: true do %>
-            <div class="icon"><%= t("map.contact-7") -%></div>
+          <%= link_to modal_biz_map_path(id: 32), remote: true do %>
+            <div class="icon"><%= @contact32.name -%></div>
           <% end %>
         </div>
         <div class="map-item" id="map8">
@@ -180,7 +180,7 @@
         <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact13 } %>
 
         <%# 武汉 %>
-        <%= render partial: 'contact_7', locals: { need_collapse_in: false } %>
+        <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact32 } %>
 
         <%# 成都 %>
         <%= render partial: 'contact', locals: { need_collapse_in: false, map_contact: @contact5 } %>
