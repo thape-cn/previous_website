@@ -4,7 +4,7 @@
 <br>
 
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-12">
     <%= form_for @person, url: admin_person_path(id: @person.id), html: { multipart: true } do |f| %>
       <%#= render 'admin/shared/error_messages', object: @info %>
 
@@ -24,13 +24,17 @@
       </div>
       <hr>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <%= f.label :avatar, "列表照片上传" %>
           <%= f.file_field :avatar %>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <%= f.label :photo, "内页照片上传" %>
           <%= f.file_field :photo %>
+        </div>
+        <div class="col-md-4">
+          <%= f.label :belong_area, "所属区域" %>
+          <%= f.select :belong_area, options_for_select(Person.belong_areas, selected = @person.belong_area), { include_blank: '全国' }, class: 'form-control' %>
         </div>
       </div>
       <hr>

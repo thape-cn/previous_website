@@ -7,6 +7,10 @@ class Person < ApplicationRecord
 
   before_create :set_new_position
 
+  def self.belong_areas
+    %w[上海 北京 杭州]
+  end
+
   private
 
   def set_new_position
