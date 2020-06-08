@@ -33,8 +33,9 @@
           <%= f.file_field :photo %>
         </div>
         <div class="col-md-4">
-          <%= f.label :belong_area, "所属区域" %>
-          <%= f.select :belong_area, options_for_select(Person.belong_areas, selected = @person.belong_area), { include_blank: '全国' }, class: 'form-control' %>
+          <%= f.label :cities_ids, "所属区域" %>
+          <%= f.select :cities_ids, options_from_collection_for_select(City.all, :id, :name, { selected: @person.cities_ids }),
+            { name: 'person[cities_ids][]' }, multiple: true, size: 7, class: 'form-control' %>
         </div>
       </div>
       <hr>
