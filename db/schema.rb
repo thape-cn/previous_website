@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_28_052920) do
+ActiveRecord::Schema.define(version: 2020_06_08_055501) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -53,6 +53,13 @@ ActiveRecord::Schema.define(version: 2020_05_28_052920) do
     t.string "seo_title"
     t.string "seo_keywords"
     t.string "seo_description"
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.string "china_area_name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "homes", force: :cascade do |t|
@@ -227,6 +234,10 @@ ActiveRecord::Schema.define(version: 2020_05_28_052920) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "tianhua2019s", force: :cascade do |t|
+     t.string "do_not_remove_which_will_break_test"
+   end
 
   create_table "users", force: :cascade do |t|
     t.string "name"
