@@ -80,6 +80,15 @@ Rails.application.routes.draw do
         delete :destory_picture
       end
     end
+    resources :works do
+      member do
+        patch :top
+        patch :bottom
+        patch :up
+        patch :down
+        delete :destory_picture
+      end
+    end
     resources :infos do
       member do
         patch :top

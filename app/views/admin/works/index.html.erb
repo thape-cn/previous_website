@@ -1,0 +1,36 @@
+<h3>天华作品列表</h3>
+
+<br>
+
+<%= link_to '创建作品', new_admin_work_path, class: "btn btn-primary" %>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h4>作品名称</h4></th>
+      <th><h4>专业分类</h4></th>
+      <th><h4>相关市场</h4></th>
+      <th colspan="2"><h4>编辑</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @works.each do |work| %>
+      <tr>
+        <td><%= link_to work.project_name, admin_work_path(work) %></td>
+        <td><span class="label label-info"><%=  %></span></td>
+        <td><span class="label label-info"><%=  %></span></td>
+        <td>
+          <%= link_to fa_icon("long-arrow-up"), top_admin_work_path(work), method: :patch %>
+          <%= link_to fa_icon("arrow-up"), up_admin_work_path(work), method: :patch %>
+          <%= link_to fa_icon("arrow-down"), down_admin_work_path(work), method: :patch %>
+          <%= link_to fa_icon("long-arrow-down"), bottom_admin_work_path(work), method: :patch %>
+          <%= link_to fa_icon("pencil-square-o"), edit_admin_work_path(work) %>
+          <%= link_to fa_icon("trash"), admin_work_path(work), method: :delete, data: { confirm: '确认删除?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @works %>
