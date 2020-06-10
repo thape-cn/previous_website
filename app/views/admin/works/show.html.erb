@@ -4,6 +4,59 @@
 
 <%= render partial: 'work_detail' -%>
 
+<div class="row">
+  <div class="col-md-5">
+    <p>设计完成时间</p>
+  </div>
+  <div class="col-md-7">
+    <p><%= @work.design_completion %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <h6>竣工时间</h6>
+  </div>
+  <div class="col-md-7">
+    <h6><%= @work.construction_completion %></h6>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <p>所在城市</p>
+  </div>
+  <div class="col-md-7">
+    <p><%= @work.city.name %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <h6>用地面积</h6>
+  </div>
+  <div class="col-md-7">
+    <h6><%= @work.site_area %></h6>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <p>规划面积</p>
+  </div>
+  <div class="col-md-7">
+    <p><%= @work.planning_area %></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <h6>建筑面积</h6>
+  </div>
+  <div class="col-md-7">
+    <h6><%= @work.architecture_area %></h6>
+  </div>
+</div>
 <% I18n.locale = :en %>
 
 <%= render partial: 'work_detail' -%>
