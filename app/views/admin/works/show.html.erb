@@ -1,5 +1,32 @@
 <p><%= link_to '返回', admin_works_path %></p>
 
+<div class="row">
+  <div class="col-md-5">
+    <h4>大类别</h4>
+  </div>
+  <div class="col-md-7">
+    <h4>
+      <% @work.project_types.collect(&:cn_name).each do |project_type_name| %>
+        <span class="label label-info"><%= project_type_name %></span>
+      <% end %>
+    </h4>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-5">
+    <h4>小类别</h4>
+  </div>
+  <div class="col-md-7">
+    <h4>
+      <% @work.residential_types.collect(&:cn_name).each do |residential_type_name| %>
+        <span class="label label-info"><%= residential_type_name %></span>
+      <% end %>
+    </h4>
+  </div>
+</div>
+
+
 <% I18n.locale = :cn %>
 
 <%= render partial: 'work_detail' -%>
@@ -27,7 +54,7 @@
     <p>所在城市</p>
   </div>
   <div class="col-md-7">
-    <p><%= @work.city.name %></p>
+    <p><span class="label label-info"><%= @work.city.name %></span></p>
   </div>
 </div>
 
