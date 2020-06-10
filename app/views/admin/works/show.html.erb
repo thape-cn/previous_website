@@ -1,0 +1,9 @@
+<p><%= link_to '返回', admin_works_path %></p>
+
+<% I18n.locale = :cn %>
+
+<%= render partial: 'work_detail' -%>
+
+<% I18n.locale = :en %>
+
+<%= render partial: 'work_detail' -%>
