@@ -1,0 +1,80 @@
+<%= link_to '返回', admin_works_path %>
+
+<h3>天华作品-修改</h3>
+<hr>
+
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for @work, url: admin_work_path(@work), html: { multipart: true } do |f| %>
+
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :project_name, "项目名称" %>
+          <%= f.text_field :project_name, class: 'form-control' %>
+        </div>
+        <div class="col-md-4">
+          <%= f.label :design_completion, "设计完成时间" %>
+          <%= f.text_field :design_completion, class: 'form-control' %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :client, "客户名称" %>
+          <%= f.text_field :client, class: 'form-control' %>
+        </div>
+        <div class="col-md-4">
+          <%= f.label :construction_completion, "竣工时间" %>
+          <%= f.text_field :construction_completion, class: 'form-control' %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :services, "服务范围" %>
+          <%= f.text_field :services, class: 'form-control' %>
+        </div>
+        <div class="col-md-4">
+          <%= f.label :city_id, "所在城市" %>
+          <%= f.select :city_id, City.all.collect { |p| [ p.name, p.id ] }, { include_blank: true }, { class: "form-control" } %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :team, "设计团队" %>
+          <%= f.text_field :team, class: 'form-control' %>
+        </div>
+        <div class="col-md-4">
+          <%= f.label :site_area, "用地面积" %>
+          <%= f.text_field :site_area, class: 'form-control' %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :cooperation, "合作单位" %>
+          <%= f.text_field :cooperation, class: 'form-control' %>
+        </div>
+        <div class="col-md-4">
+          <%= f.label :planning_area, "规划面积" %>
+          <%= f.text_field :planning_area, class: 'form-control' %>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-8">
+          <%= f.label :awards, "获奖" %>
+          <%= f.text_area :awards, class: 'form-control', rows: "9" %>
+        </div>
+        <div class="col-md-4">
+          <%= f.label :architecture_area, "建筑面积" %>
+          <%= f.text_field :architecture_area, class: 'form-control' %>
+        </div>
+      </div>
+      <br>
+      <%= f.submit "修改作品", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
