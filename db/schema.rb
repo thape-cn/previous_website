@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_09_082140) do
+ActiveRecord::Schema.define(version: 2020_06_10_090334) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -313,6 +313,8 @@ ActiveRecord::Schema.define(version: 2020_06_09_082140) do
     t.integer "architecture_area"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "snapshot_jpg"
+    t.string "snapshot_webp"
     t.index ["city_id"], name: "index_works_on_city_id"
   end
 

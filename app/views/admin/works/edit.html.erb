@@ -19,6 +19,20 @@
       </div>
       <br>
       <div class="row">
+        <div class="col-md-6">
+          <%= f.label :snapshot_jpg, "作品照片上传（JPG）" %>
+          <br />
+          <%= image_tag(@work.snapshot_jpg.url, class: 'admin-preview') if @work.snapshot_jpg_identifier.present? %>
+          <%= f.file_field :snapshot_jpg %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :snapshot_webp, "作品照片上传（WEBP）" %>
+          <br />
+          <%= image_tag(@work.snapshot_webp.url, class: 'admin-preview') if @work.snapshot_webp_identifier.present? %>
+          <%= f.file_field :snapshot_webp %>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-md-8">
           <%= f.label :client, "客户名称" %>
           <%= f.text_field :client, class: 'form-control' %>
