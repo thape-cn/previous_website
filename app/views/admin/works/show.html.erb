@@ -26,6 +26,21 @@
   </div>
 </div>
 
+<div class="row">
+    <div class="col-sm-6">
+      <p><%= @work.snapshot_jpg.url %></p>
+      <%= image_tag @work.snapshot_jpg.url, style: "width: 100%;" %>
+    </div>
+    <div class="col-sm-6">
+      <% if @work.snapshot_webp.present? %>
+        <p><%= @work.snapshot_webp.url %></p>
+        <%= image_tag(@work.snapshot_webp.url, style: "width: 100%;") %>
+      <% else %>
+        <p>没有Webp格式</p>
+      <% end %>
+    </div>
+</div>
+
 <% I18n.locale = :cn %>
 
 <%= render partial: 'work_detail' -%>
