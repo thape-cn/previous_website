@@ -26,7 +26,6 @@
   </div>
 </div>
 
-
 <% I18n.locale = :cn %>
 
 <%= render partial: 'work_detail' -%>
@@ -87,3 +86,22 @@
 <% I18n.locale = :en %>
 
 <%= render partial: 'work_detail' -%>
+
+
+<% @work.work_pictures.each do |work_picture| %>
+  <div class="row">
+      <div class="col-sm-6">
+        <p><%= work_picture.album_jpg.url %></p>
+        <%= image_tag work_picture.album_jpg.url, style: "width: 100%;" %>
+      </div>
+      <div class="col-sm-6">
+        <% if work_picture.album_webp.present? %>
+          <p><%= work_picture.album_webp.url %></p>
+          <%= image_tag(work_picture.album_webp.url, style: "width: 100%;") %>
+        <% else %>
+          <p>没有Webp格式</p>
+        <% end %>
+      </div>
+  </div>
+<% end %>
+
