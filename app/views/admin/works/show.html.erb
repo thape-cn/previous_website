@@ -28,8 +28,12 @@
 
 <div class="row">
     <div class="col-sm-6">
-      <p><%= @work.snapshot_jpg.url %></p>
-      <%= image_tag @work.snapshot_jpg.url, style: "width: 100%;" %>
+      <% if @work.snapshot_jpg.present? %>
+        <p><%= @work.snapshot_jpg.url %></p>
+        <%= image_tag @work.snapshot_jpg.url, style: "width: 100%;" %>
+      <% else %>
+        <p>连JPG格式也没有！</p>
+      <% end %>
     </div>
     <div class="col-sm-6">
       <% if @work.snapshot_webp.present? %>
