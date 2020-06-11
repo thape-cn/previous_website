@@ -2,7 +2,7 @@ module Admin
   class WorksController < Admin::ApplicationController
     before_action :logged_in_user
 
-    before_action :set_work, only: [:show, :edit, :update, :destroy, :top, :bottom, :up, :down]
+    before_action :set_work, only: [:show, :edit, :update, :destroy, :top, :bottom, :up, :down, :destory_picture]
 
     def index
       @works = Work.order(id: :asc).page(params[:page]).per(params[:per_page])
@@ -64,6 +64,11 @@ module Admin
         work.update(position: index + 1)
       end
       redirect_to admin_works_path, notice: '置顶成功！'
+    end
+
+    def destory_picture
+      @work.work_pictures.find(params[:work_picture_id]).destroy
+      @div_id_of_picture = "admin-work-pictures-preview-#{@work.id}-#{params[:work_picture_id]}"
     end
 
     def bottom

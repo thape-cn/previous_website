@@ -87,12 +87,12 @@
         </div>
       </div>
       <%= f.fields_for :work_pictures do |p| %>
-        <div class="row">
+        <div class="row" id="<%= "admin-work-pictures-preview-#{f.object.id}-#{p.object.id}" -%>">
           <div class="col-md-6">
-            <div class="field" id="<%= "admin-image-preview-jpg-#{f.object.id}-#{p.object.id}" -%>">
+            <div class="field">
               <% if p.object.album_jpg_identifier.present? %>
                 <%= image_tag(p.object.album_jpg.url, class: 'admin-preview') %>
-                <%= link_to destory_jpg_admin_work_path(f.object, work_picture_id: p.object.id), remote: true, method: :delete do %>
+                <%= link_to destory_picture_admin_work_path(f.object, work_picture_id: p.object.id), remote: true, method: :delete do %>
                   <i class="fa fa-times" aria-hidden="true"></i>
                 <% end %>
               <% else %>
@@ -105,9 +105,6 @@
             <div class="field" id="<%= "admin-image-preview-webp-#{f.object.id}-#{p.object.id}" -%>">
               <% if p.object.album_webp_identifier.present? %>
                 <%= image_tag(p.object.album_webp.url, class: 'admin-preview') %>
-                <%= link_to destory_webp_admin_work_path(f.object, work_picture_id: p.object.id), remote: true, method: :delete do %>
-                  <i class="fa fa-times" aria-hidden="true"></i>
-                <% end %>
               <% else %>
                 <%= p.label :album_webp, "案例照片上传 - 多选" %>
                 <%= p.file_field :album_webp, :multiple => true, name: "work_pictures[album_webp][]" %>
