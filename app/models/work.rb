@@ -14,4 +14,24 @@ class Work < ApplicationRecord
   mount_uploader :snapshot_webp, WebpUploader
 
   translates :project_name, :client, :services, :team, :cooperation, :awards
+
+  def project_types_ids
+    @_project_types_ids ||= project_types.pluck(:id)
+  end
+
+  def project_types_ids=(values)
+    select_values = values.reject(&:blank?).map(&:to_i)
+    if new_record?
+      (select_values - project_types_ids).each do |to_new_id|
+        work_project_types.build(project_type_id: to_new_id)
+      end
+    else
+      (project_types_ids - select_values).each do |to_destroy_id|
+        work_project_types.find_by(project_type_id: to_destroy_id).destroy
+      end
+      (select_values - project_types_ids).each do |to_add_id|
+        work_project_types.create(project_type_id: to_add_id)
+      end
+    end
+  end
 end

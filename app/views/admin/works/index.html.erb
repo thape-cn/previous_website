@@ -18,7 +18,11 @@
     <% @works.each do |work| %>
       <tr>
         <td><%= link_to work.project_name, admin_work_path(work) %></td>
-        <td><span class="label label-info"><%=  %></span></td>
+        <td>
+          <% work.project_types.collect(&:cn_name).each do |project_type_name| %>
+            <span class="label label-info"><%= project_type_name %></span>
+          <% end %>
+        </td>
         <td><span class="label label-info"><%=  %></span></td>
         <td>
           <%= link_to fa_icon("long-arrow-up"), top_admin_work_path(work), method: :patch %>

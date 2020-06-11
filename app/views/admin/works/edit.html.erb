@@ -17,7 +17,13 @@
           <%= f.text_field :design_completion, class: 'form-control' %>
         </div>
       </div>
-      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :project_types_ids, "所属区域" %>
+          <%= f.select :project_types_ids, options_from_collection_for_select(ProjectType.all, :id, :cn_name, { selected: @work.project_types_ids }),
+            { name: 'work[project_types_ids][]' }, multiple: true, size: 7, class: 'form-control' %>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-6">
           <%= f.label :snapshot_jpg, "作品照片上传（JPG）" %>
