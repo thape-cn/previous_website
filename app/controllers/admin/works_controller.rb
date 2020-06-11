@@ -16,6 +16,7 @@ module Admin
     end
 
     def edit
+      @work.work_pictures.build
     end
 
     def create
@@ -33,6 +34,12 @@ module Admin
     def update
       respond_to do |format|
         if @work.update(params[:work].permit!)
+          if params[:work_pictures].present?
+            params[:work_pictures]['album_jpg'].each_with_index do |jpg, index|
+              webp = params[:work_pictures]['album_webp'][index]
+              @work.work_pictures.create!(album_jpg: jpg, album_webp: webp, work_id: @work.id)
+            end
+          end
           format.html { redirect_to admin_works_path }
         else
           format.html { render :edit }

@@ -7,6 +7,9 @@ class Work < ApplicationRecord
 
   belongs_to :city
 
+  has_many :work_pictures
+  accepts_nested_attributes_for :work_pictures
+
   mount_uploader :snapshot_jpg, JpgUploader
   mount_uploader :snapshot_webp, WebpUploader
 

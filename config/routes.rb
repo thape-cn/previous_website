@@ -86,7 +86,8 @@ Rails.application.routes.draw do
         patch :bottom
         patch :up
         patch :down
-        delete :destory_picture
+        delete :destory_jpg
+        delete :destory_webp
       end
     end
     resources :infos do

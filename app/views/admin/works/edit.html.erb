@@ -86,6 +86,36 @@
           <%= f.text_field :architecture_area, class: 'form-control' %>
         </div>
       </div>
+      <%= f.fields_for :work_pictures do |p| %>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="field" id="<%= "admin-image-preview-jpg-#{f.object.id}-#{p.object.id}" -%>">
+              <% if p.object.album_jpg_identifier.present? %>
+                <%= image_tag(p.object.album_jpg.url, class: 'admin-preview') %>
+                <%= link_to destory_jpg_admin_work_path(f.object, work_picture_id: p.object.id), remote: true, method: :delete do %>
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                <% end %>
+              <% else %>
+                <%= p.label :album_jpg, "案例照片上传 - 多选" %>
+                <%= p.file_field :album_jpg, :multiple => true, name: "work_pictures[album_jpg][]" %>
+              <% end %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="field" id="<%= "admin-image-preview-webp-#{f.object.id}-#{p.object.id}" -%>">
+              <% if p.object.album_webp_identifier.present? %>
+                <%= image_tag(p.object.album_webp.url, class: 'admin-preview') %>
+                <%= link_to destory_webp_admin_work_path(f.object, work_picture_id: p.object.id), remote: true, method: :delete do %>
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                <% end %>
+              <% else %>
+                <%= p.label :album_webp, "案例照片上传 - 多选" %>
+                <%= p.file_field :album_webp, :multiple => true, name: "work_pictures[album_webp][]" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      <% end %>
       <br>
       <%= f.submit "修改作品", class: "btn btn-primary" %>
     <% end %>
