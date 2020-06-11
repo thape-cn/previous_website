@@ -36,7 +36,9 @@ module Admin
         if @work.update(params[:work].permit!)
           if params[:work_pictures].present?
             params[:work_pictures]['album_jpg'].each_with_index do |jpg, index|
-              webp = params[:work_pictures]['album_webp'][index]
+              webp = if params[:work_pictures]['album_webp'].present?
+                params[:work_pictures]['album_webp'][index]
+              end
               @work.work_pictures.create!(album_jpg: jpg, album_webp: webp, work_id: @work.id)
             end
           end
