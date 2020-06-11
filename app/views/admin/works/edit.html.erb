@@ -24,6 +24,11 @@
           <%= f.select :project_types_ids, options_from_collection_for_select(ProjectType.all, :id, :cn_name, { selected: @work.project_types_ids }),
             { name: 'work[project_types_ids][]' }, multiple: true, size: 7, class: 'form-control' %>
         </div>
+        <div class="col-md-6">
+          <%= f.label :residential_types_ids, "住宅类别" %>
+          <%= f.select :residential_types_ids, options_from_collection_for_select(ResidentialType.all, :id, :cn_name, { selected: @work.residential_types_ids }),
+            { name: 'work[residential_types_ids][]' }, multiple: true, size: 7, class: 'form-control' %>
+        </div>
       </div>
       <br>
       <div class="row">

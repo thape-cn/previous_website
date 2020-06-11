@@ -34,4 +34,24 @@ class Work < ApplicationRecord
       end
     end
   end
+
+  def residential_types_ids
+    @_residential_types_ids ||= residential_types.pluck(:id)
+  end
+
+  def residential_types_ids=(values)
+    select_values = values.reject(&:blank?).map(&:to_i)
+    if new_record?
+      (select_values - residential_types_ids).each do |to_new_id|
+        work_residential_types.build(residential_type_id: to_new_id)
+      end
+    else
+      (residential_types_ids - select_values).each do |to_destroy_id|
+        work_residential_types.find_by(residential_type_id: to_destroy_id).destroy
+      end
+      (select_values - residential_types_ids).each do |to_add_id|
+        work_residential_types.create(residential_type_id: to_add_id)
+      end
+    end
+  end
 end

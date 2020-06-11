@@ -9,7 +9,7 @@
     <tr>
       <th><h4>作品名称</h4></th>
       <th><h4>大类别</h4></th>
-      <th><h4>小类别</h4></th>
+      <th><h4>住宅类别</h4></th>
       <th colspan="2"><h4>编辑</h4></th>
     </tr>
   </thead>
@@ -23,7 +23,11 @@
             <span class="label label-info"><%= project_type_name %></span>
           <% end %>
         </td>
-        <td><span class="label label-info"><%=  %></span></td>
+        <td>
+          <% work.residential_types.collect(&:cn_name).each do |residential_type_name| %>
+            <span class="label label-info"><%= residential_type_name %></span>
+          <% end %>
+        </td>
         <td>
           <%= link_to fa_icon("long-arrow-up"), top_admin_work_path(work), method: :patch %>
           <%= link_to fa_icon("arrow-up"), up_admin_work_path(work), method: :patch %>
