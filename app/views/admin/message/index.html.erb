@@ -1,0 +1,27 @@
+<h3>客户留言</h3>
+
+<br>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h4>公司</h4></th>
+      <th><h4>姓名</h4></th>
+      <th><h4>联系方式</h4></th>
+      <th><h4>留言</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= message.company %></td>
+        <td><%= message.name %></td>
+        <td><%= message.contact_details %></td>
+        <td><%= message.message %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @messages %>
