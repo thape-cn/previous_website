@@ -13,8 +13,16 @@
           <%= f.text_field :project_name, class: 'form-control' %>
         </div>
         <div class="col-md-4">
-          <%= f.label :design_completion, "设计完成时间" %>
-          <%= f.text_field :design_completion, class: 'form-control' %>
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.label :design_completion, "设计完成时间" %>
+              <%= f.date_field :design_completion, class: 'form-control' %>
+            </div>
+            <div class="col-md-12">
+              <%= f.label :design_completion_lines, "设计完成时间（文本直接显示，空白则使用设计完成时间）" %>
+              <%= f.text_area :design_completion_lines, class: 'form-control', row: 3 %>
+            </div>
+          </div>
         </div>
       </div>
       <br>
@@ -49,18 +57,26 @@
       <div class="row">
         <div class="col-md-8">
           <%= f.label :client, "客户名称" %>
-          <%= f.text_field :client, class: 'form-control' %>
+          <%= f.text_area :client, class: 'form-control', rows: 3 %>
         </div>
         <div class="col-md-4">
-          <%= f.label :construction_completion, "竣工时间" %>
-          <%= f.text_field :construction_completion, class: 'form-control' %>
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.label :construction_completion, "竣工时间" %>
+              <%= f.date_field :construction_completion, class: 'form-control' %>
+            </div>
+            <div class="col-md-12">
+              <%= f.label :construction_completion_lines, "竣工时间（文本直接显示，空白则使用竣工时间）" %>
+              <%= f.text_area :construction_completion_lines, class: 'form-control', row: 3 %>
+            </div>
+          </div>
         </div>
       </div>
       <br>
       <div class="row">
         <div class="col-md-8">
           <%= f.label :services, "服务范围" %>
-          <%= f.text_field :services, class: 'form-control' %>
+          <%= f.text_area :services, class: 'form-control', rows: 3 %>
         </div>
         <div class="col-md-4">
           <%= f.label :city_id, "所在城市" %>
@@ -71,7 +87,7 @@
       <div class="row">
         <div class="col-md-8">
           <%= f.label :team, "设计团队" %>
-          <%= f.text_field :team, class: 'form-control' %>
+          <%= f.text_area :team, class: 'form-control', rows: 3 %>
         </div>
         <div class="col-md-4">
           <%= f.label :site_area, "用地面积" %>
@@ -82,7 +98,7 @@
       <div class="row">
         <div class="col-md-8">
           <%= f.label :cooperation, "合作单位" %>
-          <%= f.text_field :cooperation, class: 'form-control' %>
+          <%= f.text_area :cooperation, class: 'form-control', rows: 3 %>
         </div>
         <div class="col-md-4">
           <%= f.label :planning_area, "规划面积" %>
@@ -100,7 +116,10 @@
             <%= f.label :architecture_area, "建筑面积" %>
             <%= f.text_field :architecture_area, class: 'form-control' %>
           </div>
-          <br />
+          <div class="col-md-12">
+            <%= f.label :architecture_area_lines, "建筑面积（文本直接显示，空白则使用建筑面积）" %>
+            <%= f.text_area :architecture_area_lines, class: 'form-control', rows: 3 %>
+          </div>
           <br />
           <div class="col-md-12">
             <%= f.check_box :published, class: 'form-control' %>

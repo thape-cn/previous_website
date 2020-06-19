@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_18_010124) do
+ActiveRecord::Schema.define(version: 2020_06_19_011455) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -333,6 +333,9 @@ ActiveRecord::Schema.define(version: 2020_06_18_010124) do
     t.string "team"
     t.string "cooperation"
     t.string "awards"
+    t.string "design_completion_lines"
+    t.string "construction_completion_lines"
+    t.string "architecture_area_lines"
     t.index ["locale"], name: "index_work_translations_on_locale"
     t.index ["work_id"], name: "index_work_translations_on_work_id"
   end
