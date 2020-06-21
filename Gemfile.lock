@@ -131,10 +131,10 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.9.0)
     execjs (2.7.0)
-    ffi (1.11.3)
-    ffi (1.11.3-java)
-    ffi (1.11.3-x64-mingw32)
-    ffi (1.11.3-x86-mingw32)
+    ffi (1.13.1)
+    ffi (1.13.1-java)
+    ffi (1.13.1-x64-mingw32)
+    ffi (1.13.1-x86-mingw32)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -378,7 +378,7 @@ DEPENDENCIES
   capybara
   carrierwave
   carrierwave-aliyun
-  ffi (~> 1.11.3)
+  ffi
   font-awesome-rails
   globalize
   http
