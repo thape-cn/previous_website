@@ -1,7 +1,7 @@
 module Admin
   class PeopleController < Admin::ApplicationController
     before_action :logged_in_user
-    before_action :set_person, only: [:show, :edit, :update, :destroy, :top, :bottom, :up, :down]
+    before_action :set_person, only: [:show, :edit, :update, :destroy, :destory_city_people, :top, :bottom, :up, :down]
 
     def index
       @people = Person.with_translations('cn').all.order(position: :asc)
@@ -49,6 +49,12 @@ module Admin
       end
     end
 
+    def destory_city_people
+      city_person = @person.city_people.find_by!(id: params[:city_people_id])
+      city_person.destroy
+      redirect_to edit_admin_person_path(id: @person.id), notice: '城市职位已经删除！'
+    end
+
     def top
       @person.update(position: 0)
       Person.where.not(id: @person.id).order(position: :asc).pluck(:id).each_with_index do |id, index|
@@ -66,7 +72,7 @@ module Admin
       @person.update(position: Person.count - 1)
       redirect_to admin_people_url, notice: '置底成功！'
     end
-    
+
     def up
       up_position = @person.position - 1
       return redirect_to admin_people_url, notice: '已经最高了，你不要逼我！' if up_position < 0

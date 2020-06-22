@@ -65,6 +65,7 @@ Rails.application.routes.draw do
         patch :bottom
         patch :up
         patch :down
+        delete :destory_city_people
       end
     end
     resources :seos, only: [:show, :edit, :update]

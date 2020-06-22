@@ -55,6 +55,9 @@
             <div class="col-md-6">
               <%= p.label :city_title, "属于城市：#{p.object.city.name} 的职位名：" %>
               <%= p.text_field :city_title, class: 'form-control-inline' %>
+              <%= link_to destory_city_people_admin_person_path(f.object, city_people_id: p.object.id), remote: true, method: :delete, data: { confirm: '确认删除所属城市及其职位?' } do %>
+                <i class="fa fa-times" aria-hidden="true"></i>
+              <% end %>
             </div>
         <% end %>
         <div class="col-md-12">
