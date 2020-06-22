@@ -1,5 +1,6 @@
 class Person < ApplicationRecord
   has_many :city_people, dependent: :destroy
+  accepts_nested_attributes_for :city_people
   has_many :cities, through: :city_people
 
   translates :name, :title, :introduce
