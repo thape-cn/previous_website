@@ -1,6 +1,6 @@
 class DesigningController < ApplicationController
   def index
-    @people = Person.where(leaving_date: nil).where(category: 2)
+    @people = Person.where(leaving_date: nil).where(category: 2).where(in_old_web: true)
       .order(position: :asc).page(params[:page]).per(params[:per_page])
   end
 

@@ -1,6 +1,6 @@
 class ManagementController < ApplicationController
   def index
-    @people = Person.where(leaving_date: nil).where(category: 1)
+    @people = Person.where(leaving_date: nil).where(category: 1).where(in_old_web: true)
       .order(position: :asc).page(params[:page]).per(params[:per_page])
   end
 
