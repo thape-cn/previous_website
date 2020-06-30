@@ -22,9 +22,6 @@ class Person < ApplicationRecord
         city_people.build(city_id: to_new_id)
       end
     else
-      (cities_ids - select_values).each do |to_destroy_id|
-        city_people.find_by(city_id: to_destroy_id).destroy
-      end
       (select_values - cities_ids).each do |to_add_id|
         city_people.create(city_id: to_add_id)
       end
