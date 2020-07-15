@@ -25,10 +25,16 @@
       <hr>
       <div class="row">
         <div class="col-md-4">
+          <% if @person.avatar.present? %>
+            <%= image_tag @person.avatar.url, width: '200px', style: 'display: block' %>
+          <% end %>
           <%= f.label :avatar, "列表照片上传" %>
           <%= f.file_field :avatar %>
         </div>
         <div class="col-md-4">
+          <% if @person.photo.present? %>
+            <%= image_tag @person.photo.url, width: '200px', style: 'display: block' %>
+          <% end %>
           <%= f.label :photo, "内页照片上传" %>
           <%= f.file_field :photo %>
         </div>
