@@ -5,7 +5,7 @@ module Admin
     before_action :set_work, only: [:show, :edit, :update, :destroy, :top, :bottom, :up, :down, :destory_picture]
 
     def index
-      @works = Work.order(id: :asc).page(params[:page]).per(params[:per_page])
+      @works = Work.order(position: :asc).page(params[:page]).per(params[:per_page])
     end
 
     def show
