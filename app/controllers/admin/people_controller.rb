@@ -55,6 +55,20 @@ module Admin
       redirect_to edit_admin_person_path(id: @person.id), notice: '城市职位已经删除！'
     end
 
+    def update_positions
+      to_position = params[:to_position].to_i
+      people_ids = params[:check_ids]
+
+      rest_of_people_id = Person.where('position >= ?', to_position).pluck(:id)
+      Person.where(id: rest_of_people_id).each_with_index do |person, index|
+        person.update(position: person.position + people_ids.length + index + 1)
+      end
+      move_people = Person.where(id: people_ids).each_with_index do |person, index|
+        person.update(position: to_position + index)
+      end
+      redirect_to admin_people_path, notice: '移动成功！'
+    end
+
     def top
       @person.update(position: 0)
       Person.where.not(id: @person.id).order(position: :asc).pluck(:id).each_with_index do |id, index|

@@ -6,43 +6,52 @@
 
 <br>
 
-
-<%= form_tag admin_people_path, method: :get, class: 'form-inline' do -%>
-  <%= link_to '创建管理者', new_admin_person_path, class: "btn btn-primary" %>
-  &nbsp;&nbsp;&nbsp;
-  <div class="form-group">
-    <label class="mr-1" for="text-name">姓名：</label>
-    <%= text_field_tag 'name', params[:name], class: 'form-control', id: 'text-name' %>
+<div class="row">
+  <div class="col-md-6">
+    <%= form_tag admin_people_path, method: :get, class: 'form-inline' do -%>
+      <%= link_to '创建管理者', new_admin_person_path, class: "btn btn-primary" %>
+      &nbsp;&nbsp;&nbsp;
+      <div class="form-group">
+        <label class="mr-1" for="text-name">姓名：</label>
+        <%= text_field_tag 'name', params[:name], class: 'form-control', id: 'text-name' %>
+      </div>
+      <%= submit_tag '搜索', class: 'btn btn-secondary' %>
+    <% end -%>
   </div>
-  <%= submit_tag '搜索', class: 'btn btn-secondary' %>
-<% end -%>
-
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th><h4>分组</h4></th>
-      <th><h4>姓名</h4></th>
-      <th><h4>职位</h4></th>
-      <th colspan="2"><h4>编辑</h4></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @people.each do |person| %>
+  <div class="col-md-6">
+<%= form_with url: update_positions_admin_people_path, class: 'form-inline', local: true do |f| %>
+    <label>移动选择的项目到位置：</label>
+    <%= time_field_tag 'to_position', nil, class: 'form-control' %>
+    <%= submit_tag '移动', class: 'btn btn-secondary' %>
+  </div>
+  <table class="table table-hover">
+    <thead>
       <tr>
-        <td><%= link_to full_category(person.category) %></td>
-        <td><%= link_to person.name, admin_person_path(person) %></td>
-        <td><%= link_to person.title, admin_person_path(person) %></td>
-        <td>
-          <%= link_to fa_icon("long-arrow-up"), top_admin_person_path(person), method: :patch %>
-          <%= link_to fa_icon("arrow-up"), up_admin_person_path(person), method: :patch %>
-          <%= link_to fa_icon("arrow-down"), down_admin_person_path(person), method: :patch %>
-          <%= link_to fa_icon("long-arrow-down"), bottom_admin_person_path(person), method: :patch %>
-          <%= link_to fa_icon("pencil-square-o"), edit_admin_person_path(person) %>
-          <%= link_to fa_icon("trash"), admin_person_path(person), method: :delete, data: { confirm: '确定删除?' } %>
-        </td>
+        <th><h4>位置</h4></th>
+        <th><h4>分组</h4></th>
+        <th><h4>姓名</h4></th>
+        <th><h4>职位</h4></th>
+        <th colspan="2"><h4>编辑</h4></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @people.each do |person| %>
+        <tr>
+          <td><%= check_box_tag 'check_ids[]', person.id %> <%= person.position %></td>
+          <td><%= link_to full_category(person.category) %></td>
+          <td><%= link_to person.name, admin_person_path(person) %></td>
+          <td><%= link_to person.title, admin_person_path(person) %></td>
+          <td>
+            <%= link_to fa_icon("long-arrow-up"), top_admin_person_path(person), method: :patch %>
+            <%= link_to fa_icon("arrow-up"), up_admin_person_path(person), method: :patch %>
+            <%= link_to fa_icon("arrow-down"), down_admin_person_path(person), method: :patch %>
+            <%= link_to fa_icon("long-arrow-down"), bottom_admin_person_path(person), method: :patch %>
+            <%= link_to fa_icon("pencil-square-o"), edit_admin_person_path(person) %>
+            <%= link_to fa_icon("trash"), admin_person_path(person), method: :delete, data: { confirm: '确定删除?' } %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
 

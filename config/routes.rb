@@ -60,6 +60,9 @@ Rails.application.routes.draw do
     resources :home, only: [:show, :edit, :update]
     resources :about, only: [:show, :edit, :update]
     resources :people do
+      collection do
+        post :update_positions
+      end
       member do
         patch :top
         patch :bottom
