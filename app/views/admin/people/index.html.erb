@@ -21,7 +21,7 @@
   <div class="col-md-6">
 <%= form_with url: update_positions_admin_people_path, class: 'form-inline', local: true do |f| %>
     <label>移动选择的项目到位置：</label>
-    <%= time_field_tag 'to_position', nil, class: 'form-control' %>
+    <%= text_field_tag 'to_position', nil, class: 'form-control' %>
     <%= submit_tag '移动', class: 'btn btn-secondary' %>
   </div>
   <table class="table table-hover">
