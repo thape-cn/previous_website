@@ -11,6 +11,7 @@
   <thead>
     <tr>
       <th><h4>主题</h4></th>
+      <th><h4>创建日期</h4></th>
       <th><h4>分类</h4></th>
       <th><h4>编辑</h4></th>
     </tr>
@@ -20,6 +21,7 @@
     <% @infos.each do |info| %>
       <tr>
         <td><%= link_to info.title, admin_info_path(info) %></td>
+        <td><%= info.created_at.to_date %></td>
         <td><%= news_category(info.category) %></td>
         <td>
           <%= link_to fa_icon("long-arrow-up"), top_admin_info_path(info), method: :patch %>

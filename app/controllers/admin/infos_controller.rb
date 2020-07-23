@@ -7,7 +7,7 @@ module Admin
     # after_action :save_alt
 
     def index
-      @infos = Info.order(position: :asc)
+      @infos = Info.order(created_at: :desc)
     end
 
     def show
