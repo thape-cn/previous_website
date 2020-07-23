@@ -1,0 +1,2 @@
+class TailHome < ApplicationRecord
+end
