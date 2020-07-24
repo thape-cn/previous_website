@@ -1,0 +1,25 @@
+<h3>新首页信息修改</h3>
+<hr>
+
+<%= form_for @home, url: admin_tail_home_path(@home), html: { multipart: true } do |f| %>
+  <%= render 'admin/shared/error_messages', object: @home %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">首推新闻</div>
+        <div class="panel-body">
+          <p>
+            <%= f.label :hero_news_photo, "头条新闻图片" %> <small>尺寸W:1920*H:700像素</small>
+            <%= f.file_field :hero_news_photo %>
+          </p>
+          <p>
+            <%= f.label :hero_news_id, "新闻ID" %>
+            <%= f.text_field :hero_news_id, class: 'form-control' %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= f.submit "修改内容", class: "btn btn-primary" %>
+<% end %>
