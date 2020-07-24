@@ -1,8 +1,9 @@
 <h3>新首页信息修改</h3>
 <hr>
 
-<%= form_for @home, url: admin_tail_home_path(@home), html: { multipart: true } do |f| %>
+<%= form_for @home, url: admin_tail_home_path(@home, format: :html), html: { multipart: true } do |f| %>
   <%= render 'admin/shared/error_messages', object: @home %>
+
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
