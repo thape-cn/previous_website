@@ -73,6 +73,7 @@ Rails.application.routes.draw do
       end
     end
     resources :seos, only: [:show, :edit, :update]
+    resources :cities, except: [:destroy]
     resources :map_contacts, only: [:index, :edit, :update]
     resources :users, except: [:show, :edit, :update]
     resources :service_files, only: [:show, :edit, :update]
