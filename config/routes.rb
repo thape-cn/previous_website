@@ -58,6 +58,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root 'home#show', as: 'root'
     resources :home, only: [:show, :edit, :update]
+    resource :tail_home, only: [:edit, :update]
     resources :about, only: [:show, :edit, :update]
     resources :people do
       collection do
