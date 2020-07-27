@@ -1,0 +1,38 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<h3>新作品页 修改</h3>
+<hr>
+
+<%= form_for @work_type_page, url: admin_work_type_page_path, html: { multipart: true } do |f| %>
+  <%= render 'admin/shared/error_messages', object: @work_type_page %>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">居住</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.resdential_jpg.url, width: '500' if @work_type_page.resdential_jpg.present? %>
+              <p>
+                <%= f.label :resdential_jpg, "居住图片 JPG 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :resdential_jpg %>
+              </p>
+            </div>
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.resdential_webp.url, width: '500' if @work_type_page.resdential_webp.present? %>
+              <p>
+                <%= f.label :resdential_jpg, "居住图片 WebP 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :resdential_webp %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= f.submit "修改内容", class: "btn btn-primary" %>
+<% end %>
