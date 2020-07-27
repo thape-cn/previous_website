@@ -60,7 +60,7 @@
       <br>
       <hr>
 
-      <%= f.label :banner, "正文大图上传" %> <small>尺寸W:1000*H:500像素</small>
+      <%= f.label :banner, "正文头图上传" %> <small>尺寸W:1920*H:N像素（N建议为800以下）</small>
       <br>
       <% if f.object.banner_identifier.present? %>
         <%= image_tag(f.object.banner.url, class: 'admin-preview') %>

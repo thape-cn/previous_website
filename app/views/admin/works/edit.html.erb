@@ -41,13 +41,13 @@
       <br>
       <div class="row">
         <div class="col-md-6">
-          <%= f.label :snapshot_jpg, "作品照片上传（JPG）" %>
+          <%= f.label :snapshot_jpg, "作品封面页照片上传（JPG）" %> <small>尺寸W:900*H:600像素</small>
           <br />
           <%= image_tag(@work.snapshot_jpg.url, class: 'admin-preview') if @work.snapshot_jpg_identifier.present? %>
           <%= f.file_field :snapshot_jpg %>
         </div>
         <div class="col-md-6">
-          <%= f.label :snapshot_webp, "作品照片上传（WEBP）" %>
+          <%= f.label :snapshot_webp, "作品封面页照片上传（WEBP）" %> <small>尺寸W:900*H:600像素</small>
           <br />
           <%= image_tag(@work.snapshot_webp.url, class: 'admin-preview') if @work.snapshot_webp_identifier.present? %>
           <%= f.file_field :snapshot_webp %>
@@ -137,7 +137,7 @@
                   <i class="fa fa-times" aria-hidden="true"></i>
                 <% end %>
               <% else %>
-                <%= p.label :album_jpg, "案例照片上传 - 多选" %>
+                <%= p.label :album_jpg, "作品详情照片上传 - 多选" %> <small>尺寸W:1920*H:N像素（同一项目的N值需要相等）</small>
                 <%= p.file_field :album_jpg, :multiple => true, name: "work_pictures[album_jpg][]" %>
               <% end %>
             </div>
@@ -147,7 +147,7 @@
               <% if p.object.album_webp_identifier.present? %>
                 <%= image_tag(p.object.album_webp.url, class: 'admin-preview') %>
               <% else %>
-                <%= p.label :album_webp, "案例照片上传 - 多选" %>
+                <%= p.label :album_webp, "作品详情照片上传 - 多选" %> <small>尺寸W:1920*H:N像素（同一项目的N值需要相等）</small>
                 <%= p.file_field :album_webp, :multiple => true, name: "work_pictures[album_webp][]" %>
               <% end %>
             </div>
