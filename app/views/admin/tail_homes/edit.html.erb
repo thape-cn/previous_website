@@ -91,6 +91,37 @@
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
+        <div class="panel-heading">首页新闻</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-4">
+              <p>
+                <%= f.label :info_1_id, "最新新闻 1 ID" %>
+                <%= f.text_field :info_1_id %>
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <p>
+                <%= f.label :info_2_id, "最新新闻 2 ID" %>
+                <%= f.text_field :info_2_id %>
+              </p>
+            </div>
+            <div class="col-sm-4">
+              <p>
+                <%= f.label :info_3_id, "最新新闻 3 ID" %>
+                <%= f.text_field :info_3_id %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
         <div class="panel-heading">首推新闻</div>
         <div class="panel-body">
           <%= image_tag @home.hero_news_photo.url, width: '500' if @home.hero_news_photo.present? %>
