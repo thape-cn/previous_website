@@ -11,6 +11,62 @@
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
+        <div class="panel-heading">首页最新项目</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <%= image_tag @home.new_project_photo_1.url, width: '300' if @home.new_project_photo_1.present? %>
+              <p>
+                <%= f.label :new_project_photo_1, "最新项目 1" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.file_field :new_project_photo_1 %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.new_project_photo_2l.url, width: '300' if @home.new_project_photo_2l.present? %>
+              <p>
+                <%= f.label :new_project_photo_2l, "最新项目 2l" %> <small>尺寸W:880*H:1794像素</small>
+                <%= f.file_field :new_project_photo_2l %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.new_project_photo_3w.url, width: '300' if @home.new_project_photo_3w.present? %>
+              <p>
+                <%= f.label :new_project_photo_3w, "最新项目 3w" %> <small>尺寸W:1794*H:880像素</small>
+                <%= f.file_field :new_project_photo_3w %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.new_project_photo_4.url, width: '300' if @home.new_project_photo_4.present? %>
+              <p>
+                <%= f.label :new_project_photo_4, "最新项目 4" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.file_field :new_project_photo_4 %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.new_project_photo_5.url, width: '300' if @home.new_project_photo_5.present? %>
+              <p>
+                <%= f.label :new_project_photo_5, "最新项目 5" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.file_field :new_project_photo_5 %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.new_project_photo_6.url, width: '300' if @home.new_project_photo_6.present? %>
+              <p>
+                <%= f.label :new_project_photo_6, "最新项目 6" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.file_field :new_project_photo_6 %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr >
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
         <div class="panel-heading">首推新闻</div>
         <div class="panel-body">
           <%= image_tag @home.hero_news_photo.url, width: '500' if @home.hero_news_photo.present? %>
