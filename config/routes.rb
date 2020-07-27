@@ -87,6 +87,9 @@ Rails.application.routes.draw do
       end
     end
     resources :works do
+      collection do
+        post :update_positions
+      end
       member do
         patch :top
         patch :bottom

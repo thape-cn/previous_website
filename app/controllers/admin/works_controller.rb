@@ -5,7 +5,7 @@ module Admin
     before_action :set_work, only: [:show, :edit, :update, :destroy, :top, :bottom, :up, :down, :destory_picture]
 
     def index
-      @works = Work.order(position: :asc).page(params[:page]).per(params[:per_page])
+      @works = Work.order(position: :asc)
     end
 
     def show
@@ -55,6 +55,20 @@ module Admin
       respond_to do |format|
         format.html { redirect_to admin_works_path }
       end
+    end
+
+    def update_positions
+      to_position = params[:to_position].to_i
+      work_ids = params[:check_ids]
+
+      rest_of_works_id = Work.where('position >= ?', to_position).pluck(:id)
+      Work.where(id: rest_of_works_id).each_with_index do |work, index|
+        work.update(position: work.position + work_ids.length + index + 1)
+      end
+      move_people = Work.where(id: work_ids).each_with_index do |work, index|
+        work.update(position: to_position + index)
+      end
+      redirect_to admin_works_path, notice: '移动成功！'
     end
 
     def top
