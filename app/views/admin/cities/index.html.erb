@@ -15,6 +15,7 @@
       <th><h4>区域</h4></th>
       <th><h4>url_name</h4></th>
       <th><h4>公司名字</h4></th>
+      <th><h4>编辑</h4></th>
     </tr>
   </thead>
 
@@ -25,6 +26,9 @@
         <td><%= city.china_area_name %></td>
         <td><%= city.url_name %></td>
         <td><%= city.company_name %></td>
+        <td>
+          <%= link_to fa_icon("pencil-square-o"), edit_admin_city_path(city) %>
+        </td>
       </tr>
     <% end %>
   </tbody>

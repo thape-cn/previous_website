@@ -1,0 +1,41 @@
+<%= link_to '返回', admin_cities_path %>
+
+<h3>新官网城市-<%= @city.name -%>-编辑</h3>
+<hr>
+
+<div class="row">
+  <div class="col-md-8">
+    <%= form_for @city, url: admin_city_path(id: @city) do |f| %>
+      <%= render 'admin/shared/error_messages', object: @city %>
+
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :name, "城市名称" %>
+          <%= f.text_field :name, class: 'form-control' %>
+        </div>
+        <div class="col-md-6">
+          <%= f.label :china_area_name, "区域名称" %>
+          <%= f.text_field :china_area_name, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6">
+          <%= f.label :url_name, "URL name" %>
+          <%= f.text_field :url_name, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <%= f.label :company_name, "城市公司名称" %>
+          <%= f.text_field :company_name, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+
+      <%= f.submit "更新", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
