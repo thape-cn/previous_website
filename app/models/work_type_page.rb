@@ -1,0 +1,2 @@
+class WorkTypePage < ApplicationRecord
+end
