@@ -24,7 +24,7 @@
             <div class="col-md-6">
               <%= image_tag @work_type_page.resdential_webp.url, width: '500' if @work_type_page.resdential_webp.present? %>
               <p>
-                <%= f.label :resdential_jpg, "居住图片 WebP 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.label :resdential_webp, "居住图片 WebP 格式" %> <small>尺寸W:1920*H:700像素</small>
                 <%= f.file_field :resdential_webp %>
               </p>
             </div>
@@ -33,6 +33,115 @@
       </div>
     </div>
   </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">示范区</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.demonstration_zone_jpg.url, width: '500' if @work_type_page.demonstration_zone_jpg.present? %>
+              <p>
+                <%= f.label :demonstration_zone_jpg, "示范区 JPG 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :demonstration_zone_jpg %>
+              </p>
+            </div>
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.demonstration_zone_webp.url, width: '500' if @work_type_page.demonstration_zone_webp.present? %>
+              <p>
+                <%= f.label :demonstration_zone_webp, "示范区 WebP 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :demonstration_zone_webp %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">综合体/TOD</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.mixed_used_tod_jpg.url, width: '500' if @work_type_page.mixed_used_tod_jpg.present? %>
+              <p>
+                <%= f.label :mixed_used_tod_jpg, "综合体/TOD JPG 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :mixed_used_tod_jpg %>
+              </p>
+            </div>
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.mixed_used_tod_webp.url, width: '500' if @work_type_page.mixed_used_tod_webp.present? %>
+              <p>
+                <%= f.label :mixed_used_tod_webp, "综合体/TOD WebP 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :mixed_used_tod_webp %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">商业空间</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.commercial_jpg.url, width: '500' if @work_type_page.commercial_jpg.present? %>
+              <p>
+                <%= f.label :commercial_jpg, "商业空间图片 JPG 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :commercial_jpg %>
+              </p>
+            </div>
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.commercial_webp.url, width: '500' if @work_type_page.commercial_webp.present? %>
+              <p>
+                <%= f.label :commercial_webp, "商业空间图片 WebP 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :commercial_webp %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">超高层</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.supertall_jpg.url, width: '500' if @work_type_page.supertall_jpg.present? %>
+              <p>
+                <%= f.label :supertall_jpg, "超高层图片 JPG 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :supertall_jpg %>
+              </p>
+            </div>
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.supertall_webp.url, width: '500' if @work_type_page.supertall_webp.present? %>
+              <p>
+                <%= f.label :supertall_webp, "超高层图片 WebP 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :supertall_webp %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
 
   <%= f.submit "修改内容", class: "btn btn-primary" %>
 <% end %>
