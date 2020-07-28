@@ -8,59 +8,66 @@
 <%= form_for @about_page, url: admin_about_page_path, html: { multipart: true } do |f| %>
   <%= render 'admin/shared/error_messages', object: @about_page %>
 
-  <%# 最新项目 %>
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
-        <div class="panel-heading">首页最新项目</div>
+        <div class="panel-heading">关于天华 介绍</div>
+        <div class="panel-body">
+          <p><%= @about_page.thape_intro %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">关于天华 轮播图</div>
         <div class="panel-body">
           <div class="row">
             <div class="col-sm-6">
               <%= image_tag @about_page.about_h1.url, width: '300' if @about_page.about_h1.present? %>
               <p>
-                <%= f.label :about_h1, "最新项目 1" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.label :about_h1, "轮播图 1" %> <small>尺寸W:880*H:880像素</small>
                 <%= f.file_field :about_h1 %>
               </p>
             </div>
             <div class="col-sm-6">
               <%= image_tag @about_page.about_h2.url, width: '300' if @about_page.about_h2.present? %>
               <p>
-                <%= f.label :about_h2, "最新项目 2" %> <small>尺寸W:880*H:1794像素</small>
+                <%= f.label :about_h2, "轮播图 2" %> <small>尺寸W:880*H:1794像素</small>
                 <%= f.file_field :about_h2 %>
               </p>
             </div>
             <div class="col-sm-6">
               <%= image_tag @about_page.about_h3.url, width: '300' if @about_page.about_h3.present? %>
               <p>
-                <%= f.label :about_h3, "最新项目 3" %> <small>尺寸W:1794*H:880像素</small>
+                <%= f.label :about_h3, "轮播图 3" %> <small>尺寸W:1794*H:880像素</small>
                 <%= f.file_field :about_h3 %>
               </p>
             </div>
             <div class="col-sm-6">
               <%= image_tag @about_page.about_h4.url, width: '300' if @about_page.about_h4.present? %>
               <p>
-                <%= f.label :about_h4, "最新项目 4" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.label :about_h4, "轮播图 4" %> <small>尺寸W:880*H:880像素</small>
                 <%= f.file_field :about_h4 %>
               </p>
             </div>
             <div class="col-sm-6">
               <%= image_tag @about_page.about_h5.url, width: '300' if @about_page.about_h5.present? %>
               <p>
-                <%= f.label :about_h5, "最新项目 5" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.label :about_h5, "轮播图 5" %> <small>尺寸W:880*H:880像素</small>
                 <%= f.file_field :about_h5 %>
               </p>
             </div>
             <div class="col-sm-6">
               <%= image_tag @about_page.about_h6.url, width: '300' if @about_page.about_h6.present? %>
               <p>
-                <%= f.label :about_h6, "最新项目 6" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.label :about_h6, "轮播图 6" %> <small>尺寸W:880*H:880像素</small>
                 <%= f.file_field :about_h6 %>
               </p>
             </div>
             <div class="col-sm-6">
               <%= image_tag @about_page.about_h7.url, width: '300' if @about_page.about_h7.present? %>
               <p>
-                <%= f.label :about_h7, "最新项目 7" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.label :about_h7, "轮播图 7" %> <small>尺寸W:880*H:880像素</small>
                 <%= f.file_field :about_h7 %>
               </p>
             </div>
