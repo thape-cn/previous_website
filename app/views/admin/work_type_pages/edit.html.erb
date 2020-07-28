@@ -151,6 +151,22 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-md-6">
+              <%= image_tag @work_type_page.cultural_wide_jpg.url, width: '500' if @work_type_page.cultural_wide_jpg.present? %>
+              <p>
+                <%= f.label :cultural_wide_jpg, "文化Wide图片 JPG 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :cultural_wide_jpg %>
+              </p>
+            </div>
+            <div class="col-md-6">
+              <%= image_tag @work_type_page.cultural_wide_webp.url, width: '500' if @work_type_page.cultural_wide_webp.present? %>
+              <p>
+                <%= f.label :cultural_wide_webp, "文化Wide图片 WebP 格式" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :cultural_wide_webp %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
               <%= image_tag @work_type_page.cultural_jpg.url, width: '500' if @work_type_page.cultural_jpg.present? %>
               <p>
                 <%= f.label :cultural_jpg, "文化图片 JPG 格式" %> <small>尺寸W:1920*H:700像素</small>

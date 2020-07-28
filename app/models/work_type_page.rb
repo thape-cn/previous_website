@@ -9,6 +9,8 @@ class WorkTypePage < ApplicationRecord
   mount_uploader :commercial_webp, PictureUploader
   mount_uploader :supertall_jpg, PictureUploader
   mount_uploader :supertall_webp, PictureUploader
+  mount_uploader :cultural_wide_jpg, PictureUploader
+  mount_uploader :cultural_wide_webp, PictureUploader
   mount_uploader :cultural_jpg, PictureUploader
   mount_uploader :cultural_webp, PictureUploader
   mount_uploader :education_jpg, PictureUploader
