@@ -1,10 +1,16 @@
 class TailHome < ApplicationRecord
   mount_uploader :background_1, PictureUploader
+  mount_uploader :background_1_webp, PictureUploader
   mount_uploader :background_2, PictureUploader
+  mount_uploader :background_2_webp, PictureUploader
   mount_uploader :background_3, PictureUploader
+  mount_uploader :background_3_webp, PictureUploader
   mount_uploader :background_4, PictureUploader
+  mount_uploader :background_4_webp, PictureUploader
   mount_uploader :background_5, PictureUploader
+  mount_uploader :background_5_webp, PictureUploader
   mount_uploader :background_6, PictureUploader
+  mount_uploader :background_6_webp, PictureUploader
 
   mount_uploader :background_1_mobile, PictureUploader
   mount_uploader :background_2_mobile, PictureUploader

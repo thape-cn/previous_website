@@ -172,12 +172,30 @@
               </p>
             </div>
             <div class="col-sm-6">
+              <%= image_tag @home.background_1_webp.url, width: '300' if @home.background_1_webp.present? %>
+              <p>
+                <%= f.label :background_1_webp, "背景 1 WEBP" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_1_webp %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
               <%= image_tag @home.background_2.url, width: '300' if @home.background_2.present? %>
               <p>
                 <%= f.label :background_2, "背景 2" %> <small>尺寸W:1920*H:968像素</small>
                 <%= f.file_field :background_2 %>
               </p>
             </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.background_2_webp.url, width: '300' if @home.background_2_webp.present? %>
+              <p>
+                <%= f.label :background_2_webp, "背景 1 WEBP" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_2_webp %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-sm-6">
               <%= image_tag @home.background_3.url, width: '300' if @home.background_3.present? %>
               <p>
@@ -186,12 +204,30 @@
               </p>
             </div>
             <div class="col-sm-6">
+              <%= image_tag @home.background_3_webp.url, width: '300' if @home.background_3_webp.present? %>
+              <p>
+                <%= f.label :background_3_webp, "背景 1 WEBP" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_3_webp %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
               <%= image_tag @home.background_4.url, width: '300' if @home.background_4.present? %>
               <p>
                 <%= f.label :background_4, "背景 4" %> <small>尺寸W:1920*H:968像素</small>
                 <%= f.file_field :background_4 %>
               </p>
             </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.background_4_webp.url, width: '300' if @home.background_4_webp.present? %>
+              <p>
+                <%= f.label :background_4_webp, "背景 1 WEBP" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_4_webp %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-sm-6">
               <%= image_tag @home.background_5.url, width: '300' if @home.background_5.present? %>
               <p>
@@ -200,10 +236,26 @@
               </p>
             </div>
             <div class="col-sm-6">
+              <%= image_tag @home.background_5_webp.url, width: '300' if @home.background_5_webp.present? %>
+              <p>
+                <%= f.label :background_5_webp, "背景 1 WEBP" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_5_webp %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
               <%= image_tag @home.background_6.url, width: '300' if @home.background_6.present? %>
               <p>
                 <%= f.label :background_6, "背景 6" %> <small>尺寸W:1920*H:968像素</small>
                 <%= f.file_field :background_6 %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.background_6_webp.url, width: '300' if @home.background_6_webp.present? %>
+              <p>
+                <%= f.label :background_6_webp, "背景 1 WEBP" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_6_webp %>
               </p>
             </div>
           </div>
