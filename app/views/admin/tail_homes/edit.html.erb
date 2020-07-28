@@ -8,6 +8,7 @@
 <%= form_for @home, url: admin_tail_home_path, html: { multipart: true } do |f| %>
   <%= render 'admin/shared/error_messages', object: @home %>
 
+  <%# 最新项目 %>
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
@@ -86,8 +87,7 @@
     </div>
   </div>
 
-  <hr >
-
+  <%# 首页新闻 %>
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
@@ -95,18 +95,33 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-sm-4">
+              <%= image_tag @home.info_1_photo.url, width: '400' if @home.info_1_photo.present? %>
+              <p>
+                <%= f.label :info_1_photo, "最新新闻 1 图片" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.file_field :info_1_photo %>
+              </p>
               <p>
                 <%= f.label :info_1_id, "最新新闻 1 ID" %>
                 <%= f.text_field :info_1_id %>
               </p>
             </div>
             <div class="col-sm-4">
+              <%= image_tag @home.info_2_photo.url, width: '400' if @home.info_2_photo.present? %>
+              <p>
+                <%= f.label :info_2_photo, "最新新闻 2 图片" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.file_field :info_2_photo %>
+              </p>
               <p>
                 <%= f.label :info_2_id, "最新新闻 2 ID" %>
                 <%= f.text_field :info_2_id %>
               </p>
             </div>
             <div class="col-sm-4">
+              <%= image_tag @home.info_3_photo.url, width: '400' if @home.info_3_photo.present? %>
+              <p>
+                <%= f.label :info_3_photo, "最新新闻 3 图片" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.file_field :info_3_photo %>
+              </p>
               <p>
                 <%= f.label :info_3_id, "最新新闻 3 ID" %>
                 <%= f.text_field :info_3_id %>
@@ -118,11 +133,11 @@
     </div>
   </div>
 
-  <hr />
+  <%# 新闻页首推 %>
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
-        <div class="panel-heading">首推新闻</div>
+        <div class="panel-heading">新闻页首推</div>
         <div class="panel-body">
           <%= image_tag @home.hero_news_photo.url, width: '500' if @home.hero_news_photo.present? %>
           <p>
@@ -137,6 +152,61 @@
             <%= f.label :hero_news_title_cap, "新闻标题的下划线字数" %>
             <%= f.text_field :hero_news_title_cap, class: 'form-control' %>
           </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%# 首页轮播图 %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">首页轮播图</div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <%= image_tag @home.background_1.url, width: '300' if @home.background_1.present? %>
+              <p>
+                <%= f.label :background_1, "背景 1" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_1 %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.background_2.url, width: '300' if @home.background_2.present? %>
+              <p>
+                <%= f.label :background_2, "背景 2" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_2 %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.background_3.url, width: '300' if @home.background_3.present? %>
+              <p>
+                <%= f.label :background_3, "背景 3" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_3 %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.background_4.url, width: '300' if @home.background_4.present? %>
+              <p>
+                <%= f.label :background_4, "背景 4" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_4 %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.background_5.url, width: '300' if @home.background_5.present? %>
+              <p>
+                <%= f.label :background_5, "背景 5" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_5 %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.background_6.url, width: '300' if @home.background_6.present? %>
+              <p>
+                <%= f.label :background_6, "背景 6" %> <small>尺寸W:1920*H:968像素</small>
+                <%= f.file_field :background_6 %>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
