@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_28_033003) do
+ActiveRecord::Schema.define(version: 2020_07_28_051230) do
 
   create_table "about_translations", force: :cascade do |t|
     t.integer "about_id", null: false
@@ -324,6 +324,24 @@ ActiveRecord::Schema.define(version: 2020_07_28_033003) do
     t.string "background_4_pad"
     t.string "background_5_pad"
     t.string "background_6_pad"
+    t.string "background_1_webp"
+    t.string "background_2_webp"
+    t.string "background_3_webp"
+    t.string "background_4_webp"
+    t.string "background_5_webp"
+    t.string "background_6_webp"
+    t.string "background_1_mobile_webp"
+    t.string "background_2_mobile_webp"
+    t.string "background_3_mobile_webp"
+    t.string "background_4_mobile_webp"
+    t.string "background_5_mobile_webp"
+    t.string "background_6_mobile_webp"
+    t.string "background_1_pad_webp"
+    t.string "background_2_pad_webp"
+    t.string "background_3_pad_webp"
+    t.string "background_4_pad_webp"
+    t.string "background_5_pad_webp"
+    t.string "background_6_pad_webp"
   end
 
   create_table "tianhua2019s", force: :cascade do |t|
