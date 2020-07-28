@@ -13,7 +13,9 @@
       <div class="panel panel-default">
         <div class="panel-heading">关于天华 介绍</div>
         <div class="panel-body">
-          <p><%= @about_page.thape_intro %></p>
+          <p>
+            <%= f.text_area :thape_intro, rows: 7, class: 'form-control' %>
+          </p>
         </div>
       </div>
     </div>
