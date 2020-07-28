@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_28_073450) do
+ActiveRecord::Schema.define(version: 2020_07_28_081625) do
 
   create_table "about_pages", force: :cascade do |t|
     t.text "thape_intro"
@@ -292,7 +292,6 @@ ActiveRecord::Schema.define(version: 2020_07_28_073450) do
     t.string "interior_intro_file"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "thape_intro"
     t.text "building_intro"
     t.text "interior_intro"
     t.text "planning_intro"
