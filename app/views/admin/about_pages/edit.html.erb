@@ -32,12 +32,30 @@
               </p>
             </div>
             <div class="col-sm-6">
+              <%= image_tag @about_page.about_h1_mobile.url, width: '300' if @about_page.about_h1_mobile.present? %>
+              <p>
+                <%= f.label :about_h1_mobile, "轮播图 1 手机端" %> <small>尺寸W:880*H:880像素</small>
+                <%= f.file_field :about_h1_mobile %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
               <%= image_tag @about_page.about_h2.url, width: '300' if @about_page.about_h2.present? %>
               <p>
                 <%= f.label :about_h2, "轮播图 2" %> <small>尺寸W:880*H:1794像素</small>
                 <%= f.file_field :about_h2 %>
               </p>
             </div>
+            <div class="col-sm-6">
+              <%= image_tag @about_page.about_h2_mobile.url, width: '300' if @about_page.about_h2_mobile.present? %>
+              <p>
+                <%= f.label :about_h2_mobile, "轮播图 2 手机端" %> <small>尺寸W:880*H:1794像素</small>
+                <%= f.file_field :about_h2_mobile %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-sm-6">
               <%= image_tag @about_page.about_h3.url, width: '300' if @about_page.about_h3.present? %>
               <p>
@@ -46,12 +64,30 @@
               </p>
             </div>
             <div class="col-sm-6">
+              <%= image_tag @about_page.about_h3_mobile.url, width: '300' if @about_page.about_h3_mobile.present? %>
+              <p>
+                <%= f.label :about_h3_mobile, "轮播图 3 手机端" %> <small>尺寸W:880*H:1794像素</small>
+                <%= f.file_field :about_h3_mobile %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
               <%= image_tag @about_page.about_h4.url, width: '300' if @about_page.about_h4.present? %>
               <p>
                 <%= f.label :about_h4, "轮播图 4" %> <small>尺寸W:880*H:880像素</small>
                 <%= f.file_field :about_h4 %>
               </p>
             </div>
+            <div class="col-sm-6">
+              <%= image_tag @about_page.about_h4_mobile.url, width: '300' if @about_page.about_h4_mobile.present? %>
+              <p>
+                <%= f.label :about_h4_mobile, "轮播图 4 手机端" %> <small>尺寸W:880*H:1794像素</small>
+                <%= f.file_field :about_h4_mobile %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-sm-6">
               <%= image_tag @about_page.about_h5.url, width: '300' if @about_page.about_h5.present? %>
               <p>
@@ -60,6 +96,15 @@
               </p>
             </div>
             <div class="col-sm-6">
+              <%= image_tag @about_page.about_h5_mobile.url, width: '300' if @about_page.about_h5_mobile.present? %>
+              <p>
+                <%= f.label :about_h5_mobile, "轮播图 5 手机端" %> <small>尺寸W:880*H:1794像素</small>
+                <%= f.file_field :about_h5_mobile %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
               <%= image_tag @about_page.about_h6.url, width: '300' if @about_page.about_h6.present? %>
               <p>
                 <%= f.label :about_h6, "轮播图 6" %> <small>尺寸W:880*H:880像素</small>
@@ -67,10 +112,26 @@
               </p>
             </div>
             <div class="col-sm-6">
+              <%= image_tag @about_page.about_h6_mobile.url, width: '300' if @about_page.about_h6_mobile.present? %>
+              <p>
+                <%= f.label :about_h6_mobile, "轮播图 6 手机端" %> <small>尺寸W:880*H:1794像素</small>
+                <%= f.file_field :about_h6_mobile %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
               <%= image_tag @about_page.about_h7.url, width: '300' if @about_page.about_h7.present? %>
               <p>
                 <%= f.label :about_h7, "轮播图 7" %> <small>尺寸W:880*H:880像素</small>
                 <%= f.file_field :about_h7 %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @about_page.about_h7_mobile.url, width: '300' if @about_page.about_h7_mobile.present? %>
+              <p>
+                <%= f.label :about_h7_mobile, "轮播图 7 手机端" %> <small>尺寸W:880*H:1794像素</small>
+                <%= f.file_field :about_h7_mobile %>
               </p>
             </div>
           </div>
