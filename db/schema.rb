@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_28_081625) do
+ActiveRecord::Schema.define(version: 2020_07_28_082821) do
 
   create_table "about_pages", force: :cascade do |t|
     t.text "thape_intro"
@@ -361,6 +361,7 @@ ActiveRecord::Schema.define(version: 2020_07_28_081625) do
     t.string "background_4_pad_webp"
     t.string "background_5_pad_webp"
     t.string "background_6_pad_webp"
+    t.string "hero_news_photo_mobile"
   end
 
   create_table "tianhua2019s", force: :cascade do |t|

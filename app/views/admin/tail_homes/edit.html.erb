@@ -139,19 +139,32 @@
       <div class="panel panel-default">
         <div class="panel-heading">新闻页首推</div>
         <div class="panel-body">
-          <%= image_tag @home.hero_news_photo.url, width: '500' if @home.hero_news_photo.present? %>
-          <p>
-            <%= f.label :hero_news_photo, "头条新闻图片" %> <small>尺寸W:1920*H:700像素</small>
-            <%= f.file_field :hero_news_photo %>
-          </p>
-          <p>
-            <%= f.label :hero_news_id, "新闻ID" %>
-            <%= f.text_field :hero_news_id, class: 'form-control' %>
-          </p>
-          <p>
-            <%= f.label :hero_news_title_cap, "新闻标题的下划线字数" %>
-            <%= f.text_field :hero_news_title_cap, class: 'form-control' %>
-          </p>
+          <div class="row">
+            <div class="col-sm-6">
+              <%= image_tag @home.hero_news_photo.url, width: '500' if @home.hero_news_photo.present? %>
+              <p>
+                <%= f.label :hero_news_photo, "头条新闻图片" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :hero_news_photo %>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <%= image_tag @home.hero_news_photo_mobile.url, width: '500' if @home.hero_news_photo_mobile.present? %>
+              <p>
+                <%= f.label :hero_news_photo_mobile, "头条新闻图片 手机端" %> <small>尺寸W:1920*H:700像素</small>
+                <%= f.file_field :hero_news_photo_mobile %>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <p>
+              <%= f.label :hero_news_id, "新闻ID" %>
+              <%= f.text_field :hero_news_id, class: 'form-control' %>
+            </p>
+            <p>
+              <%= f.label :hero_news_title_cap, "新闻标题的下划线字数" %>
+              <%= f.text_field :hero_news_title_cap, class: 'form-control' %>
+            </p>
+          </div>
         </div>
       </div>
     </div>
