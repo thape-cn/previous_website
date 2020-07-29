@@ -5,7 +5,7 @@ module Admin
     before_action :set_work, only: [:show, :edit, :update, :destroy, :top, :bottom, :up, :down, :destory_picture]
 
     def index
-      @works = Work.with_translations('cn').all.order(position: :asc)
+      @works = Work.includes(:project_types, :residential_types).with_translations('cn').all.order(position: :asc)
       @works = @works.where('work_translations.project_name LIKE ?', "%#{params[:project_name]}%") if params[:project_name].present?
     end
 
