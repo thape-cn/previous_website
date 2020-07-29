@@ -62,8 +62,8 @@ module Admin
       to_position = params[:to_position].to_i
       work_ids = params[:check_ids]
 
-      rest_of_works_id = Work.where('position >= ?', to_position).pluck(:id)
-      Work.where(id: rest_of_works_id).each_with_index do |work, index|
+      rest_of_works_ids = Work.where('position >= ?', to_position).pluck(:id)
+      Work.where(id: rest_of_works_ids).each_with_index do |work, index|
         work.update(position: work.position + work_ids.length + index + 1)
       end
       move_people = Work.where(id: work_ids).each_with_index do |work, index|
