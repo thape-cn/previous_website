@@ -61,7 +61,7 @@ module Admin
 
       rest_of_people_id = Person.where('position >= ?', to_position).pluck(:id)
       Person.where(id: rest_of_people_id).each_with_index do |person, index|
-        person.update(position: person.position + people_ids.length + index + 1)
+        person.update(position: person.position + 10000 + index + 1)
       end
       move_people = Person.where(id: people_ids).each_with_index do |person, index|
         person.update(position: to_position + index)

@@ -64,9 +64,9 @@ module Admin
 
       rest_of_works_ids = Work.where('position >= ?', to_position).pluck(:id)
       Work.where(id: rest_of_works_ids).each_with_index do |work, index|
-        work.update(position: work.position + work_ids.length + index + 1)
+        work.update(position: work.position + 10000 + index + 1)
       end
-      move_people = Work.where(id: work_ids).each_with_index do |work, index|
+      move_works = Work.where(id: work_ids).each_with_index do |work, index|
         work.update(position: to_position + index)
       end
       redirect_to admin_works_path, notice: '移动成功！'
