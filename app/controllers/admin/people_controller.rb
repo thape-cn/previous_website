@@ -59,8 +59,9 @@ module Admin
       to_position = params[:to_position].to_i
       people_ids = params[:check_ids]
 
-      rest_of_people_id = Person.where('position >= ?', to_position).pluck(:id)
-      Person.where(id: rest_of_people_id).each_with_index do |person, index|
+      rest_of_people_ids = Person.where('position >= ?', to_position).order(position: :asc).pluck(:id)
+      rest_of_people_ids.each_with_index do |person_id, index|
+        person = Person.find person_id
         person.update(position: person.position + 10000 + index + 1)
       end
       move_people = Person.where(id: people_ids).each_with_index do |person, index|
