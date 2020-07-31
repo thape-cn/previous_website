@@ -1,3 +1,7 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
 <h3>客户留言</h3>
 
 <br>
@@ -9,6 +13,7 @@
       <th><h4>姓名</h4></th>
       <th><h4>联系方式</h4></th>
       <th><h4>留言</h4></th>
+      <th><h4>动作</h4></th>
     </tr>
   </thead>
 
@@ -19,6 +24,9 @@
         <td><%= message.name %></td>
         <td><%= message.contact_details %></td>
         <td><%= message.message %></td>
+        <td>
+          <%= link_to fa_icon("trash"), admin_message_path(message), method: :delete %>
+        </td>
       </tr>
     <% end %>
   </tbody>

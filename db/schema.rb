@@ -365,10 +365,6 @@ ActiveRecord::Schema.define(version: 2020_07_30_030655) do
     t.string "hero_news_photo_mobile"
   end
 
-  create_table "tianhua2019s", force: :cascade do |t|
-    t.string "do_not_remove_which_will_break_test"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"

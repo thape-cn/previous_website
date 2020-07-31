@@ -5,5 +5,11 @@ module Admin
     def index
       @messages = GuestMessage.all.order(id: :desc).page(params[:page]).per(params[:per_page])
     end
+
+    def destroy
+      m = GuestMessage.find params[:id]
+      m.destroy
+      redirect_to admin_message_index_path, notice: "#{m.message}, 删除成功"
+    end
   end
 end
