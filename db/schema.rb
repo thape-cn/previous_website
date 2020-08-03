@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_30_030655) do
+ActiveRecord::Schema.define(version: 2020_08_03_051436) do
+
+  create_table "about_page_translations", force: :cascade do |t|
+    t.integer "about_page_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "thape_intro"
+    t.index ["about_page_id"], name: "index_about_page_translations_on_about_page_id"
+    t.index ["locale"], name: "index_about_page_translations_on_locale"
+  end
 
   create_table "about_pages", force: :cascade do |t|
     t.text "thape_intro"
@@ -289,6 +299,22 @@ ActiveRecord::Schema.define(version: 2020_07_30_030655) do
     t.string "contact_title"
   end
 
+  create_table "service_file_translations", force: :cascade do |t|
+    t.integer "service_file_id", null: false
+    t.string "locale", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "building_intro"
+    t.string "interior_intro"
+    t.string "planning_intro"
+    t.string "landscape_intro"
+    t.string "vetting_intro"
+    t.string "consluting_intro"
+    t.string "vrtech_intro"
+    t.index ["locale"], name: "index_service_file_translations_on_locale"
+    t.index ["service_file_id"], name: "index_service_file_translations_on_service_file_id"
+  end
+
   create_table "service_files", force: :cascade do |t|
     t.string "interior_intro_file"
     t.datetime "created_at", null: false
@@ -363,6 +389,10 @@ ActiveRecord::Schema.define(version: 2020_07_30_030655) do
     t.string "background_5_pad_webp"
     t.string "background_6_pad_webp"
     t.string "hero_news_photo_mobile"
+  end
+
+  create_table "tianhua2019s", force: :cascade do |t|
+    t.string "do_not_remove_which_will_break_test"
   end
 
   create_table "users", force: :cascade do |t|
