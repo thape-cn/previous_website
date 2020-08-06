@@ -72,6 +72,15 @@
       <%= f.text_field :banner_alt, class: 'form-control' %>
       <br>
 
+      <%= f.label :pdf_file, "PDF文件" %>
+      <br>
+      <% if f.object.pdf_file_identifier.present? %>
+        <%= f.object.pdf_file.url %>
+      <% end %>
+      <br>
+      <%= f.file_field :pdf_file %>
+      <br>
+
       <%= f.label :content, "内容" %>
       <%= f.text_area :content, class: 'form-control', rows: "40", id: "editor" %>
       <br>

@@ -2,6 +2,7 @@ class Info < ApplicationRecord
   mount_uploader :picture, PictureUploader
   mount_uploader :banner, BannerUploader
   mount_uploader :snapshot, SnapshotUploader
+  mount_uploader :pdf_file, PdfFileUploader
 
   has_many :pictures
 
