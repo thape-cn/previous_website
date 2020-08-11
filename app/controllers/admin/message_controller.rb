@@ -6,10 +6,14 @@ module Admin
       @messages = GuestMessage.all.order(id: :desc).page(params[:page]).per(params[:per_page])
     end
 
+    def show
+      @message = GuestMessage.find(params[:id])
+    end
+
     def destroy
       m = GuestMessage.find params[:id]
       m.destroy
-      redirect_to admin_message_index_path, notice: "#{m.message}, 删除成功"
+      redirect_to admin_message_index_path, notice: "#{truncate(m.message, length: 30)}, 删除成功"
     end
   end
 end

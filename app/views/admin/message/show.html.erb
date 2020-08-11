@@ -1,0 +1,13 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<h3>客户留言</h3>
+
+<br>
+
+<h3><%= @message.company %></h3>
+<h4><%= @message.name %></h4>
+<p><%= @message.contact_details %></p>
+<p><%= simple_format @message.message %></p>
+

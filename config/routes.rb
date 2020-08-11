@@ -111,7 +111,7 @@ Rails.application.routes.draw do
         post :upload
       end
     end
-    resources :message, only: [:index, :destroy]
+    resources :message, only: [:index, :show, :destroy]
     get '/login', to: 'sessions#new'
     post '/login', to:'sessions#create'
     delete '/logout', to: 'sessions#destroy'

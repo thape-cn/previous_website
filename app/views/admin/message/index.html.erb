@@ -21,7 +21,7 @@
     <% @messages.each do |message| %>
       <tr>
         <td><%= message.company %></td>
-        <td><%= message.name %></td>
+        <td><%= link_to_if message.name.present?, message.name, admin_message_path(id: message.id) %></td>
         <td><%= message.contact_details %></td>
         <td><%= message.message %></td>
         <td>
