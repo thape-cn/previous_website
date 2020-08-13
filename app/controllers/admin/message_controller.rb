@@ -13,7 +13,7 @@ module Admin
     def destroy
       m = GuestMessage.find params[:id]
       m.destroy
-      redirect_to admin_message_index_path, notice: "#{truncate(m.message, length: 30)}, 删除成功"
+      redirect_to admin_message_index_path, notice: "#{m.message&.truncate(30)}, 删除成功"
     end
   end
 end

@@ -9,10 +9,9 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th><h4>公司</h4></th>
-      <th><h4>姓名</h4></th>
-      <th><h4>联系方式</h4></th>
+      <th><h4>公司 / 姓名 <br /> 联系方式</h4></th>
       <th><h4>留言</h4></th>
+      <th><h4>留言时间</h4></th>
       <th><h4>动作</h4></th>
     </tr>
   </thead>
@@ -20,10 +19,12 @@
   <tbody>
     <% @messages.each do |message| %>
       <tr>
-        <td><%= message.company %></td>
-        <td><%= link_to_if message.name.present?, message.name, admin_message_path(id: message.id) %></td>
-        <td><%= message.contact_details %></td>
+        <td><%= message.company %> <%= link_to_if message.name.present?, message.name, admin_message_path(id: message.id) %>
+          <br />
+          <%= message.contact_details %>
+        </td>
         <td><%= message.message %></td>
+        <td><%= message.created_at %></td>
         <td>
           <%= link_to fa_icon("trash"), admin_message_path(message), method: :delete %>
         </td>
