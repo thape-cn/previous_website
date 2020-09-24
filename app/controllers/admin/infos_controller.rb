@@ -38,6 +38,9 @@ module Admin
     def update
       respond_to do |format|
         if @info.update(params[:info].permit!)
+          @info.content_convert_to_jpeg
+          @info.content_convert_to_gif
+          @info.save
           format.html { redirect_to admin_infos_url }
         else
           format.html { render :edit }
