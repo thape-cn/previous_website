@@ -41,7 +41,8 @@ module Admin
           @info.content_convert_to_jpeg
           @info.content_convert_to_gif
           @info.save
-          format.html { redirect_to admin_infos_url }
+          flash[:success] = "保存成功!"
+          format.html { redirect_to edit_admin_info_path }
         else
           format.html { render :edit }
         end

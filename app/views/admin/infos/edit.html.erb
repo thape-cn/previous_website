@@ -1,3 +1,7 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
 <%= link_to '返回', admin_infos_path %>
 
 <h3>修改新闻</h3>
