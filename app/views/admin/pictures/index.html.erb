@@ -11,19 +11,22 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th>No.</th>
-          <th>URL</th>
-          <th>预览</th>
-          <th>更新日期</th>
+          <th>No. & URL & 预览</th>
+          <th>动作</th>
         </tr>
       </thead>
       <tbody>
         <% @pictures.each do |picture| %>
           <tr>
-            <td><%= picture.id %></td>
-            <td><%= picture.image.url %></td>
-            <td><img src="<%= picture.image.url -%>?x-oss-process=image/resize,w_200" /></td>
-            <td><%= picture.updated_at %></td>
+            <td><%= picture.id %>: <%= picture.image.url %>
+              <br />
+              <img src="<%= picture.image.url -%>?x-oss-process=image/resize,w_200" />
+              <br />
+              <%= picture.updated_at %>
+            </td>
+            <td>
+
+            </td>
           </tr>
         <% end %>
       </tbody>
