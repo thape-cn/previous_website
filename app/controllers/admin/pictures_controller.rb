@@ -11,12 +11,23 @@ module Admin
     end
 
     def update
-      @page = params[:page].present || 1
+      @page = params[:page].presence || 1
       @picture = Picture.find(params[:id])
+      @picture.update(picture_params)
       redirect_to admin_pictures_path(page: @page), notice: '更新成功'
     end
 
     def destroy
+      @page = params[:page].presence || 1
+      @picture = Picture.find(params[:id])
+      @picture.destroy
+      redirect_to admin_pictures_path(page: @page), notice: '删除成功'
     end
+
+    private
+
+      def picture_params
+        params[:picture].permit(:image, :info_id)
+      end
   end
 end
