@@ -25,7 +25,8 @@
               <%= picture.updated_at %>
             </td>
             <td>
-
+              <%= link_to fa_icon("pencil-square-o"), edit_admin_picture_path(picture, page: params[:page]) %>
+              <%= link_to fa_icon("trash"), admin_picture_path(picture), method: :delete, data: { confirm: '确认删除?' } %>
             </td>
           </tr>
         <% end %>

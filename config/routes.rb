@@ -111,7 +111,7 @@ Rails.application.routes.draw do
         post :upload
       end
     end
-    resources :pictures, only: [:index]
+    resources :pictures, except: [:show]
     resources :message, only: [:index, :show, :destroy]
     get '/login', to: 'sessions#new'
     post '/login', to:'sessions#create'

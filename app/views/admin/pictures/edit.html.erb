@@ -1,0 +1,29 @@
+<%= link_to '返回', admin_pictures_path %>
+
+<h3>Picture-<%= @picture.id -%>-编辑</h3>
+
+<hr>
+
+<div class="row">
+  <div class="col-md-8">
+    <%= form_for @picture, url: admin_picture_path(id: @picture) do |f| %>
+      <%= render 'admin/shared/error_messages', object: @picture %>
+      <%= hidden_field_tag 'page', @page %>
+
+      <div class="row">
+        <div class="col-md-12">
+          <%= f.label :image, "图片" %>
+          <br />
+          <img src="<%= @picture.image.url -%>?x-oss-process=image/resize,w_200" />
+          <br />
+          <br />
+          <%= f.file_field :image, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+
+      <%= f.submit class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
