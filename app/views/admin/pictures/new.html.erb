@@ -1,0 +1,32 @@
+<%= link_to '返回', admin_pictures_path %>
+
+<h3>Picture-新建</h3>
+
+<hr>
+
+<div class="row">
+  <div class="col-md-8">
+    <%= form_for @picture, url: admin_pictures_path(id: @picture) do |f| %>
+      <%= render 'admin/shared/error_messages', object: @picture %>
+      <%= hidden_field_tag 'page', @page %>
+
+      <div class="row">
+        <div class="col-12">
+          <%= f.label :image, "图片" %>
+          <br />
+          <%= f.file_field :image, class: 'form-control' %>
+        </div>
+        <br />
+        <div class="col-12">
+          <%= f.label :info_id, "新闻ID" %>
+          <br />
+          <%= f.text_field :info_id, class: 'form-control' %>
+        </div>
+      </div>
+      <hr>
+
+      <%= f.submit class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
