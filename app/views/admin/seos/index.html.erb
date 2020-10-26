@@ -1,18 +1,27 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
 <h3>SEO关键词</h3>
 <hr>
 
 <div class="row">
   <% @seos.each do |seo| %>
-    <div class="col-12">
-      <div class="panel panel-default">
-        <div class="panel-heading"><b><%= seo.seo_name -%></b>关键词</div>
-        <div class="panel-body">
-          <p><strong>title:</strong><%= seo.home_title %></p>
-          <p><strong>description:</strong><%= seo.description %></p>
-          <p><strong>abstract:</strong><%= seo.abstract %></p>
-          <p><strong>keywords:</strong><%= seo.keywords %></p>
+    <%= form_with model: seo, url: admin_seo_path(id: seo.id), method: :patch, local: true do |f| -%>
+      <div class="col-12">
+        <div class="panel panel-default">
+          <div class="panel-heading"><b><%= seo.seo_name -%></b>关键词</div>
+          <div class="panel-body">
+            <p><strong>title:</strong><%= f.text_field :home_title, class: 'form-control' -%></p>
+            <p><strong>description:</strong><%= f.text_field :description, class: 'form-control' -%></p>
+            <p><strong>abstract:</strong><%= f.text_field :abstract, class: 'form-control' -%></p>
+            <p><strong>keywords:</strong><%= f.text_field :keywords, class: 'form-control' -%></p>
+          </div>
+          <div class="panel-footer">
+            <%= f.submit '更新SEO', class: 'btn btn-primary' -%>
+          </div>
         </div>
       </div>
-    </div>
+    <% end %>
   <% end %>
 </div>

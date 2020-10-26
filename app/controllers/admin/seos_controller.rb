@@ -8,11 +8,11 @@ module Admin
     def update
       respond_to do |format|
         if @seo.update(params[:seo].permit!)
-          flash[:success] = "更新成功!"
-          format.html { redirect_to admin_seo_url }
+          flash[:success] = "#{@seo.seo_name}更新成功!"
+          format.html { redirect_to admin_seos_path }
         else
-          flash[:danger] = "更新失败!"
-          format.html { redirect_to admin_seo_url }
+          flash[:danger] = "#{@seo.seo_name}更新失败!"
+          format.html { redirect_to admin_seos_path }
         end
       end
     end
