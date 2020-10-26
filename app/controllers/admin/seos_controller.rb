@@ -1,10 +1,8 @@
 module Admin
   class SeosController < Admin::ApplicationController
     before_action :logged_in_user
-    def show
-    end
-
-    def edit
+    def index
+      @seos = Seo.all
     end
 
     def update

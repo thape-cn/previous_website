@@ -1,0 +1,18 @@
+<h3>SEO关键词</h3>
+<hr>
+
+<div class="row">
+  <% @seos.each do |seo| %>
+    <div class="col-12">
+      <div class="panel panel-default">
+        <div class="panel-heading"><b><%= seo.seo_name -%></b>关键词</div>
+        <div class="panel-body">
+          <p><strong>title:</strong><%= seo.home_title %></p>
+          <p><strong>description:</strong><%= seo.description %></p>
+          <p><strong>abstract:</strong><%= seo.abstract %></p>
+          <p><strong>keywords:</strong><%= seo.keywords %></p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

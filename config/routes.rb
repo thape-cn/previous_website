@@ -74,7 +74,7 @@ Rails.application.routes.draw do
         delete :destory_city_people
       end
     end
-    resources :seos, only: [:show, :edit, :update]
+    resources :seos, only: [:index, :update]
     resources :cities, except: [:destroy, :show]
     resources :map_contacts, only: [:index, :edit, :update]
     resources :users, except: [:show, :edit, :update]
