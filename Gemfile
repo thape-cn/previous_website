@@ -8,7 +8,7 @@ gem 'rails', '~> 6.0.3'
 gem 'sqlite3'
 gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 4.3'
+gem 'puma'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # See https://github.com/rails/execjs#readme for more supported runtimes
