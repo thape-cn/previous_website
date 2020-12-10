@@ -222,9 +222,9 @@ GEM
     pg (1.2.3-x64-mingw32)
     pg (1.2.3-x86-mingw32)
     public_suffix (4.0.6)
-    puma (5.1.0)
+    puma (5.1.1)
       nio4r (~> 2.0)
-    puma (5.1.0-java)
+    puma (5.1.1-java)
       nio4r (~> 2.0)
     rack (2.2.3)
     rack-test (1.1.0)
@@ -370,6 +370,7 @@ PLATFORMS
   x64-mingw32
   x86-mingw32
   x86-mswin32
+  x86_64-darwin-19
 
 DEPENDENCIES
   bcrypt (~> 3.1.13)
@@ -415,4 +416,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.1.4
+   2.2.0
