@@ -2,8 +2,7 @@
 lock '~> 3.15.0'
 
 set :application, 'thape_web'
-# deploy using 'https://github.com/thape-cn/website.git' is too slow
-set :repo_url, 'git@e.coding.net:sew/thape_web.git'
+set :repo_url, 'https://github.com/thape-cn/previous_website.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
