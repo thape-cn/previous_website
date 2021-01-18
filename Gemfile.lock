@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/Eric-Guo/wechat
-  revision: 6fd194a9beb1c8fa8a899aed96d0554ddfcf7865
+  revision: be32ac5074e1007512b5b40c9ccf2c7d74662bf6
   branch: main
   specs:
     wechat (0.12.1)
@@ -288,7 +288,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rexml (3.2.4)
-    route_translator (9.0.0)
+    route_translator (10.0.0)
       actionpack (>= 5.0.0.1, < 6.2)
       activesupport (>= 5.0.0.1, < 6.2)
       addressable (~> 2.7)
