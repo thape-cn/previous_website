@@ -44,8 +44,7 @@ gem "carrierwave"
 gem 'carrierwave-aliyun'
 gem 'http'
 
-# bundle config local.wechat /Users/guochunzhong/git/oss/wechat/
-gem 'wechat', git: 'https://github.com/Eric-Guo/wechat', branch: :main
+gem 'wechat'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

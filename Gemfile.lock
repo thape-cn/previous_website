@@ -1,15 +1,3 @@
-GIT
-  remote: https://github.com/Eric-Guo/wechat
-  revision: be32ac5074e1007512b5b40c9ccf2c7d74662bf6
-  branch: main
-  specs:
-    wechat (0.12.1)
-      activesupport (>= 3.2, < 7)
-      http (>= 1.0.4, < 5)
-      nokogiri (>= 1.6.0)
-      rexml
-      thor
-
 GEM
   remote: https://gems.ruby-china.com/
   specs:
@@ -361,6 +349,12 @@ GEM
     websocket-driver (0.7.3-java)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    wechat (0.12.1)
+      activesupport (>= 3.2, < 7)
+      http (>= 1.0.4, < 5)
+      nokogiri (>= 1.6.0)
+      rexml
+      thor
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.4.2)
@@ -411,7 +405,7 @@ DEPENDENCIES
   uglifier
   web-console
   webdrivers
-  wechat!
+  wechat
 
 RUBY VERSION
    ruby 2.7.1p83
