@@ -109,7 +109,7 @@ GEM
       image_processing (~> 1.1)
       mimemagic (>= 0.3.0)
       mini_mime (>= 0.1.3)
-    carrierwave-aliyun (1.2.1)
+    carrierwave-aliyun (1.2.2)
       aliyun-sdk (>= 0.7.0)
       carrierwave (>= 1)
     childprocess (3.0.0)
@@ -315,7 +315,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     sqlite3 (1.4.2)
-    sshkit (1.21.1)
+    sshkit (1.21.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     thor (1.0.1)
@@ -411,4 +411,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.2.5
+   2.2.6
