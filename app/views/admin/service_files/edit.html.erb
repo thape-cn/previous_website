@@ -86,6 +86,17 @@
         </div>
       </div>
     </div>
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">年度账单</div>
+        <div class="panel-body">
+          <p>
+            <%= f.label :tianhua_2020_bill_music, "天华2020年度账单音乐" %>
+            <%= f.file_field :tianhua_2020_bill_music %>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <%= f.submit "修改", class: "btn btn-primary" %>
