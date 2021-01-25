@@ -283,6 +283,8 @@ GEM
     ruby-vips (2.0.17)
       ffi (~> 1.9)
     rubyzip (2.3.0)
+    sass-rails (6.0.0)
+      sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc (2.4.0-x64-mingw32)
@@ -393,7 +395,7 @@ DEPENDENCIES
   puma
   rails (~> 6.0.3)
   route_translator
-  sassc-rails
+  sass-rails
   selenium-webdriver
   simditor
   simplecov

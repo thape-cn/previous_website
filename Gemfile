@@ -35,7 +35,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'kaminari'
 
-gem 'sassc-rails'
+gem 'sass-rails'
 gem 'ffi'
 gem 'jquery-rails'
 gem 'mini_magick'
