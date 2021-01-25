@@ -11,6 +11,8 @@ jobs:
           BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
           NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+          PG_HOST: 127.0.0.1
+          PG_USERNAME: thape_web_test
 
       - image: circleci/postgres:latest
         environment:
@@ -25,8 +27,8 @@ jobs:
 
       # Which version of bundler? should keep same as Gemfile.lock
       - run:
-          name: install bundler v2.1.4
-          command: gem install bundler -v 2.1.4 && bundle -v
+          name: install bundler
+          command: gem install bundler && bundle -v
 
       # Restore bundle cache
       - restore_cache:
