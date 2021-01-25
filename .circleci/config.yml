@@ -12,6 +12,12 @@ jobs:
           RAILS_ENV: test
           NOKOGIRI_USE_SYSTEM_LIBRARIES: true
 
+      - image: circleci/postgres:latest
+        environment:
+          POSTGRES_USER: thape_web_test
+          POSTGRES_DB: thape_web_test
+          POSTGRES_PASSWORD: "thape_web_test"
+
     working_directory: ~/thape_web
 
     steps:
@@ -51,6 +57,11 @@ jobs:
           key: thape-web-yarn-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+
+      - run:
+          name: Copy configs
+          command: |
+            cp .circleci/app_config/database.yml config/database.yml
 
       - run:
           name: Database setup
