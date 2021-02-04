@@ -7,8 +7,8 @@ namespace :fill_lat_lng do
       g = Geocoder.search(work.project_name)
       if g.first.present? && g.first.coordinates.present?
         puts "#{work.project_name}: #{g.first.coordinates}"
-        work.coordinate_lat = g.first.coordinates.split(',')[0]
-        work.coordinate_lng = g.first.coordinates.split(',')[1]
+        work.coordinate_lat = g.first.coordinates[0]
+        work.coordinate_lng = g.first.coordinates[1]
         work.save
       end
     end
