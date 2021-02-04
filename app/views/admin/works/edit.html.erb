@@ -9,8 +9,20 @@
 
       <div class="row">
         <div class="col-md-8">
-          <%= f.label :project_name, "项目名称" %>
-          <%= f.text_field :project_name, class: 'form-control' %>
+          <div class="row">
+            <div class="col-md-12">
+              <%= f.label :project_name, "项目名称" %>
+              <%= f.text_field :project_name, class: 'form-control' %>
+            </div>
+            <div class="col-md-6">
+              <%= f.label :coordinate_lat, "纬度(Latitude)" %>
+              <%= f.text_field :coordinate_lat, class: 'form-control' %>
+            </div>
+            <div class="col-md-6">
+              <%= f.label :coordinate_lng, "经度(Longitude)" %>
+              <%= f.text_field :coordinate_lng, class: 'form-control' %>
+            </div>
+          </div>
         </div>
         <div class="col-md-4">
           <div class="row">
