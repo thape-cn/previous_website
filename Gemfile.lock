@@ -131,6 +131,7 @@ GEM
       rake
     font-awesome-rails (4.7.0.6)
       railties (>= 3.2, < 6.2)
+    geocoder (1.6.4)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     globalize (6.0.0)
@@ -330,8 +331,6 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    tzinfo-data (1.2021.1)
-      tzinfo (>= 1.0.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
@@ -384,6 +383,7 @@ DEPENDENCIES
   carrierwave-aliyun
   ffi
   font-awesome-rails
+  geocoder
   globalize
   http
   jbuilder (~> 2.9)
