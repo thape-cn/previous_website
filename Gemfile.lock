@@ -396,6 +396,7 @@ DEPENDENCIES
   kaminari
   listen
   mini_magick
+  minitest
   minitest-ci
   pg
   puma
