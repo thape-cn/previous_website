@@ -1,0 +1,43 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<h3>作品集</h3>
+<br>
+
+<%= link_to '创建新作品集', new_admin_portfolio_path, class: "btn btn-primary" %>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h4>标题</h4></th>
+      <th><h4>PDF 文件</h4></th>
+      <th><h4>封面</h4></th>
+      <th><h4>创建时间</h4></th>
+      <th><h4>动作</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @portfolios.each do |portfolio| %>
+      <tr>
+        <td>
+          <%= link_to portfolio.title, admin_portfolio_path(id: portfolio.id) %>
+        </td>
+        <td><%= link_to '下载', portfolio.pdf_file.url %></td>
+        <td>
+          <%= image_tag portfolio.cover_jpg.url, width: '300' if portfolio.cover_jpg.present? %>
+          <br />
+          <%= image_tag portfolio.cover_webp.url, width: '300' if portfolio.cover_webp.present? %>
+        </td>
+        <td><%= portfolio.created_at %></td>
+        <td>
+          <%= link_to fa_icon("pencil-square-o"), edit_admin_portfolio_path(portfolio, page: params[:page]) %>
+          <%= link_to fa_icon("trash"), admin_portfolio_path(portfolio), method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @portfolios, hide_goto_page: false %>
