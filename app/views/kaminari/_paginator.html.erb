@@ -17,8 +17,6 @@
     <%= next_page_tag unless current_page.last? %>
     <%= last_page_tag unless current_page.last? %>
     <% unless @options[:hide_goto_page] %>
-      &nbsp;
-      <%= t('.display_total', total: @options[:total_pages]) -%>
       <form class="form-inline" method="get" action="<%= request.fullpath -%>">
         <%= t('.goto_page_before') -%>
         <input class="pagination-control mr-sm-0" aria-label="Go page number" autocomplete="off" name="page">
