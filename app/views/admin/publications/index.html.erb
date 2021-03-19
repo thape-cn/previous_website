@@ -1,0 +1,43 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<h3>作品集</h3>
+<br>
+
+<%= link_to '创建新出版物', new_admin_publication_path, class: "btn btn-primary" %>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h4>标题</h4></th>
+      <th><h4>PDF 文件</h4></th>
+      <th><h4>封面</h4></th>
+      <th><h4>创建时间</h4></th>
+      <th><h4>动作</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publications.each do |publication| %>
+      <tr>
+        <td>
+          <%= link_to publication.title, admin_publication_path(id: publication.id) %>
+        </td>
+        <td><%= link_to_if publication.pdf_file.present?, '下载', publication.pdf_file.url %></td>
+        <td>
+          <%= image_tag publication.cover_jpg.url, width: '300' if publication.cover_jpg.present? %>
+          <br />
+          <%= image_tag publication.cover_webp.url, width: '300' if publication.cover_webp.present? %>
+        </td>
+        <td><%= publication.created_at %></td>
+        <td>
+          <%= link_to fa_icon("pencil-square-o"), edit_admin_publication_path(publication, page: params[:page]) %>
+          <%= link_to fa_icon("trash"), admin_publication_path(publication), method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @publications, hide_goto_page: false %>

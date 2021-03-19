@@ -1,13 +1,13 @@
-<%= link_to '返回', admin_portfolios_path %>
+<%= link_to '返回', admin_publications_path %>
 
-<h3>作品集-新建</h3>
+<h3>出版物-<%= @publication.id -%>-编辑</h3>
 
 <hr>
 
 <div class="row">
   <div class="col-md-8">
-    <%= form_for @portfolio, url: admin_portfolios_path, local: true do |f| %>
-      <%= render 'admin/shared/error_messages', object: @portfolio %>
+    <%= form_for @publication, url: admin_publication_path(id: @publication), local: true do |f| %>
+      <%= render 'admin/shared/error_messages', object: @publication %>
       <%= hidden_field_tag 'page', @page %>
 
       <div class="col-12">
@@ -33,7 +33,7 @@
       </div>
 
       <br />
-      <%= f.submit '创建作品集', class: "btn btn-primary" %>
+      <%= f.submit '更新出版物', class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>

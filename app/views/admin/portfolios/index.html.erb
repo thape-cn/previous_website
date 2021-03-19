@@ -24,7 +24,7 @@
         <td>
           <%= link_to portfolio.title, admin_portfolio_path(id: portfolio.id) %>
         </td>
-        <td><%= link_to '下载', portfolio.pdf_file.url %></td>
+        <td><%= link_to_if portfolio.pdf_file.present?, '下载', portfolio.pdf_file.url %></td>
         <td>
           <%= image_tag portfolio.cover_jpg.url, width: '300' if portfolio.cover_jpg.present? %>
           <br />

@@ -57,6 +57,7 @@ namespace :admin do
   resources :pictures, except: [:show]
   resources :message, only: [:index, :show, :destroy]
   resources :portfolios, except: [:show]
+  resources :publications, except: [:show]
   get '/login', to: 'sessions#new'
   post '/login', to:'sessions#create'
   delete '/logout', to: 'sessions#destroy'
