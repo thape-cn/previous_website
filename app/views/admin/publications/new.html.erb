@@ -15,6 +15,13 @@
         <br />
         <%= f.text_field :title, class: 'form-control' %>
       </div>
+
+      <div class="col-12">
+        <%= f.label :category_status, "分类" %>
+        <br />
+        <%= f.select :category_status, Publication.category_status_options, {}, class: 'form-control' %>
+      </div>
+
       <br />
       <div class="col-4">
         <%= f.label :pdf_file, "PDF文件" %>
