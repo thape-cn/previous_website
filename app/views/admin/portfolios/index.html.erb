@@ -22,7 +22,7 @@
     <% @portfolios.each do |portfolio| %>
       <tr>
         <td>
-          <%= link_to portfolio.title, admin_portfolio_path(id: portfolio.id) %>
+          <%= link_to portfolio.title, edit_admin_portfolio_path(id: portfolio.id) %>
         </td>
         <td><%= link_to_if portfolio.pdf_file.present?, '下载', portfolio.pdf_file.url %></td>
         <td>

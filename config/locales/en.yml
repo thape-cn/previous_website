@@ -1,6 +1,12 @@
 ---
 en:
   activerecord:
+    enums:
+      publication:
+        category_status:
+          monographs: "Monographs"
+          standard_specification: "Standard specification"
+          paper_patent: "Paper patent"
     errors:
       models:
         info:

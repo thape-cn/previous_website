@@ -1,6 +1,12 @@
 ---
 cn:
   activerecord:
+    enums:
+      publication:
+        category_status:
+          monographs: "专著书籍"
+          standard_specification: "规范标准"
+          paper_patent: "论文专利"
     errors:
       models:
         info:
