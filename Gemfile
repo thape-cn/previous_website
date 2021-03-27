@@ -44,6 +44,7 @@ gem 'jquery-rails'
 gem 'mini_magick'
 gem 'simditor'
 gem "carrierwave"
+gem 'mimemagic', '~> 0.3.10' # require by carrierwave
 gem 'carrierwave-aliyun'
 gem 'http'
 
