@@ -10,7 +10,9 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th><h4>标题</h4></th>
+      <th>
+        <h4>标题/子标题</h4>
+      </th>
       <th><h4>PDF 文件</h4></th>
       <th><h4>封面</h4></th>
       <th><h4>创建时间</h4></th>
@@ -23,6 +25,8 @@
       <tr>
         <td>
           <%= link_to portfolio.title, edit_admin_portfolio_path(id: portfolio.id) %>
+          <br />
+          <%= portfolio.sub_title %>
         </td>
         <td><%= link_to_if portfolio.pdf_file.present?, '下载', portfolio.pdf_file.url %></td>
         <td>

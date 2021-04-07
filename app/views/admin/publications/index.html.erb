@@ -10,8 +10,9 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th><h4>标题</h4></th>
-      <th><h4>分类</h4></th>
+      <th>
+        <h4>标题/子标题/分类</h4>
+      </th>
       <th><h4>PDF 文件</h4></th>
       <th><h4>封面</h4></th>
       <th><h4>创建时间</h4></th>
@@ -24,8 +25,11 @@
       <tr>
         <td>
           <%= link_to publication.title, edit_admin_publication_path(id: publication.id) %>
+          <br />
+          <%= publication.sub_title %>
+          <br />
+          <%= publication.category_status_name %>
         </td>
-        <td><%= publication.category_status_name %></td>
         <td><%= link_to_if publication.pdf_file.present?, '下载', publication.pdf_file.url %></td>
         <td>
           <%= image_tag publication.cover_jpg.url, width: '300' if publication.cover_jpg.present? %>
