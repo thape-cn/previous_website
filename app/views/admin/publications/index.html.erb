@@ -29,6 +29,8 @@
           <%= publication.sub_title %>
           <br />
           <%= publication.category_status_name %>
+          <br />
+          height: <%= publication.pixel_height -%> X width: <%= publication.pixel_width -%>
         </td>
         <td><%= link_to_if publication.pdf_file.present?, '下载', publication.pdf_file.url %></td>
         <td>

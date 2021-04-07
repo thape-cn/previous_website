@@ -27,6 +27,8 @@
           <%= link_to portfolio.title, edit_admin_portfolio_path(id: portfolio.id) %>
           <br />
           <%= portfolio.sub_title %>
+          <br />
+          height: <%= publication.pixel_height -%> X width: <%= publication.pixel_width -%>
         </td>
         <td><%= link_to_if portfolio.pdf_file.present?, '下载', portfolio.pdf_file.url %></td>
         <td>
