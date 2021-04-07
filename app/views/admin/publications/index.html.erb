@@ -4,8 +4,18 @@
 
 <h3>作品集</h3>
 <br>
-
-<%= link_to '创建新出版物', new_admin_publication_path, class: "btn btn-primary" %>
+<div class="row">
+  <div class="col-md-6">
+    <%= form_tag admin_publications_path, method: :get, class: 'form-inline' do -%>
+      <%= link_to '创建新出版物', new_admin_publication_path, class: "btn btn-primary" %>
+      <div class="form-group mx-3">
+        <label for="select-category-status">分类：</label>
+        <%= select_tag :category_status, options_for_select(Publication.category_status_options, params[:category_status]), include_blank: '全部', class: 'form-control', id: 'select-category-status' %>
+      </div>
+      <%= submit_tag '搜索', class: 'btn btn-secondary' %>
+    <% end -%>
+  </div>
+</div>
 
 <table class="table table-hover">
   <thead>
