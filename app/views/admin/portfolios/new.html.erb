@@ -49,6 +49,11 @@
         <%= f.text_field :pixel_width, class: 'form-control' %>
       </div>
 
+      <div class="col-4">
+        <%= f.label :position, "排序位置" %>
+        <br />
+        <%= f.text_field :position, class: 'form-control' %>
+      </div>
       <br />
       <%= f.submit '创建作品集', class: "btn btn-primary" %>
     <% end %>

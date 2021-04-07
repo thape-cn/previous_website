@@ -4,7 +4,7 @@ module Admin
     before_action :set_portfolio, only: [:edit, :update, :destroy]
 
     def index
-      portfolios = Portfolio.all.order(id: :desc)
+      portfolios = Portfolio.all.order(:position)
       @portfolios = portfolios.page(params[:page]).per(params[:per_page])
     end
 

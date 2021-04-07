@@ -4,7 +4,7 @@ module Admin
     before_action :set_publication, only: [:edit, :update, :destroy]
 
     def index
-      portfolios = Publication.all.order(id: :desc)
+      portfolios = Publication.all.order(:position)
       @publications = Publication.page(params[:page]).per(params[:per_page])
     end
 
