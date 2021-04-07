@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_051842) do
+ActiveRecord::Schema.define(version: 2021_04_07_053633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -318,6 +318,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_051842) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "title"
+    t.string "sub_title"
     t.index ["locale"], name: "index_portfolio_translations_on_locale"
     t.index ["portfolio_id"], name: "index_portfolio_translations_on_portfolio_id"
   end
@@ -345,6 +346,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_051842) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "title"
+    t.string "sub_title"
     t.index ["locale"], name: "index_publication_translations_on_locale"
     t.index ["publication_id"], name: "index_publication_translations_on_publication_id"
   end
