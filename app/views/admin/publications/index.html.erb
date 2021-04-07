@@ -10,12 +10,12 @@
 <table class="table table-hover">
   <thead>
     <tr>
+      <th>排序</th>
       <th>
         <h4>标题/子标题/分类</h4>
       </th>
       <th><h4>PDF 文件</h4></th>
       <th><h4>封面</h4></th>
-      <th><h4>创建时间</h4></th>
       <th><h4>动作</h4></th>
     </tr>
   </thead>
@@ -23,6 +23,7 @@
   <tbody>
     <% @publications.each do |publication| %>
       <tr>
+        <td><%= publication.position -%></td>
         <td>
           <%= link_to publication.title, edit_admin_publication_path(id: publication.id) %>
           <br />
@@ -31,6 +32,10 @@
           <%= publication.category_status_name %>
           <br />
           height: <%= publication.pixel_height -%> X width: <%= publication.pixel_width -%>
+          <br />
+          创建时间：<%= publication.created_at %>
+          <br />
+          修改时间：<%= publication.updated_at %>
         </td>
         <td><%= link_to_if publication.pdf_file.present?, '下载', publication.pdf_file.url %></td>
         <td>
@@ -38,7 +43,6 @@
           <br />
           <%= image_tag publication.cover_webp.url, width: '300' if publication.cover_webp.present? %>
         </td>
-        <td><%= publication.created_at %></td>
         <td>
           <%= link_to fa_icon("pencil-square-o"), edit_admin_publication_path(publication, page: params[:page]) %>
           <%= link_to fa_icon("trash"), admin_publication_path(publication), method: :delete %>
