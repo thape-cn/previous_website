@@ -28,7 +28,7 @@
           <br />
           <%= portfolio.sub_title %>
           <br />
-          height: <%= publication.pixel_height -%> X width: <%= publication.pixel_width -%>
+          height: <%= portfolio.pixel_height -%> X width: <%= portfolio.pixel_width -%>
         </td>
         <td><%= link_to_if portfolio.pdf_file.present?, '下载', portfolio.pdf_file.url %></td>
         <td>
