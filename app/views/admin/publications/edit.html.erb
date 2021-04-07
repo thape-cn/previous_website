@@ -17,6 +17,12 @@
       </div>
 
       <div class="col-12">
+        <%= f.label :sub_title, "子标题" %>
+        <br />
+        <%= f.text_field :sub_title, class: 'form-control' %>
+      </div>
+
+      <div class="col-12">
         <%= f.label :category_status, "分类" %>
         <br />
         <%= f.select :category_status, Publication.category_status_options, {}, class: 'form-control' %>
@@ -37,6 +43,16 @@
         <%= f.label :cover_webp, "WEBP 封面文件" %>
         <br />
         <%= f.file_field :cover_webp, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :pixel_height, "像素高，不高于900" %>
+        <br />
+        <%= f.text_field :pixel_height, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :pixel_width, "像素高，不宽于700" %>
+        <br />
+        <%= f.text_field :pixel_width, class: 'form-control' %>
       </div>
 
       <br />
