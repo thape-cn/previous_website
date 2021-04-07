@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_19_033211) do
+ActiveRecord::Schema.define(version: 2021_04_07_051842) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -328,6 +328,8 @@ ActiveRecord::Schema.define(version: 2021_03_19_033211) do
     t.string "cover_webp"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "pixel_height", default: 900
+    t.integer "pixel_width", default: 700
   end
 
   create_table "project_types", id: :bigint, default: nil, force: :cascade do |t|
@@ -354,6 +356,8 @@ ActiveRecord::Schema.define(version: 2021_03_19_033211) do
     t.string "cover_webp"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "pixel_height", default: 900
+    t.integer "pixel_width", default: 700
   end
 
   create_table "residential_types", id: :bigint, default: nil, force: :cascade do |t|
