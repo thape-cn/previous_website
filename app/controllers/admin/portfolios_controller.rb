@@ -21,7 +21,7 @@ module Admin
     end
 
     def update
-      @portfolio = Portfolio.update(portfolio_params)
+      @portfolio.update(portfolio_params)
       redirect_to admin_portfolios_path, notice: "更新成功"
     end
 

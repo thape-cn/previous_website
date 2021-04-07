@@ -21,7 +21,7 @@ module Admin
     end
 
     def update
-      @publication = Publication.update(publication_params)
+      @publication.update(publication_params)
       redirect_to admin_publications_path, notice: "更新成功"
     end
 
