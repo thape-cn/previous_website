@@ -9,6 +9,9 @@ default: &default
   encoding_aes_key: <%= Rails.application.credentials.wechat_encoding_aes_key! %>
   jsapi_ticket: "tmp/wechat_jsapi_ticket"
 
+staging:
+  <<: *default
+
 production:
   <<: *default
 
@@ -34,6 +37,14 @@ hulaquan_test:
   token: <%= Rails.application.credentials.wechat_hulaquan_token! %>
   encrypt_mode: true
   access_token: "tmp/wechat_hulaquan_test_access_token"
+  encoding_aes_key: <%= Rails.application.credentials.wechat_hulaquan_encoding_aes_key! %>
+
+hulaquan_staging:
+  appid: <%= Rails.application.credentials.wechat_hulaquan_appid! %>
+  secret: <%= Rails.application.credentials.wechat_hulaquan_secret! %>
+  token: <%= Rails.application.credentials.wechat_hulaquan_token! %>
+  encrypt_mode: true
+  access_token: "tmp/wechat_hulaquan_access_token"
   encoding_aes_key: <%= Rails.application.credentials.wechat_hulaquan_encoding_aes_key! %>
 
 hulaquan_production:
