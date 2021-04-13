@@ -35,14 +35,24 @@
         <%= f.file_field :pdf_file, class: 'form-control' %>
       </div>
       <div class="col-4">
-        <%= f.label :cover_jpg, "JPG/PNG 封面文件" %>
+        <%= f.label :cover_jpg, "JPG/PNG PC封面文件" %>
         <br />
         <%= f.file_field :cover_jpg, class: 'form-control' %>
       </div>
       <div class="col-4">
-        <%= f.label :cover_webp, "WEBP 封面文件" %>
+        <%= f.label :cover_webp, "WEBP PC封面文件" %>
         <br />
         <%= f.file_field :cover_webp, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :mobile_cover_jpg, "JPG/PNG Mobile封面文件" %>
+        <br />
+        <%= f.file_field :mobile_cover_jpg, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :mobile_cover_webp, "WEBP Mobile封面文件" %>
+        <br />
+        <%= f.file_field :mobile_cover_webp, class: 'form-control' %>
       </div>
       <div class="col-4">
         <%= f.label :pixel_height, "像素高，不高于900" %>

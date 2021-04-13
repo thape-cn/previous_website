@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_063351) do
+ActiveRecord::Schema.define(version: 2021_04_13_102926) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -332,6 +332,8 @@ ActiveRecord::Schema.define(version: 2021_04_07_063351) do
     t.integer "pixel_height", default: 900
     t.integer "pixel_width", default: 700
     t.integer "position", default: 0
+    t.string "mobile_cover_jpg"
+    t.string "mobile_cover_webp"
   end
 
   create_table "project_types", id: :bigint, default: nil, force: :cascade do |t|
@@ -362,6 +364,8 @@ ActiveRecord::Schema.define(version: 2021_04_07_063351) do
     t.integer "pixel_height", default: 900
     t.integer "pixel_width", default: 700
     t.integer "position", default: 0
+    t.string "mobile_cover_jpg"
+    t.string "mobile_cover_webp"
   end
 
   create_table "residential_types", id: :bigint, default: nil, force: :cascade do |t|
