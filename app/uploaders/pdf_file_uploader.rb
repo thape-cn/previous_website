@@ -8,9 +8,6 @@ class PdfFileUploader < CarrierWave::Uploader::Base
   end
 
   def content_disposition
-    # Only for non-image files
-    if file.extension.downcase.in?(%w(pdf))
-      "attachment;filename=#{file.original_filename}"
-    end
+    "attachment;filename=#{file.original_filename}"
   end
 end
