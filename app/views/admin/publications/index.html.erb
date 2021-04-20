@@ -48,7 +48,7 @@
           <br />
           修改时间：<%= publication.updated_at %>
         </td>
-        <td><%= link_to_if publication.pdf_file.present?, '下载', publication.pdf_file.url %></td>
+        <td><%= link_to_if publication.pdf_file.present?, '下载', publication.pdf_file.url, download: publication.pdf_file.identifier %></td>
         <td>
           <%= image_tag publication.cover_jpg.url, width: publication.pixel_width / 10, height: publication.pixel_height / 10 if publication.cover_jpg.present? %>
           <br />

@@ -36,7 +36,7 @@
           <br />
           修改时间：<%= portfolio.updated_at %>
         </td>
-        <td><%= link_to_if portfolio.pdf_file.present?, '下载', portfolio.pdf_file.url %></td>
+        <td><%= link_to_if portfolio.pdf_file.present?, '下载', portfolio.pdf_file.url, download: portfolio.pdf_file.identifier %></td>
         <td>
           <%= image_tag portfolio.cover_jpg.url, width: portfolio.pixel_width / 10, height: portfolio.pixel_height / 10 if portfolio.cover_jpg.present? %>
           <br />
