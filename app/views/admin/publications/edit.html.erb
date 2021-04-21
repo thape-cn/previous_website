@@ -55,6 +55,11 @@
         <%= f.file_field :mobile_cover_webp, class: 'form-control' %>
       </div>
       <div class="col-4">
+        <%= f.label :page_cover, "PNG 页内封面文件" %>
+        <br />
+        <%= f.file_field :page_cover, class: 'form-control' %>
+      </div>
+      <div class="col-4">
         <%= f.label :pixel_height, "像素高，不高于900" %>
         <br />
         <%= f.text_field :pixel_height, class: 'form-control' %>

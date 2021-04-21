@@ -2,7 +2,7 @@
   <div class="alert alert-<%= message_type %>"><%= message %></div>
 <% end %>
 
-<h3>作品集</h3>
+<h3>出版物</h3>
 <br>
 <div class="row">
   <div class="col-md-6">
@@ -27,6 +27,7 @@
       <th><h4>PDF 文件</h4></th>
       <th><h4>PC封面</h4></th>
       <th><h4>Mobile封面</h4></th>
+      <th><h4>内页封面</h4></th>
       <th><h4>动作</h4></th>
     </tr>
   </thead>
@@ -58,6 +59,9 @@
           <%= image_tag publication.mobile_cover_jpg.url, width: publication.pixel_width / 10, height: publication.pixel_height / 10 if publication.mobile_cover_jpg.present? %>
           <br />
           <%= image_tag publication.mobile_cover_webp.url, width: publication.pixel_width / 10, height: publication.pixel_height / 10 if publication.mobile_cover_webp.present? %>
+        </td>
+        <td>
+          <%= image_tag publication.page_cover.url, width: publication.pixel_width / 10, height: publication.pixel_height / 10 if publication.page_cover.present? %>
         </td>
         <td>
           <%= link_to fa_icon("pencil-square-o"), edit_admin_publication_path(publication, page: params[:page]) %>
