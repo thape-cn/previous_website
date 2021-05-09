@@ -4,17 +4,17 @@
 
 desandro-matches-selector@^2.0.0:
   version "2.0.2"
-  resolved "https://registry.npm.taobao.org/desandro-matches-selector/download/desandro-matches-selector-2.0.2.tgz#717beed4dc13e7d8f3762f707a6d58a6774218e1"
+  resolved "https://registry.nlark.com/desandro-matches-selector/download/desandro-matches-selector-2.0.2.tgz#717beed4dc13e7d8f3762f707a6d58a6774218e1"
   integrity sha1-cXvu1NwT59jzdi9wem1YpndCGOE=
 
 ev-emitter@^1.0.1, ev-emitter@^1.1.1:
   version "1.1.1"
-  resolved "https://registry.npm.taobao.org/ev-emitter/download/ev-emitter-1.1.1.tgz#8f18b0ce5c76a5d18017f71c0a795c65b9138f2a"
+  resolved "https://registry.nlark.com/ev-emitter/download/ev-emitter-1.1.1.tgz#8f18b0ce5c76a5d18017f71c0a795c65b9138f2a"
   integrity sha1-jxiwzlx2pdGAF/ccCnlcZbkTjyo=
 
 fizzy-ui-utils@^2.0.7:
   version "2.0.7"
-  resolved "https://registry.npm.taobao.org/fizzy-ui-utils/download/fizzy-ui-utils-2.0.7.tgz#7df45dcc4eb374a08b65d39bb9a4beedf7330505"
+  resolved "https://registry.nlark.com/fizzy-ui-utils/download/fizzy-ui-utils-2.0.7.tgz#7df45dcc4eb374a08b65d39bb9a4beedf7330505"
   integrity sha1-ffRdzE6zdKCLZdObuaS+7fczBQU=
   dependencies:
     desandro-matches-selector "^2.0.0"
@@ -33,19 +33,19 @@ flickity@^2.2.0:
 
 get-size@^2.0.3:
   version "2.0.3"
-  resolved "https://registry.npm.taobao.org/get-size/download/get-size-2.0.3.tgz#54a1d0256b20ea7ac646516756202769941ad2ef"
+  resolved "https://registry.nlark.com/get-size/download/get-size-2.0.3.tgz#54a1d0256b20ea7ac646516756202769941ad2ef"
   integrity sha1-VKHQJWsg6nrGRlFnViAnaZQa0u8=
 
 unidragger@^2.3.0:
   version "2.3.1"
-  resolved "https://registry.npm.taobao.org/unidragger/download/unidragger-2.3.1.tgz#2e8c34feff61affa96dc895234ddfc1ea4ec7515"
+  resolved "https://registry.nlark.com/unidragger/download/unidragger-2.3.1.tgz#2e8c34feff61affa96dc895234ddfc1ea4ec7515"
   integrity sha1-Low0/v9hr/qW3IlSNN38HqTsdRU=
   dependencies:
     unipointer "^2.3.0"
 
 unipointer@^2.3.0:
   version "2.3.0"
-  resolved "https://registry.npm.taobao.org/unipointer/download/unipointer-2.3.0.tgz#ba0dc462ce31c2a88e80810e19c3bae0ce47ed9f"
+  resolved "https://registry.nlark.com/unipointer/download/unipointer-2.3.0.tgz#ba0dc462ce31c2a88e80810e19c3bae0ce47ed9f"
   integrity sha1-ug3EYs4xwqiOgIEOGcO64M5H7Z8=
   dependencies:
     ev-emitter "^1.0.1"
