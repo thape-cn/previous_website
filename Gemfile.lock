@@ -124,7 +124,7 @@ GEM
     enumize (0.2.0)
       rails (>= 5.0.0)
     erubi (1.10.0)
-    execjs (2.7.0)
+    execjs (2.8.0)
     ffi (1.15.0)
     ffi (1.15.0-java)
     ffi (1.15.0-x64-mingw32)
