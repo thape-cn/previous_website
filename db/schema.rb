@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_28_034622) do
+ActiveRecord::Schema.define(version: 2021_05_28_041143) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -484,22 +484,22 @@ ActiveRecord::Schema.define(version: 2021_05_28_034622) do
     t.string "hero_news_photo_mobile"
     t.string "background_1_title"
     t.string "background_1_subtitle"
-    t.string "background_1_url"
+    t.string "background_1_link"
     t.string "background_2_title"
     t.string "background_2_subtitle"
-    t.string "background_2_url"
+    t.string "background_2_link"
     t.string "background_3_title"
     t.string "background_3_subtitle"
-    t.string "background_3_url"
+    t.string "background_3_link"
     t.string "background_4_title"
     t.string "background_4_subtitle"
-    t.string "background_4_url"
+    t.string "background_4_link"
     t.string "background_5_title"
     t.string "background_5_subtitle"
-    t.string "background_5_url"
+    t.string "background_5_link"
     t.string "background_6_title"
     t.string "background_6_subtitle"
-    t.string "background_6_url"
+    t.string "background_6_link"
   end
 
   create_table "users", id: :bigint, default: nil, force: :cascade do |t|
