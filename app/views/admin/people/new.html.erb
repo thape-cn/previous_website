@@ -1,9 +1,11 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
 <%= link_to '返回', admin_people_path %>
 
 <h3>天华高管团队-添加</h3>
 <hr>
-
-<%#= render 'form', person: @person %>
 
 <div class="row">
   <div class="col-md-8">
