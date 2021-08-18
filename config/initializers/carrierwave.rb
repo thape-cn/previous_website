@@ -13,7 +13,7 @@ CarrierWave.configure do |config|
   # 是否使用内部连接，true - 使用 Aliyun 主机内部局域网的方式访问  false - 外部网络访问
   # When your app server wants deployment in Alicloud internal network, enable this option can speed up uploading
   # by using internal networking. otherwice you must disable it.
-  config.aliyun_internal   = false
+  config.aliyun_internal   = true
   # 配置存储的地区数据中心，默认: "cn-hangzhou"
   # Which region of your Bucket.
   config.aliyun_region     = "cn-shanghai"
