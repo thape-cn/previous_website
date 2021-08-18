@@ -39,7 +39,7 @@
         <tr>
           <td><%= check_box_tag 'check_ids[]', person.id %> <%= person.position %></td>
           <td><%= link_to full_category(person.category) %></td>
-          <td><%= link_to person.name, admin_person_path(person) %></td>
+          <td><%= link_to person.name, admin_person_path(person) %><br ><%= person.url_name -%></td>
           <td><%= link_to person.title, admin_person_path(person) %></td>
           <td>
             <%= link_to fa_icon("long-arrow-up"), top_admin_person_path(person), method: :patch %>
