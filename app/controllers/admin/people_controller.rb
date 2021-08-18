@@ -26,7 +26,8 @@ module Admin
           flash[:success] = "创建成功!"
           format.html { redirect_to admin_people_url }
         else
-          format.html { render :new, notice: @person.errors.full_messages.to_sentence }
+          flash[:danger] = @person.errors.full_messages.to_sentence
+          format.html { render :new }
         end
       end
     end
@@ -36,6 +37,7 @@ module Admin
         if @person.update(person_params)
           format.html { redirect_to admin_people_url }
         else
+          flash[:danger] = @person.errors.full_messages.to_sentence
           format.html { render :edit }
         end
       end
