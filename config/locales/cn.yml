@@ -15,6 +15,10 @@ cn:
               blank: "引言不能为空"
             content:
               blank: "正文不能为空"
+        person:
+          attributes:
+            url_name:
+              taken: "管理团队成员的URL短名不能重复，可以到列表页检查是否已经有人的URL短名为空，两个空也视作重复。"
   helpers:
     page_entries_info:
       more_pages:

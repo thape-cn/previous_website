@@ -15,6 +15,10 @@ en:
               blank: "Introudction can not being blank."
             content:
               blank: "Content can not being blank."
+        person:
+          attributes:
+            url_name:
+              taken: "The URL short name of the management team member cannot be repeated. You can go to the list page to check whether the URL short name is empty. Two empty URLs are considered as duplicates."
   helpers:
     page_entries_info:
       more_pages:
