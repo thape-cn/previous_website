@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_28_041143) do
+ActiveRecord::Schema.define(version: 2021_08_23_090933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -124,6 +124,7 @@ ActiveRecord::Schema.define(version: 2021_05_28_041143) do
     t.text "url_name"
     t.text "company_name"
     t.bigint "company_position"
+    t.string "company_name_english"
   end
 
   create_table "city_people", id: :bigint, default: nil, force: :cascade do |t|
@@ -430,7 +431,7 @@ ActiveRecord::Schema.define(version: 2021_05_28_041143) do
     t.string "new_project_photo_6"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "hero_news_photo"
+    t.string "hero_news_photo"
     t.bigint "hero_news_id"
     t.bigint "hero_news_title_cap"
     t.bigint "new_project_1_id"

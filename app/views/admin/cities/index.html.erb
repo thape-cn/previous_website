@@ -25,7 +25,12 @@
         <td><%= city.name %></td>
         <td><%= city.china_area_name %></td>
         <td><%= city.url_name %></td>
-        <td><%= city.company_name %></td>
+        <td>
+          <%= city.company_name %>
+          <br />
+          <%= city.company_name_english %>
+
+        </td>
         <td>
           <%= link_to fa_icon("pencil-square-o"), edit_admin_city_path(city) %>
         </td>
