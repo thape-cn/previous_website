@@ -43,3 +43,4 @@ set :rbenv_type, :user
 set :rbenv_ruby, '3.0.2'
 
 set :puma_init_active_record, true
+set :puma_phased_restart, true
