@@ -357,7 +357,7 @@ GEM
     websocket-driver (0.7.5-java)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    wechat (0.13.3)
+    wechat (0.14.0)
       activesupport (>= 6.0, < 7)
       http (>= 1.0.4, < 6)
       nokogiri (>= 1.6.0)
