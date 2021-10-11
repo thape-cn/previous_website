@@ -21,7 +21,7 @@ fizzy-ui-utils@^2.0.7:
 
 flickity@^2.2.0:
   version "2.2.2"
-  resolved "https://registry.nlark.com/flickity/download/flickity-2.2.2.tgz#29597ac4d9b81938a58610a0eeb9db915508063d"
+  resolved "https://registry.npmmirror.com/flickity/download/flickity-2.2.2.tgz#29597ac4d9b81938a58610a0eeb9db915508063d"
   integrity sha1-KVl6xNm4GTilhhCg7rnbkVUIBj0=
   dependencies:
     desandro-matches-selector "^2.0.0"
