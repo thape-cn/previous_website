@@ -4,7 +4,7 @@
 
 desandro-matches-selector@^2.0.0:
   version "2.0.2"
-  resolved "https://registry.npm.taobao.org/desandro-matches-selector/download/desandro-matches-selector-2.0.2.tgz#717beed4dc13e7d8f3762f707a6d58a6774218e1"
+  resolved "https://registry.nlark.com/desandro-matches-selector/download/desandro-matches-selector-2.0.2.tgz#717beed4dc13e7d8f3762f707a6d58a6774218e1"
   integrity sha1-cXvu1NwT59jzdi9wem1YpndCGOE=
 
 ev-emitter@^1.0.1, ev-emitter@^1.1.1:
@@ -14,14 +14,14 @@ ev-emitter@^1.0.1, ev-emitter@^1.1.1:
 
 fizzy-ui-utils@^2.0.7:
   version "2.0.7"
-  resolved "https://registry.npm.taobao.org/fizzy-ui-utils/download/fizzy-ui-utils-2.0.7.tgz#7df45dcc4eb374a08b65d39bb9a4beedf7330505"
+  resolved "https://registry.nlark.com/fizzy-ui-utils/download/fizzy-ui-utils-2.0.7.tgz#7df45dcc4eb374a08b65d39bb9a4beedf7330505"
   integrity sha1-ffRdzE6zdKCLZdObuaS+7fczBQU=
   dependencies:
     desandro-matches-selector "^2.0.0"
 
 flickity@^2.2.0:
   version "2.2.2"
-  resolved "https://registry.npmmirror.com/flickity/download/flickity-2.2.2.tgz#29597ac4d9b81938a58610a0eeb9db915508063d"
+  resolved "https://registry.nlark.com/flickity/download/flickity-2.2.2.tgz#29597ac4d9b81938a58610a0eeb9db915508063d"
   integrity sha1-KVl6xNm4GTilhhCg7rnbkVUIBj0=
   dependencies:
     desandro-matches-selector "^2.0.0"
@@ -45,7 +45,7 @@ unidragger@^2.3.0:
 
 unipointer@^2.3.0:
   version "2.3.0"
-  resolved "https://registry.npm.taobao.org/unipointer/download/unipointer-2.3.0.tgz#ba0dc462ce31c2a88e80810e19c3bae0ce47ed9f"
+  resolved "https://registry.nlark.com/unipointer/download/unipointer-2.3.0.tgz#ba0dc462ce31c2a88e80810e19c3bae0ce47ed9f"
   integrity sha1-ug3EYs4xwqiOgIEOGcO64M5H7Z8=
   dependencies:
     ev-emitter "^1.0.1"
