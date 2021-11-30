@@ -284,7 +284,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rexml (3.2.5)
-    route_translator (11.0.1)
+    route_translator (12.0.0)
       actionpack (>= 5.2, < 7.0)
       activesupport (>= 5.2, < 7.0)
       addressable (~> 2.7)
