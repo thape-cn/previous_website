@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/ruby:3.0.2-node-browsers
+      - image: circleci/ruby:3.0.3-node-browsers
         environment: # environment variables for primary container
           BUNDLE_JOBS: 3
           BUNDLE_RETRY: 3
@@ -68,6 +68,11 @@ jobs:
       - run:
           name: Database setup
           command: bin/rails db:schema:load --trace
+
+      # do assets precompile
+      - run:
+          name: assets precompile
+          command: bin/rails assets:precompile
 
       # run tests!
       - run:
