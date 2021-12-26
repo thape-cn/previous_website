@@ -411,6 +411,7 @@ DEPENDENCIES
   selenium-webdriver
   simditor
   simplecov
+  sprockets
   sqlite3
   terser
   turbolinks (~> 5)

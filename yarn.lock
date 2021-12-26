@@ -36,6 +36,11 @@ get-size@^2.0.3:
   resolved "https://registry.npmmirror.com/get-size/download/get-size-2.0.3.tgz#54a1d0256b20ea7ac646516756202769941ad2ef"
   integrity sha1-VKHQJWsg6nrGRlFnViAnaZQa0u8=
 
+turbolinks@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npmmirror.com/turbolinks/download/turbolinks-5.2.0.tgz#e6877a55ea5c1cb3bb225f0a4ae303d6d32ff77c"
+  integrity sha1-5od6VepcHLO7Il8KSuMD1tMv93w=
+
 unidragger@^2.4.0:
   version "2.4.0"
   resolved "https://registry.npmmirror.com/unidragger/download/unidragger-2.4.0.tgz#4cd7e564317af0ef42632d5984a82d4ae6314d8d"
