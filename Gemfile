@@ -18,11 +18,11 @@ gem 'terser'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.9'
+gem 'jbuilder'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-gem 'bcrypt', '~> 3.1.13'
+gem 'bcrypt'
 gem 'route_translator'
 gem 'globalize'
 
@@ -32,7 +32,7 @@ gem 'globalize'
 # Reduces boot times through caching; required in config/boot.rb
 
 gem 'font-awesome-rails'
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '>= 1.9.3', require: false
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'kaminari'
 
@@ -57,12 +57,6 @@ group :development, :test do
 end
 
 group :development do
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console'
-  gem 'listen'
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
