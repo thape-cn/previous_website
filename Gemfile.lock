@@ -154,7 +154,7 @@ GEM
       rake
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
-    geocoder (1.7.2)
+    geocoder (1.7.3)
     globalid (1.0.0)
       activesupport (>= 5.0)
     http (5.0.4)
