@@ -26,7 +26,7 @@ gem 'jbuilder'
 gem 'bcrypt'
 gem 'route_translator'
 # bundle config local.globalize /Users/guochunzhong/git/oss/globalize/
-gem 'globalize', git: 'https://github.com/ekampp/globalize', branch: 'master'
+gem 'globalize', git: 'https://git.thape.com.cn/rails/globalize.git', branch: 'master'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
