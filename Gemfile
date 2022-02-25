@@ -25,8 +25,7 @@ gem 'jbuilder'
 # Use ActiveModel has_secure_password
 gem 'bcrypt'
 gem 'route_translator'
-# bundle config local.globalize /Users/guochunzhong/git/oss/globalize/
-gem 'globalize', git: 'https://git.thape.com.cn/rails/globalize.git', branch: 'master'
+gem 'globalize'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
