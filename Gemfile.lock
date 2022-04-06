@@ -208,8 +208,8 @@ GEM
     minitest (5.15.0)
     minitest-ci (3.4.0)
       minitest (>= 5.0.6)
-    msgpack (1.4.5)
-    msgpack (1.4.5-java)
+    msgpack (1.5.0)
+    msgpack (1.5.0-java)
     net-imap (0.2.3)
       digest
       net-protocol
