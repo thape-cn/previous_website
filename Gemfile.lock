@@ -144,7 +144,7 @@ GEM
       rake
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
-    geocoder (1.7.5)
+    geocoder (1.8.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     globalize (6.1.0)
@@ -433,4 +433,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.3.13
+   2.3.14
