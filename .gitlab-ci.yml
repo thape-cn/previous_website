@@ -14,8 +14,7 @@ variables:
   POSTGRES_PASSWORD: "postgres"
   CACHE_FALLBACK_KEY: $CI_COMMIT_REF_SLUG
 
-# Cache gems in between builds
-cache:
+cache: &default_cache
   - key:
       files:
         - Gemfile.lock
@@ -36,6 +35,8 @@ stages:
   - deploy
 
 test:
+  cache:
+    <<: *default_cache
   script:
     - bundle install -j $(nproc)
     - yarn install --cache-folder .yarn-cache
@@ -44,6 +45,8 @@ test:
     - bin/rails test
 
 deploy_staging:
+  cache:
+    <<: *default_cache
   stage: deploy
   script:
     - bundle install -j $(nproc)
