@@ -47,4 +47,4 @@ deploy_staging:
   stage: deploy
   script:
     - eval `ssh-agent -s`
-    - whoami
+    - whoami # cirecleci
