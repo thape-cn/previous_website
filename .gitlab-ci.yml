@@ -48,15 +48,9 @@ deploy_staging:
           - Gemfile.lock
       paths:
         - vendor/ruby
-    - key:
-        files:
-          - yarn.lock
-      paths:
-        - .yarn-cache/
   stage: deploy
   script:
     - bundle install -j $(nproc)
-    - yarn install --cache-folder .yarn-cache
     - mkdir ~/.ssh
     - mv "$SSH_ID_RSA" ~/.ssh/id_rsa
     - mv "$SSH_CONFIG_FILE" ~/.ssh/config
