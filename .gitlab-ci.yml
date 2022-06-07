@@ -55,3 +55,18 @@ deploy_staging:
     - mv "$SSH_ID_RSA" ~/.ssh/id_rsa
     - mv "$SSH_CONFIG_FILE" ~/.ssh/config
     - bundle exec cap staging deploy
+
+deploy_production:
+  cache:
+    - key:
+        files:
+          - Gemfile.lock
+      paths:
+        - vendor/ruby
+  stage: deploy
+  script:
+    - bundle install -j $(nproc)
+    - mkdir ~/.ssh
+    - mv "$SSH_ID_RSA" ~/.ssh/id_rsa
+    - mv "$SSH_CONFIG_FILE" ~/.ssh/config
+    - bundle exec cap production deploy
