@@ -77,6 +77,7 @@ GEM
       execjs (~> 2)
     bcrypt (3.1.18)
     bcrypt (3.1.18-java)
+    bcrypt_pbkdf (1.1.0)
     bootsnap (1.12.0)
       msgpack (~> 1.2)
     bootstrap-sass (3.4.1)
@@ -131,6 +132,8 @@ GEM
     docile (1.4.0)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    ed25519 (1.3.0)
+    ed25519 (1.3.0-java)
     enumize (0.2.1)
       rails (>= 5.0.0)
     erubi (1.10.0)
@@ -400,6 +403,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt
+  bcrypt_pbkdf
   bootsnap (>= 1.9.3)
   bootstrap-sass (~> 3.4.1)
   capistrano
@@ -410,6 +414,7 @@ DEPENDENCIES
   carrierwave
   carrierwave-aliyun
   debug
+  ed25519
   enumize
   ffi
   font-awesome-rails
