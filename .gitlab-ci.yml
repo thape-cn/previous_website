@@ -48,5 +48,6 @@ deploy_staging:
   script:
     - bundle install -j $(nproc)
     - yarn install --cache-folder .yarn-cache
-    - eval `ssh-agent -s`
-    - whoami # cirecleci
+    - mkdir ~/.ssh
+    - mv "$SSH_ID_RSA" ~/.ssh/id_rsa
+    - bundle exec cap staging deploy
