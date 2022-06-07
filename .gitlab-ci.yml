@@ -55,6 +55,9 @@ deploy_staging:
     - mv "$SSH_ID_RSA" ~/.ssh/id_rsa
     - mv "$SSH_CONFIG_FILE" ~/.ssh/config
     - bundle exec cap staging deploy
+  environment:
+    name: staging
+    url: https://tailwind-backend.thape.com.cn
 
 deploy_production:
   cache:
@@ -70,3 +73,9 @@ deploy_production:
     - mv "$SSH_ID_RSA" ~/.ssh/id_rsa
     - mv "$SSH_CONFIG_FILE" ~/.ssh/config
     - bundle exec cap production deploy
+  environment:
+    name: production
+    url: https://legacy.thape.com.cn
+  when: manual
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
