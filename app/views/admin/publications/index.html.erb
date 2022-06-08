@@ -49,17 +49,17 @@
         </td>
         <td><%= link_to_if publication.pdf_file.present?, '下载', publication.pdf_file.url, download: publication.pdf_file.identifier %></td>
         <td>
-          <%= image_tag publication.cover_jpg.url, width: publication.pixel_width / 10, height: publication.pixel_height / 10 if publication.cover_jpg.present? %>
+          <%= image_tag publication.cover_jpg.url, width: publication.pixel_width.to_f / 10, height: publication.pixel_height.to_f / 10 if publication.cover_jpg.present? %>
           <br />
-          <%= image_tag publication.cover_webp.url, width: publication.pixel_width / 10, height: publication.pixel_height / 10 if publication.cover_webp.present? %>
+          <%= image_tag publication.cover_webp.url, width: publication.pixel_width.to_f / 10, height: publication.pixel_height.to_f / 10 if publication.cover_webp.present? %>
         </td>
         <td>
-          <%= image_tag publication.mobile_cover_jpg.url, width: publication.pixel_width / 10, height: publication.pixel_height / 10 if publication.mobile_cover_jpg.present? %>
+          <%= image_tag publication.mobile_cover_jpg.url, width: publication.pixel_width.to_f / 10, height: publication.pixel_height.to_f / 10 if publication.mobile_cover_jpg.present? %>
           <br />
-          <%= image_tag publication.mobile_cover_webp.url, width: publication.pixel_width / 10, height: publication.pixel_height / 10 if publication.mobile_cover_webp.present? %>
+          <%= image_tag publication.mobile_cover_webp.url, width: publication.pixel_width.to_f / 10, height: publication.pixel_height.to_f / 10 if publication.mobile_cover_webp.present? %>
         </td>
         <td>
-          <%= image_tag publication.page_cover.url, width: publication.pixel_width / 10, height: publication.pixel_height / 10 if publication.page_cover.present? %>
+          <%= image_tag publication.page_cover.url, width: publication.pixel_width.to_f / 10, height: publication.pixel_height.to_f / 10 if publication.page_cover.present? %>
         </td>
         <td>
           <%= link_to fa_icon("pencil-square-o"), edit_admin_publication_path(publication, page: params[:page]) %>

@@ -37,17 +37,17 @@
         </td>
         <td><%= link_to_if portfolio.pdf_file.present?, '下载', portfolio.pdf_file.url, download: portfolio.pdf_file.identifier %></td>
         <td>
-          <%= image_tag portfolio.cover_jpg.url, width: portfolio.pixel_width / 10, height: portfolio.pixel_height / 10 if portfolio.cover_jpg.present? %>
+          <%= image_tag portfolio.cover_jpg.url, width: portfolio.pixel_width.to_f / 10, height: portfolio.pixel_height.to_f / 10 if portfolio.cover_jpg.present? %>
           <br />
-          <%= image_tag portfolio.cover_webp.url, width: portfolio.pixel_width / 10, height: portfolio.pixel_height / 10 if portfolio.cover_webp.present? %>
+          <%= image_tag portfolio.cover_webp.url, width: portfolio.pixel_width.to_f / 10, height: portfolio.pixel_height.to_f / 10 if portfolio.cover_webp.present? %>
         </td>
         <td>
-          <%= image_tag portfolio.mobile_cover_jpg.url, width: portfolio.pixel_width / 10, height: portfolio.pixel_height / 10 if portfolio.mobile_cover_jpg.present? %>
+          <%= image_tag portfolio.mobile_cover_jpg.url, width: portfolio.pixel_width.to_f / 10, height: portfolio.pixel_height.to_f / 10 if portfolio.mobile_cover_jpg.present? %>
           <br />
-          <%= image_tag portfolio.mobile_cover_webp.url, width: portfolio.pixel_width / 10, height: portfolio.pixel_height / 10 if portfolio.mobile_cover_webp.present? %>
+          <%= image_tag portfolio.mobile_cover_webp.url, width: portfolio.pixel_width.to_f / 10, height: portfolio.pixel_height.to_f / 10 if portfolio.mobile_cover_webp.present? %>
         </td>
         <td>
-          <%= image_tag portfolio.page_cover.url, width: portfolio.pixel_width / 10, height: portfolio.pixel_height / 10 if portfolio.page_cover.present? %>
+          <%= image_tag portfolio.page_cover.url, width: portfolio.pixel_width.to_f / 10, height: portfolio.pixel_height.to_f / 10 if portfolio.page_cover.present? %>
         </td>
         <td>
           <%= link_to fa_icon("pencil-square-o"), edit_admin_portfolio_path(portfolio, page: params[:page]) %>

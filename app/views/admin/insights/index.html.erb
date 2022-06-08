@@ -37,17 +37,17 @@
         </td>
         <td><%= link_to_if insight.pdf_file.present?, '下载', insight.pdf_file.url, download: insight.pdf_file.identifier %></td>
         <td>
-          <%= image_tag insight.cover_jpg.url, width: insight.pixel_width / 10, height: insight.pixel_height / 10 if insight.cover_jpg.present? %>
+          <%= image_tag insight.cover_jpg.url, width: insight.pixel_width.to_f / 10, height: insight.pixel_height.to_f / 10 if insight.cover_jpg.present? %>
           <br />
-          <%= image_tag insight.cover_webp.url, width: insight.pixel_width / 10, height: insight.pixel_height / 10 if insight.cover_webp.present? %>
+          <%= image_tag insight.cover_webp.url, width: insight.pixel_width.to_f / 10, height: insight.pixel_height.to_f / 10 if insight.cover_webp.present? %>
         </td>
         <td>
-          <%= image_tag insight.mobile_cover_jpg.url, width: insight.pixel_width / 10, height: insight.pixel_height / 10 if insight.mobile_cover_jpg.present? %>
+          <%= image_tag insight.mobile_cover_jpg.url, width: insight.pixel_width.to_f / 10, height: insight.pixel_height.to_f / 10 if insight.mobile_cover_jpg.present? %>
           <br />
-          <%= image_tag insight.mobile_cover_webp.url, width: insight.pixel_width / 10, height: insight.pixel_height / 10 if insight.mobile_cover_webp.present? %>
+          <%= image_tag insight.mobile_cover_webp.url, width: insight.pixel_width.to_f / 10, height: insight.pixel_height.to_f / 10 if insight.mobile_cover_webp.present? %>
         </td>
         <td>
-          <%= image_tag insight.page_cover.url, width: insight.pixel_width / 10, height: insight.pixel_height / 10 if insight.page_cover.present? %>
+          <%= image_tag insight.page_cover.url, width: insight.pixel_width.to_f / 10, height: insight.pixel_height.to_f / 10 if insight.page_cover.present? %>
         </td>
         <td>
           <%= link_to fa_icon("pencil-square-o"), edit_admin_insight_path(insight, page: params[:page]) %>
