@@ -1,0 +1,76 @@
+<%= link_to '返回', admin_insights_path %>
+
+<h3>天华内刊-新建</h3>
+
+<hr>
+
+<div class="row">
+  <div class="col-md-8">
+    <%= form_for @insight, url: admin_insights_path, local: true do |f| %>
+      <%= render 'admin/shared/error_messages', object: @insight %>
+      <%= hidden_field_tag 'page', @page %>
+
+      <div class="col-12">
+        <%= f.label :title, "标题" %>
+        <br />
+        <%= f.text_field :title, class: 'form-control' %>
+      </div>
+      <div class="col-12">
+        <%= f.label :sub_title, "子标题" %>
+        <br />
+        <%= f.text_field :sub_title, class: 'form-control' %>
+      </div>
+
+      <br />
+      <div class="col-4">
+        <%= f.label :pdf_file, "PDF 文件" %>
+        <br />
+        <%= f.file_field :pdf_file, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :cover_jpg, "JPG/PNG PC封面文件" %>
+        <br />
+        <%= f.file_field :cover_jpg, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :cover_webp, "WEBP PC封面文件" %>
+        <br />
+        <%= f.file_field :cover_webp, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :mobile_cover_jpg, "JPG/PNG Mobile封面文件" %>
+        <br />
+        <%= f.file_field :mobile_cover_jpg, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :mobile_cover_webp, "WEBP Mobile封面文件" %>
+        <br />
+        <%= f.file_field :mobile_cover_webp, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :page_cover, "PNG 页内封面文件" %>
+        <br />
+        <%= f.file_field :page_cover, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :pixel_height, "像素高，不高于900" %>
+        <br />
+        <%= f.text_field :pixel_height, class: 'form-control' %>
+      </div>
+      <div class="col-4">
+        <%= f.label :pixel_width, "像素宽，不宽于700" %>
+        <br />
+        <%= f.text_field :pixel_width, class: 'form-control' %>
+      </div>
+
+      <div class="col-4">
+        <%= f.label :position, "排序位置" %>
+        <br />
+        <%= f.text_field :position, class: 'form-control' %>
+      </div>
+      <br />
+      <%= f.submit '创建出版物', class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

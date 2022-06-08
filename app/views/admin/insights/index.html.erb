@@ -1,0 +1,61 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<h3>天华内刊</h3>
+<br>
+
+<%= link_to '创建新天华内刊', new_admin_insight_path, class: "btn btn-primary" %>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h4>排序</h4></th>
+      <th><h4>标题/子标题</h4></th>
+      <th><h4>PDF 文件</h4></th>
+      <th><h4>PC封面</h4></th>
+      <th><h4>Mobile封面</h4></th>
+      <th><h4>内页封面</h4></th>
+      <th><h4>动作</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @insights.each do |insight| %>
+      <tr>
+        <td><%= insight.position -%></td>
+        <td>
+          <%= link_to insight.title, edit_admin_insight_path(id: insight.id) %>
+          <br />
+          <%= insight.sub_title %>
+          <br />
+          height: <%= insight.pixel_height -%> X width: <%= insight.pixel_width -%>
+          <br />
+          创建时间：<%= insight.created_at %>
+          <br />
+          修改时间：<%= insight.updated_at %>
+        </td>
+        <td><%= link_to_if insight.pdf_file.present?, '下载', insight.pdf_file.url, download: insight.pdf_file.identifier %></td>
+        <td>
+          <%= image_tag insight.cover_jpg.url, width: insight.pixel_width / 10, height: insight.pixel_height / 10 if insight.cover_jpg.present? %>
+          <br />
+          <%= image_tag insight.cover_webp.url, width: insight.pixel_width / 10, height: insight.pixel_height / 10 if insight.cover_webp.present? %>
+        </td>
+        <td>
+          <%= image_tag insight.mobile_cover_jpg.url, width: insight.pixel_width / 10, height: insight.pixel_height / 10 if insight.mobile_cover_jpg.present? %>
+          <br />
+          <%= image_tag insight.mobile_cover_webp.url, width: insight.pixel_width / 10, height: insight.pixel_height / 10 if insight.mobile_cover_webp.present? %>
+        </td>
+        <td>
+          <%= image_tag insight.page_cover.url, width: insight.pixel_width / 10, height: insight.pixel_height / 10 if insight.page_cover.present? %>
+        </td>
+        <td>
+          <%= link_to fa_icon("pencil-square-o"), edit_admin_insight_path(insight, page: params[:page]) %>
+          <%= link_to fa_icon("trash"), admin_insight_path(insight), method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @insights, hide_goto_page: false %>
