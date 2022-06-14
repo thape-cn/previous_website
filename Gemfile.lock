@@ -346,7 +346,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.3)
+    sqlite3 (1.4.2)
     sshkit (1.21.2)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -436,7 +436,7 @@ DEPENDENCIES
   simditor
   simplecov
   sprockets
-  sqlite3
+  sqlite3 (= 1.4.2)
   terser
   turbolinks (~> 5)
   tzinfo-data

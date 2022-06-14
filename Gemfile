@@ -7,7 +7,7 @@ ruby '>= 2.7'
 gem 'rails', '~> 7.0.3'
 gem 'sprockets'
 gem 'enumize'
-gem 'sqlite3'
+gem 'sqlite3', '= 1.4.2'
 gem 'pg'
 # Use Puma as the app server
 gem 'puma'
