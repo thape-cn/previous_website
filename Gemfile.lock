@@ -354,7 +354,7 @@ GEM
     stringio (3.0.2)
     strscan (3.0.3)
     strscan (3.0.3-java)
-    terser (1.1.11)
+    terser (1.1.12)
       execjs (>= 0.3.0, < 3)
     thor (1.2.1)
     tilt (2.0.10)
@@ -447,4 +447,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.3.17
+   2.3.18
