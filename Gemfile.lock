@@ -136,7 +136,7 @@ GEM
     ed25519 (1.3.0-java)
     enumize (0.2.1)
       rails (>= 5.0.0)
-    erubi (1.10.0)
+    erubi (1.11.0)
     execjs (2.8.1)
     ffi (1.15.5)
     ffi (1.15.5-java)
