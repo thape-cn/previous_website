@@ -210,8 +210,8 @@ GEM
     minitest (5.16.3)
     minitest-ci (3.4.0)
       minitest (>= 5.0.6)
-    msgpack (1.5.6)
-    msgpack (1.5.6-java)
+    msgpack (1.6.0)
+    msgpack (1.6.0-java)
     net-imap (0.3.1)
       net-protocol
     net-pop (0.1.2)
@@ -337,7 +337,7 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.5.1)
+    sqlite3 (1.5.2)
       mini_portile2 (~> 2.8.0)
     sshkit (1.21.3)
       net-scp (>= 1.1.2)
@@ -380,7 +380,7 @@ GEM
       zeitwerk (~> 2.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.0)
+    zeitwerk (2.6.1)
 
 PLATFORMS
   arm64-darwin-21
