@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
     def redirect_to_thape_web_if_bot
       if browser.bot.search_engine?
-        redirect_to "https://www.thape.com"
+        redirect_to "https://www.thape.com#{request.fullpath}", status: :moved_permanently
       end
     end
 
