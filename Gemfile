@@ -37,6 +37,7 @@ gem 'bootsnap', '>= 1.9.3', require: false
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'kaminari'
 
+gem 'browser'
 gem 'geocoder'
 
 gem 'sass-rails'

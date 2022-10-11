@@ -83,6 +83,7 @@ GEM
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
+    browser (5.3.1)
     builder (3.2.4)
     capistrano (3.17.1)
       airbrussh (>= 1.0.0)
@@ -229,6 +230,8 @@ GEM
     nokogiri (1.13.8)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+    nokogiri (1.13.8-arm64-darwin)
+      racc (~> 1.4)
     pg (1.4.3)
     psych (4.0.6)
       stringio
@@ -339,6 +342,7 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.5.2)
       mini_portile2 (~> 2.8.0)
+    sqlite3 (1.5.2-arm64-darwin)
     sshkit (1.21.3)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
@@ -396,6 +400,7 @@ DEPENDENCIES
   bcrypt_pbkdf
   bootsnap (>= 1.9.3)
   bootstrap-sass (~> 3.4.1)
+  browser
   capistrano
   capistrano-rails
   capistrano-rbenv
