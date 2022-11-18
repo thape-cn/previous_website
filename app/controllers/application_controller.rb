@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_action :redirect_to_thape_web_if_bot
+  before_action :redirect_to_thape_web_unless_admin
   before_action :set_locale
   before_action :prepare_seo_variable
 
@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
 
   private
 
-    def redirect_to_thape_web_if_bot
-      if browser.bot.search_engine?
+    def redirect_to_thape_web_unless_admin
+      unless request.path.start_with?('/admin')
         redirect_to "https://www.thape.com#{request.fullpath}", status: :moved_permanently
       end
     end
