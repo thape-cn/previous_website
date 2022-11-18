@@ -169,7 +169,7 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     io-console (0.5.11)
     io-console (0.5.11-java)
-    irb (1.4.2)
+    irb (1.4.3)
       reline (>= 0.3.0)
     jar-dependencies (0.4.1)
     jbuilder (2.11.5)
@@ -230,7 +230,7 @@ GEM
     nokogiri (1.13.9)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    pg (1.4.4)
+    pg (1.4.5)
     psych (4.0.6)
       stringio
     psych (4.0.6-java)
@@ -439,4 +439,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.3.25
+   2.3.26
