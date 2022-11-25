@@ -1,3 +1,4 @@
+set :rbenv_ruby, '3.1.3'
 set :nginx_use_ssl, true
 set :puma_service_unit_name, :puma_old_web
 set :puma_systemctl_user, :system
