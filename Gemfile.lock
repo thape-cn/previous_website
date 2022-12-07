@@ -237,7 +237,7 @@ GEM
       stringio
     psych (4.0.6-java)
       jar-dependencies (>= 0.1.7)
-    public_suffix (5.0.0)
+    public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
     puma (5.6.5-java)
