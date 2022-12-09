@@ -169,7 +169,7 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     io-console (0.5.11)
     io-console (0.5.11-java)
-    irb (1.5.1)
+    irb (1.6.0)
       reline (>= 0.3.0)
     jar-dependencies (0.4.1)
     jbuilder (2.11.5)
