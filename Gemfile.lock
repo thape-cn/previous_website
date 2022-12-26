@@ -136,7 +136,7 @@ GEM
     ed25519 (1.3.0-java)
     enumize (0.2.1)
       rails (>= 5.0.0)
-    erubi (1.11.0)
+    erubi (1.12.0)
     execjs (2.8.1)
     ffi (1.15.5)
     ffi (1.15.5-java)
@@ -210,13 +210,13 @@ GEM
     mime-types-data (3.2022.0105)
     mini_magick (4.12.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
+    mini_portile2 (2.8.1)
     minitest (5.16.3)
     minitest-ci (3.4.0)
       minitest (>= 5.0.6)
     msgpack (1.6.0)
     msgpack (1.6.0-java)
-    net-imap (0.3.3)
+    net-imap (0.3.4)
       date
       net-protocol
     net-pop (0.1.2)
@@ -240,8 +240,8 @@ GEM
       nio4r (~> 2.0)
     puma (5.6.5-java)
       nio4r (~> 2.0)
-    racc (1.6.1)
-    racc (1.6.1-java)
+    racc (1.6.2)
+    racc (1.6.2-java)
     rack (2.2.4)
     rack-test (2.0.2)
       rack (>= 1.3)
@@ -324,7 +324,7 @@ GEM
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     simditor (2.3.6)
-    simplecov (0.21.2)
+    simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
       simplecov_json_formatter (~> 0.1)
@@ -436,4 +436,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.3.26
+   2.4.1
