@@ -122,7 +122,7 @@ GEM
     carrierwave-aliyun (1.2.3)
       aliyun-sdk (>= 0.7.0)
       carrierwave (>= 1)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.2.0)
     crass (1.0.6)
     date (3.3.3)
     date (3.3.3-java)
