@@ -231,7 +231,7 @@ GEM
     netrc (0.11.0)
     nio4r (2.5.8)
     nio4r (2.5.8-java)
-    nokogiri (1.14.0)
+    nokogiri (1.14.1)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     pg (1.4.5)
