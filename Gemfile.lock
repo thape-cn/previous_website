@@ -231,7 +231,7 @@ GEM
     netrc (0.11.0)
     nio4r (2.5.9)
     nio4r (2.5.9-java)
-    nokogiri (1.14.2)
+    nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     pg (1.4.6)
@@ -436,4 +436,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   2.4.10
+   2.4.12
