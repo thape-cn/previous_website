@@ -61,6 +61,14 @@
   </div>
   <div class="col-md-12">
     <div class="panel panel-default">
+      <div class="panel-heading">可持续发展 介绍</div>
+      <div class="panel-body">
+        <p><%= @service_file.sustainable_intro %></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="panel panel-default">
       <div class="panel-heading">年度账单</div>
       <div class="panel-body">
         <p><%= @service_file.tianhua_2020_bill_music.url if @service_file.tianhua_2020_bill_music_identifier.present? %></p>
