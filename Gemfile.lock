@@ -269,7 +269,7 @@ GEM
       zeitwerk (~> 2.5)
     rake (13.0.6)
     regexp_parser (2.8.1)
-    reline (0.3.5)
+    reline (0.3.6)
       io-console (~> 0.5)
     request_store (1.5.1)
       rack (>= 1.4)
