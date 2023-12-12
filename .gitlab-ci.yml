@@ -13,8 +13,23 @@ before_script:
   - bundle config set path 'vendor'  # Install dependencies into ./vendor/ruby
 
 stages:
+  - security
   - test
   - deploy
+
+scan:
+  stage: security
+  before_script:
+    - wget -q https://s.murphysec.com/release/murphysec-linux-amd64 -O murphysec
+    - chmod +x murphysec
+  script:
+    - ./murphysec -v  # Print version
+    - ./murphysec scan . --server http://172.16.1.252 --token $MURPHYSEC_TOKEN --json > scan_results.json
+  artifacts:
+    paths:
+      - scan_results.json
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
 
 test:
   services:
