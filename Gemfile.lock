@@ -160,7 +160,7 @@ GEM
     image_processing (1.12.2)
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
-    io-console (0.6.0)
+    io-console (0.7.0)
     irb (1.10.1)
       rdoc
       reline (>= 0.3.8)
@@ -207,6 +207,7 @@ GEM
     minitest-ci (3.4.0)
       minitest (>= 5.0.6)
     msgpack (1.7.2)
+    murmurhash3 (0.1.7)
     net-imap (0.4.8)
       date
       net-protocol
@@ -336,6 +337,8 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
+    unleash (5.0.0)
+      murmurhash3 (~> 0.1.7)
     websocket (1.2.10)
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
@@ -397,6 +400,7 @@ DEPENDENCIES
   terser
   turbolinks (~> 5)
   tzinfo-data
+  unleash
   wechat
 
 RUBY VERSION
