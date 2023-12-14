@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :set_unleash_context
   before_action :redirect_to_thape_web_unless_admin
   before_action :set_locale
   before_action :prepare_seo_variable
@@ -6,6 +7,13 @@ class ApplicationController < ActionController::Base
   include Admin::SessionsHelper
 
   private
+    def set_unleash_context
+      @unleash_context = Unleash::Context.new(
+        session_id: session.id,
+        remote_address: request.remote_ip,
+        user_id: session[:user_id]
+      )
+    end
 
     def redirect_to_thape_web_unless_admin
       unless request.path.start_with?('/admin')
