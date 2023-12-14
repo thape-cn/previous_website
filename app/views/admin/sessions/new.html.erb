@@ -5,8 +5,12 @@
       <div class="alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
 
-    <%= image_tag 'tianhualogowhite.png', width: 200 %>
-    <h3 class="form-signin-heading">天华集团网站管理控制台</h3>
+    <% if UNLEASH.is_enabled? "NewLoginTitle", @unleash_context %>
+      <h1 class="form-signin-heading">天华集团网站管理控制台</h1>
+    <% else %>
+      <%= image_tag 'tianhualogowhite.png', width: 200 %>
+      <h3 class="form-signin-heading">天华集团网站管理控制台</h3>
+    <% end %>
     <%= f.label :email, class: 'sr-only' %>
     <%= f.email_field :email, class: 'form-control', placeholder: "邮箱" %>
     <%= f.label :password,class: 'sr-only' %>
