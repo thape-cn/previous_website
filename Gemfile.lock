@@ -221,9 +221,6 @@ GEM
     net-ssh (7.2.0)
     netrc (0.11.0)
     nio4r (2.7.0)
-    nokogiri (1.15.5)
-      mini_portile2 (~> 2.8.2)
-      racc (~> 1.4)
     nokogiri (1.15.5-aarch64-linux)
       racc (~> 1.4)
     nokogiri (1.15.5-arm-linux)
@@ -322,8 +319,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.9)
-      mini_portile2 (~> 2.8.0)
     sqlite3 (1.6.9-aarch64-linux)
     sqlite3 (1.6.9-arm-linux)
     sqlite3 (1.6.9-arm64-darwin)
@@ -366,7 +361,6 @@ PLATFORMS
   aarch64-linux
   arm-linux
   arm64-darwin
-  ruby
   x86-linux
   x86_64-darwin
   x86_64-linux
