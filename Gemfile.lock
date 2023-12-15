@@ -202,7 +202,6 @@ GEM
     mime-types-data (3.2023.1205)
     mini_magick (4.12.0)
     mini_mime (1.1.5)
-    mini_portile2 (2.8.5)
     minitest (5.20.0)
     minitest-ci (3.4.0)
       minitest (>= 5.0.6)
@@ -225,7 +224,13 @@ GEM
     nokogiri (1.15.5)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
+    nokogiri (1.15.5-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.15.5-arm-linux)
+      racc (~> 1.4)
     nokogiri (1.15.5-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.15.5-x86-linux)
       racc (~> 1.4)
     nokogiri (1.15.5-x86_64-darwin)
       racc (~> 1.4)
@@ -319,7 +324,10 @@ GEM
       sprockets (>= 3.0.0)
     sqlite3 (1.6.9)
       mini_portile2 (~> 2.8.0)
+    sqlite3 (1.6.9-aarch64-linux)
+    sqlite3 (1.6.9-arm-linux)
     sqlite3 (1.6.9-arm64-darwin)
+    sqlite3 (1.6.9-x86-linux)
     sqlite3 (1.6.9-x86_64-darwin)
     sqlite3 (1.6.9-x86_64-linux)
     sshkit (1.21.6)
@@ -355,9 +363,12 @@ GEM
     zeitwerk (2.6.12)
 
 PLATFORMS
-  arm64-darwin-21
+  aarch64-linux
+  arm-linux
+  arm64-darwin
   ruby
-  x86_64-darwin-19
+  x86-linux
+  x86_64-darwin
   x86_64-linux
 
 DEPENDENCIES
@@ -404,7 +415,7 @@ DEPENDENCIES
   wechat
 
 RUBY VERSION
-   ruby 2.7.1p83
+   ruby 3.2.2p53
 
 BUNDLED WITH
-   2.4.22
+   2.5.0
