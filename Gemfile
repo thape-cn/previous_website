@@ -9,7 +9,7 @@ gem 'sprockets'
 gem 'enumize'
 gem 'sqlite3'
 gem 'pg'
-gem 'puma', '< 6' # current thape_web server not ready for puma 6
+gem 'puma', '>= 6.4'
 
 gem 'terser'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -63,7 +63,7 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
-  gem 'capistrano3-puma', '~> 5.2.0'
+  gem 'capistrano3-puma', '~> 6.0.0.beta.1'
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
 end
