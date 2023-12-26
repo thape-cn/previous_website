@@ -1,7 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-info_one:
+---
+picture_one:
   image: test.png
-  info: one
-  info_id: one
+  info: info_one
   id: 1

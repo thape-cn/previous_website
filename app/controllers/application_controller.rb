@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
     def redirect_to_thape_web_unless_admin
       unless request.path.start_with?('/admin')
-        redirect_to "https://www.thape.com#{request.fullpath}", status: :moved_permanently
+        redirect_to "https://www.thape.com#{request.fullpath}", status: :moved_permanently, allow_other_host: true
       end
     end
 

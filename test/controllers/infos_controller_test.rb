@@ -7,7 +7,7 @@ class InfosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get show" do
-    get info_path(infos(:one))
+    get info_path(infos(:info_one))
     assert_response :moved_permanently
   end
 end
