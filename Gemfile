@@ -7,7 +7,7 @@ ruby '>= 3.0'
 gem 'rails', '~> 7.1.2'
 gem 'sprockets'
 gem 'enumize'
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.7'
 gem 'pg'
 gem 'puma', '>= 6.4'
 

@@ -428,7 +428,7 @@ DEPENDENCIES
   simditor
   simplecov
   sprockets
-  sqlite3
+  sqlite3 (~> 1.7)
   terser
   turbolinks (~> 5)
   tzinfo-data
