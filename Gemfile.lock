@@ -93,7 +93,7 @@ GEM
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
-    browser (6.0.0)
+    browser (5.3.1)
     builder (3.2.4)
     capistrano (3.18.1)
       airbrussh (>= 1.0.0)
@@ -400,7 +400,7 @@ DEPENDENCIES
   bcrypt_pbkdf
   bootsnap (>= 1.9.3)
   bootstrap-sass (~> 3.4.1)
-  browser
+  browser (< 6)
   capistrano
   capistrano-rails
   capistrano-rbenv
