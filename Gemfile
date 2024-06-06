@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '>= 3.0'
+gem 'ffi', '~> 1.16.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.1.2'
@@ -41,7 +42,6 @@ gem 'browser', "< 6" # support ruby 3.0
 gem 'geocoder'
 
 gem 'sass-rails'
-gem 'ffi'
 gem 'jquery-rails'
 gem 'mini_magick'
 gem 'simditor'
