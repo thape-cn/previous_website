@@ -42,6 +42,7 @@ gem 'browser', "< 6" # support ruby 3.0
 gem 'geocoder'
 
 gem 'sass-rails'
+gem 'sprockets-rails', '~> 3.4.2'
 gem 'jquery-rails'
 gem 'mini_magick'
 gem 'simditor'
