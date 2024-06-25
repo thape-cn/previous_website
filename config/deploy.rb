@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock '~> 3.18.0'
+lock '~> 3.19.0'
 
 set :application, 'thape_web'
 set :repo_url, 'https://git.thape.com.cn/rails/old-web.git'
