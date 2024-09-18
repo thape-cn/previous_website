@@ -375,7 +375,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    unleash (5.0.7)
+    unleash (5.1.0)
       murmurhash3 (~> 0.1.7)
     webrick (1.8.1)
     websocket (1.2.11)
@@ -449,4 +449,4 @@ RUBY VERSION
    ruby 3.2.2p53
 
 BUNDLED WITH
-   2.5.18
+   2.5.19
