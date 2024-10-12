@@ -6,6 +6,7 @@ gem 'ffi', '~> 1.16.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.1.2'
+gem 'zeitwerk', "~> 2.6.18"
 gem 'csv'
 gem 'sprockets'
 gem 'enumize'
