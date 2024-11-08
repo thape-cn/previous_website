@@ -101,7 +101,7 @@ GEM
       sassc (>= 2.0.0)
     browser (5.3.1)
     builder (3.3.0)
-    capistrano (3.19.1)
+    capistrano (3.19.2)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -260,9 +260,9 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
-    ostruct (0.6.0)
+    ostruct (0.6.1)
     pg (1.5.9)
-    psych (5.1.2)
+    psych (5.2.0)
       stringio
     public_suffix (6.0.1)
     puma (6.4.3)
