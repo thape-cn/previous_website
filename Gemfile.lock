@@ -229,7 +229,7 @@ GEM
     minitest (5.25.1)
     minitest-ci (3.4.0)
       minitest (>= 5.0.6)
-    msgpack (1.7.3)
+    msgpack (1.7.5)
     murmurhash3 (0.1.7)
     mutex_m (0.2.0)
     net-imap (0.4.17)
@@ -335,7 +335,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    securerandom (0.3.1)
+    securerandom (0.3.2)
     selenium-webdriver (4.26.0)
       base64 (~> 0.2)
       logger (~> 1.4)
