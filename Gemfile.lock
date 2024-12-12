@@ -387,8 +387,8 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    wechat (0.17.5)
-      activesupport (>= 6.0, < 8)
+    wechat (0.17.6)
+      activesupport (>= 6.0, < 9)
       http (>= 1.0.4, < 6)
       nokogiri (>= 1.6.0)
       rexml
