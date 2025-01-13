@@ -233,7 +233,7 @@ GEM
     msgpack (1.7.5)
     murmurhash3 (0.1.7)
     mutex_m (0.3.0)
-    net-imap (0.4.17)
+    net-imap (0.4.18)
       date
       net-protocol
     net-pop (0.1.2)
@@ -437,12 +437,16 @@ DEPENDENCIES
   mini_magick
   minitest
   minitest-ci
+  net-imap (~> 0.4.17)
+  nokogiri (~> 1.17.2)
   pg
   puma (>= 6.4)
   rails (~> 7.1.2)
+  reline (~> 0.5.12)
   route_translator
   sass-rails
-  selenium-webdriver (>= 4.11.0)
+  securerandom (~> 0.3.2)
+  selenium-webdriver (~> 4.26.0)
   simditor
   simplecov
   sprockets
