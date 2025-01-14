@@ -13,7 +13,7 @@ module Admin
         format.csv do
           render_csv_header "thape web messages"
           csv_res = CSV.generate do |csv|
-            csv << %w[序号 公司 姓名 联系方式 留言 留言时间]
+            csv << %w[序号 公司 姓名 联系方式 留言 留言时间 广告评分]
             messages.each do |s|
               values = []
               values << s.id
@@ -22,6 +22,7 @@ module Admin
               values << s.contact_details
               values << s.message
               values << s.created_at
+              values << s.spam_score
               csv << values
             end
           end

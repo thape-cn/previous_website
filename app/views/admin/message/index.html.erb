@@ -11,7 +11,8 @@
     <tr>
       <th><h4>公司 / 姓名 <br /> 联系方式</h4></th>
       <th><h4>留言</h4></th>
-      <th><h4>留言时间</h4></th>
+      <th><h5>留言时间</h5></th>
+      <th><h5>广告评分</h5></th>
       <th><h4>动作</h4></th>
     </tr>
   </thead>
@@ -25,6 +26,7 @@
         </td>
         <td><%= message.message %></td>
         <td><%= message.created_at %></td>
+        <td><%= message.spam_score %></td>
         <td>
           <%= link_to fa_icon("trash"), admin_message_path(message), method: :delete %>
         </td>
