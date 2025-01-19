@@ -60,6 +60,8 @@ gem 'minitest'
 
 gem 'unleash', '< 6'
 
+gem 'rorvswild'
+
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'debug'

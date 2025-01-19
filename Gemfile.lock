@@ -321,6 +321,7 @@ GEM
       mime-types (>= 1.16, < 4.0)
       netrc (~> 0.8)
     rexml (3.4.0)
+    rorvswild (1.8.1)
     route_translator (14.2.0)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
@@ -443,6 +444,7 @@ DEPENDENCIES
   puma (>= 6.4)
   rails (~> 7.1.2)
   reline (~> 0.5.12)
+  rorvswild
   route_translator
   sass-rails
   securerandom (~> 0.3.2)
