@@ -6,17 +6,14 @@ gem 'ffi', '~> 1.16.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.1.2'
-gem "nokogiri", "~> 1.18.2"
 gem "net-imap", "~> 0.4.17"
-gem "securerandom", "~> 0.3.2"
 gem "reline", "~> 0.5.12"
-gem 'zeitwerk', "~> 2.6.18"
 gem 'csv'
 gem 'sprockets'
 gem 'enumize'
 gem 'sqlite3'
 gem 'pg'
-gem 'puma', '>= 6.4'
+gem 'puma', '>= 6.5'
 
 gem 'terser'
 # See https://github.com/rails/execjs#readme for more supported runtimes

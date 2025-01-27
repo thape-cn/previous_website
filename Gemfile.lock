@@ -247,7 +247,6 @@ GEM
     net-sftp (4.0.0)
       net-ssh (>= 5.0.0, < 8.0.0)
     net-smtp (0.5.0)
-      net-protocol
     net-ssh (7.3.0)
     netrc (0.11.0)
     nio4r (2.7.4)
@@ -345,7 +344,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    securerandom (0.3.2)
+    securerandom (0.4.1)
     selenium-webdriver (4.26.0)
       base64 (~> 0.2)
       logger (~> 1.4)
@@ -406,7 +405,7 @@ GEM
       zeitwerk (~> 2.4)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    zeitwerk (2.6.18)
+    zeitwerk (2.7.1)
 
 PLATFORMS
   aarch64-linux
@@ -445,15 +444,13 @@ DEPENDENCIES
   minitest
   minitest-ci
   net-imap (~> 0.4.17)
-  nokogiri (~> 1.18.2)
   pg
-  puma (>= 6.4)
+  puma (>= 6.5)
   rails (~> 7.1.2)
   reline (~> 0.5.12)
   rorvswild
   route_translator
   sass-rails
-  securerandom (~> 0.3.2)
   selenium-webdriver (~> 4.26.0)
   simditor
   simplecov
@@ -464,7 +461,6 @@ DEPENDENCIES
   tzinfo-data
   unleash (< 6)
   wechat
-  zeitwerk (~> 2.6.18)
 
 RUBY VERSION
    ruby 3.2.2p53
