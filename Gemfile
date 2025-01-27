@@ -14,7 +14,7 @@ gem 'zeitwerk', "~> 2.6.18"
 gem 'csv'
 gem 'sprockets'
 gem 'enumize'
-gem 'sqlite3', '~> 1.7'
+gem 'sqlite3'
 gem 'pg'
 gem 'puma', '>= 6.4'
 
