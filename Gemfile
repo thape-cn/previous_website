@@ -55,7 +55,7 @@ gem 'wechat'
 
 gem 'minitest'
 
-gem 'unleash', '< 6'
+gem 'unleash'
 
 gem 'rorvswild'
 
