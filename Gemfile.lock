@@ -388,7 +388,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    unleash (6.1.1)
+    unleash (6.1.2)
       yggdrasil-engine (~> 1.0.1)
     websocket (1.2.11)
     websocket-driver (0.7.7)
