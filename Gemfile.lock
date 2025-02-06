@@ -232,7 +232,7 @@ GEM
     minitest (5.25.4)
     minitest-ci (3.4.0)
       minitest (>= 5.0.6)
-    msgpack (1.7.5)
+    msgpack (1.8.0)
     mutex_m (0.3.0)
     net-imap (0.4.18)
       date
