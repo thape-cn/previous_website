@@ -416,7 +416,7 @@ GEM
       ffi (~> 1.16.3)
     yggdrasil-engine (1.0.3-x86_64-linux)
       ffi (~> 1.16.3)
-    zeitwerk (2.7.1)
+    zeitwerk (2.7.2)
 
 PLATFORMS
   aarch64-linux
