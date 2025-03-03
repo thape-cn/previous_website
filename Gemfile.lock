@@ -225,7 +225,7 @@ GEM
       logger
       mime-types-data (~> 3.2015)
     mime-types-data (3.2025.0220)
-    mini_magick (5.1.2)
+    mini_magick (5.2.0)
       benchmark
       logger
     mini_mime (1.1.5)
@@ -390,10 +390,11 @@ GEM
       base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    wechat (0.17.6)
+    wechat (0.17.7)
       activesupport (>= 6.0, < 9)
       http (>= 1.0.4, < 6)
       nokogiri (>= 1.6.0)
+      ostruct
       rexml
       thor
       zeitwerk (~> 2.4)
