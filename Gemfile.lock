@@ -383,7 +383,7 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    unleash (6.2.0)
+    unleash (6.2.1)
       base64 (~> 0.2.0)
       logger (~> 1.6.5)
       yggdrasil-engine (~> 1.0.3)
@@ -470,4 +470,4 @@ RUBY VERSION
    ruby 3.2.2p53
 
 BUNDLED WITH
-   2.6.7
+   2.6.8
