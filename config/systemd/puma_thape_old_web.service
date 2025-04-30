@@ -3,7 +3,7 @@ Description=Puma HTTP Server for thape_web (staging)
 After=network.target
 
 [Service]
-Type=simple
+Type=notify
 User=thape_web
 WorkingDirectory=/var/www/thape_old_web/current
 ExecStart=/home/thape_web/.rbenv/bin/rbenv exec bundle exec puma -C /var/www/thape_old_web/shared/puma.rb
