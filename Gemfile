@@ -49,9 +49,9 @@ gem 'mini_magick'
 gem 'simditor'
 gem "carrierwave"
 gem 'carrierwave-aliyun'
-gem 'http'
 
-gem 'wechat'
+# bundle config local.wechat /Users/$(whoami)/git/oss/wechat/
+gem 'wechat', git: "https://git.thape.com.cn/Eric-Guo/wechat.git", branch: :main
 
 gem 'minitest'
 
