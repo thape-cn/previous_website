@@ -1,6 +1,6 @@
 GIT
   remote: https://git.thape.com.cn/Eric-Guo/wechat.git
-  revision: 9131aecfe2777cca47452235b8a096891eb45490
+  revision: 9c157312df2cf1b26af5f6f22a5c24a36cb976ce
   branch: main
   specs:
     wechat (0.17.7)
@@ -275,7 +275,7 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.13)
-    rack-session (2.1.0)
+    rack-session (2.1.1)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
     rack-test (2.2.0)
