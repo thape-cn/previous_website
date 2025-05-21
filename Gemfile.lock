@@ -160,7 +160,7 @@ GEM
       reline (>= 0.3.8)
     docile (1.4.1)
     domain_name (0.6.20240107)
-    drb (2.2.1)
+    drb (2.2.3)
     ed25519 (1.4.0)
     enumize (0.2.1)
       rails (>= 5.0.0)
@@ -229,7 +229,7 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2025.0514)
+    mime-types-data (3.2025.0520)
     mini_magick (5.2.0)
       benchmark
       logger
