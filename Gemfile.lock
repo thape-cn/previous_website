@@ -229,7 +229,7 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2025.0520)
+    mime-types-data (3.2025.0527)
     mini_magick (5.2.0)
       benchmark
       logger
@@ -390,10 +390,10 @@ GEM
     turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    unleash (6.3.0)
+    unleash (6.3.1)
       base64 (~> 0.2.0)
       logger (~> 1.6)
-      yggdrasil-engine (~> 1.0.3)
+      yggdrasil-engine (~> 1.0.4)
     websocket (1.2.11)
     websocket-driver (0.7.7)
       base64
@@ -401,13 +401,13 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    yggdrasil-engine (1.0.3-aarch64-linux)
+    yggdrasil-engine (1.0.4-aarch64-linux)
       ffi (~> 1.16.3)
-    yggdrasil-engine (1.0.3-arm64-darwin)
+    yggdrasil-engine (1.0.4-arm64-darwin)
       ffi (~> 1.16.3)
-    yggdrasil-engine (1.0.3-x86_64-darwin)
+    yggdrasil-engine (1.0.4-x86_64-darwin)
       ffi (~> 1.16.3)
-    yggdrasil-engine (1.0.3-x86_64-linux)
+    yggdrasil-engine (1.0.4-x86_64-linux)
       ffi (~> 1.16.3)
     zeitwerk (2.7.3)
 
