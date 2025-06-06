@@ -331,7 +331,7 @@ GEM
     route_translator (14.2.0)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
-    ruby-vips (2.2.3)
+    ruby-vips (2.2.4)
       ffi (~> 1.12)
       logger
     rubyzip (2.4.1)
