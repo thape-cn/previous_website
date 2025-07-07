@@ -328,7 +328,7 @@ GEM
       netrc (~> 0.8)
     rexml (3.4.1)
     rorvswild (1.9.2)
-    route_translator (15.1.0)
+    route_translator (15.2.0)
       actionpack (>= 6.1)
       activesupport (>= 6.1)
     ruby-vips (2.2.4)
@@ -367,10 +367,10 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    sqlite3 (2.7.1-aarch64-linux-gnu)
-    sqlite3 (2.7.1-arm64-darwin)
-    sqlite3 (2.7.1-x86_64-darwin)
-    sqlite3 (2.7.1-x86_64-linux-gnu)
+    sqlite3 (2.7.2-aarch64-linux-gnu)
+    sqlite3 (2.7.2-arm64-darwin)
+    sqlite3 (2.7.2-x86_64-darwin)
+    sqlite3 (2.7.2-x86_64-linux-gnu)
     sshkit (1.24.0)
       base64
       logger
