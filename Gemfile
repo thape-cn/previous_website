@@ -55,7 +55,7 @@ gem 'wechat', git: "https://git.thape.com.cn/Eric-Guo/wechat.git", branch: :main
 
 gem 'minitest'
 
-gem 'unleash'
+gem 'unleash', '~> 6.3.1'
 
 gem 'rorvswild'
 
