@@ -150,6 +150,7 @@ GEM
     carrierwave-aliyun (1.2.3)
       aliyun-sdk (>= 0.7.0)
       carrierwave (>= 1)
+    cgi (0.5.0)
     concurrent-ruby (1.3.5)
     connection_pool (2.5.3)
     crass (1.0.6)
@@ -164,7 +165,8 @@ GEM
     ed25519 (1.4.0)
     enumize (0.2.1)
       rails (>= 5.0.0)
-    erb (5.0.2)
+    erb (4.0.4)
+      cgi (>= 0.3.3)
     erubi (1.13.1)
     execjs (2.10.0)
     ffi (1.16.3)
@@ -411,7 +413,7 @@ GEM
       ffi (~> 1.16.3)
     yggdrasil-engine (1.0.4-x86_64-linux)
       ffi (~> 1.16.3)
-    zeitwerk (2.7.3)
+    zeitwerk (2.6.18)
 
 PLATFORMS
   aarch64-linux
@@ -470,4 +472,4 @@ RUBY VERSION
    ruby 3.2.2p53
 
 BUNDLED WITH
-   2.7.1
+   2.6.9
