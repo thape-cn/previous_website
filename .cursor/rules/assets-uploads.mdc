@@ -1,0 +1,19 @@
+---
+description: Assets (Sprockets) and file uploads (CarrierWave)
+globs: app/assets/**/*,config/initializers/assets.rb,app/uploaders/**/*.rb,app/models/**/*.rb
+---
+### Assets
+
+- **Pipeline**: Sprockets. Version `1.0`. Paths include `node_modules` and `app/assets/fonts`.
+- **Precompile list**: `blackapp.css`, `blackapp.js`, `admin.css`, `tianhua2019.js`.
+- **JS/CSS**: Turbolinks, jQuery, Bootstrap-Sass; use Sprockets manifests in `app/assets/javascripts` and `stylesheets`.
+
+### Uploads
+
+- **CarrierWave**: Configured for Aliyun OSS (public) except in `test` which uses file storage.
+- **Uploaders**: Located in `app/uploaders/` (e.g., `photo_uploader.rb`, `webp_uploader.rb`).
+- **Models**: Use `mount_uploader :column, UploaderClass` to attach files.
+
+Guidelines:
+- For new assets, append to precompile list if not part of default manifest.
+- For uploads, ensure credentials keys exist and consider `aliyun_mode` privacy needs.

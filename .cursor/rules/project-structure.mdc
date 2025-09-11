@@ -1,0 +1,25 @@
+---
+alwaysApply: true
+---
+### Project structure and entry points
+
+- **Main framework**: Rails 7.1 app (`Tianhua::Application`).
+- **Primary routes**: `config/routes.rb` draws `config/routes/admin.rb` and wraps public routes in `localized` blocks.
+- **Default locale**: `cn`; available locales: `['en','cn']`. All URLs include `:locale` via `default_url_options`.
+- **Web entry**: Root route maps to `static_pages#homes`; admin root is `admin/home#show`.
+- **Admin namespace**: Controllers live under `app/controllers/admin/`; admin layout is `views/layouts/admin.html.erb`.
+- **Models**: ActiveRecord models in `app/models/`. File uploads handled by CarrierWave uploaders in `app/uploaders/`.
+- **Views**: ERB in `app/views/**`. Pagination views under `app/views/kaminari/`.
+- **Assets**: Sprockets pipeline; custom bundles precompiled per `config/initializers/assets.rb`.
+- **Feature flags**: Unleash initialized in `config/initializers/unleash.rb` and context set in `ApplicationController`.
+- **Monitoring**: RorVsWild started in `config/initializers/rorvswild.rb`.
+
+Key files:
+- `config/application.rb`
+- `config/routes.rb`
+- `config/routes/admin.rb`
+- `app/controllers/application_controller.rb`
+- `app/controllers/admin/application_controller.rb`
+- `config/initializers/assets.rb`
+- `config/initializers/kaminari_config.rb`
+- `config/initializers/route_translator.rb`

@@ -1,0 +1,16 @@
+---
+description: Rails conventions used across controllers, models, and views
+globs: app/**/*.rb,app/views/**/*.erb
+---
+### Rails conventions in this codebase
+
+- **Controllers**: Use `before_action` for setup; admin controllers inherit from `Admin::ApplicationController` with layout `admin`.
+- **Views**: Use ERB templates; pagination via Kaminari partials under `app/views/kaminari/`.
+- **SEO**: `ApplicationController#prepare_seo_variable` sets `@seo = Seo.first` for layout usage.
+- **CSV downloads**: `Admin::ApplicationController#render_csv_header` provides headers helper.
+- **Strong params**: Follow standard `params.require(...).permit(...)` style in controllers.
+- **Time zone**: `config.time_zone = 'Beijing'`, AR default timezone `:local`.
+
+When adding features:
+- Prefer URL helpers with `locale`.
+- Ensure admin views use the `admin` layout and authenticate as needed.

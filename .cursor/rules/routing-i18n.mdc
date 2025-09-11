@@ -1,0 +1,16 @@
+---
+description: Project routing and i18n behavior
+globs: app/controllers/**/*.rb,config/routes*.rb,app/views/**/*.erb
+---
+### Routing and i18n
+
+- **Locale in URLs**: `ApplicationController#default_url_options` injects `{ locale: I18n.locale }`. Prefer URL helpers that include `locale`.
+- **Route translator**: `RouteTranslator.config.force_locale = true` ensures locale is always present.
+- **Available locales**: `en`, `cn`; default `cn` (see `config/application.rb`).
+- **Localized scope**: Most public resources are inside `localized do ... end` in `config/routes.rb`.
+- **Admin routes**: Namespaced under `/admin` and loaded from `config/routes/admin.rb`.
+- **External redirect**: Non-admin requests are permanently redirected to `https://www.thape.com` preserving path.
+
+Tips:
+- Use `url_for(model)` or `*_path(model, locale: I18n.locale)` to avoid missing locale.
+- When adding new routes, place public ones inside `localized` and admin ones in `config/routes/admin.rb`.

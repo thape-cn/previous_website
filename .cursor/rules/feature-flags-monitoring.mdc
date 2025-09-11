@@ -1,0 +1,14 @@
+---
+description: Feature flags (Unleash) usage and monitoring (RorVsWild)
+globs: config/initializers/unleash.rb,app/controllers/**/*.rb
+---
+### Feature flags (Unleash)
+
+- **Client**: Initialized in `config/initializers/unleash.rb` and bound to constant `UNLEASH`.
+- **Context**: `ApplicationController#set_unleash_context` constructs an `Unleash::Context` using `session_id`, `remote_address`, and `user_id`.
+- **Usage**: When gating features, fetch toggles via `UNLEASH.is_enabled?("flag_name", @unleash_context)`.
+
+### Monitoring (RorVsWild)
+
+- **Startup**: `RorVsWild.start(api_key: ...)` in initializer.
+- **Guideline**: Wrap high-risk code with custom logging where helpful; avoid sending secrets.

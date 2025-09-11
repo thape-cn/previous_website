@@ -1,0 +1,13 @@
+---
+description: Testing stack and conventions
+globs: test/**/*.rb
+---
+### Tests
+
+- **Framework**: Minitest with Rails system/integration tests present under `test/`.
+- **System tests**: Capybara + Selenium WebDriver in `group :test`.
+- **CI**: Optional `:ci` group includes `minitest-ci` and `simplecov`.
+
+Guidelines:
+- Use fixtures under `test/fixtures/`.
+- Prefer system tests for critical admin flows (login, CRUD) and integration tests for routing/i18n.
