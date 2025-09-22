@@ -172,7 +172,7 @@ GEM
     ffi (1.16.3)
     font-awesome-rails (4.7.0.9)
       railties (>= 3.2, < 9.0)
-    geocoder (1.8.5)
+    geocoder (1.8.6)
       base64 (>= 0.1.0)
       csv (>= 3.0.0)
     globalid (1.2.1)
@@ -371,10 +371,10 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    sqlite3 (2.7.3-aarch64-linux-gnu)
-    sqlite3 (2.7.3-arm64-darwin)
-    sqlite3 (2.7.3-x86_64-darwin)
-    sqlite3 (2.7.3-x86_64-linux-gnu)
+    sqlite3 (2.7.4-aarch64-linux-gnu)
+    sqlite3 (2.7.4-arm64-darwin)
+    sqlite3 (2.7.4-x86_64-darwin)
+    sqlite3 (2.7.4-x86_64-linux-gnu)
     sshkit (1.24.0)
       base64
       logger
