@@ -5,7 +5,7 @@ ruby '>= 3.0'
 gem 'ffi', '~> 1.16.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.1.2'
+gem 'rails', '~> 7.2.2'
 gem "net-imap", "~> 0.4.17"
 gem "reline", "~> 0.5.12"
 gem 'csv'
