@@ -1,6 +1,6 @@
 GIT
   remote: https://git.thape.com.cn/Eric-Guo/wechat.git
-  revision: e2e018a1ff1f314472693e99d525dfff4c7baed6
+  revision: ae2083bf6402280c8d178fb56e9bcff0733e0f0e
   branch: main
   specs:
     wechat (1.0.1)
@@ -232,7 +232,7 @@ GEM
     mini_magick (5.3.1)
       logger
     mini_mime (1.1.5)
-    minitest (5.26.0)
+    minitest (5.26.1)
     minitest-ci (3.4.0)
       minitest (>= 5.0.6)
     msgpack (1.8.0)
