@@ -101,7 +101,7 @@ GEM
     bcrypt (3.1.22)
     bcrypt_pbkdf (1.1.2)
     benchmark (0.5.0)
-    bigdecimal (4.0.1)
+    bigdecimal (4.1.0)
     bootsnap (1.23.0)
       msgpack (~> 1.2)
     bootstrap-sass (3.4.1)
@@ -227,7 +227,7 @@ GEM
     mime-types (3.7.0)
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
-    mime-types-data (3.2026.0317)
+    mime-types-data (3.2026.0331)
     mini_magick (5.3.1)
       logger
     mini_mime (1.1.5)
