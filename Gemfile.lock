@@ -160,7 +160,7 @@ GEM
     ed25519 (1.4.0)
     enumize (0.2.1)
       rails (>= 5.0.0)
-    erb (6.0.2)
+    erb (6.0.3)
     erubi (1.13.1)
     execjs (2.10.1)
     ffi (1.16.3)
@@ -369,10 +369,10 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
-    sqlite3 (2.9.2-aarch64-linux-gnu)
-    sqlite3 (2.9.2-arm64-darwin)
-    sqlite3 (2.9.2-x86_64-darwin)
-    sqlite3 (2.9.2-x86_64-linux-gnu)
+    sqlite3 (2.9.3-aarch64-linux-gnu)
+    sqlite3 (2.9.3-arm64-darwin)
+    sqlite3 (2.9.3-x86_64-darwin)
+    sqlite3 (2.9.3-x86_64-linux-gnu)
     sshkit (1.25.0)
       base64
       logger
