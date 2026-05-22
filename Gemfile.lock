@@ -1,6 +1,6 @@
 GIT
   remote: https://git.thape.com.cn/Eric-Guo/wechat.git
-  revision: 96f2041e38593987c308325067daae748f794619
+  revision: 42dce1ab715dcc117e3420641913ab85bcb58901
   branch: main
   specs:
     wechat (1.1.0)
@@ -413,7 +413,7 @@ GEM
       ffi (~> 1.16.3)
     yggdrasil-engine (1.0.4-x86_64-linux)
       ffi (~> 1.16.3)
-    zeitwerk (2.8.0)
+    zeitwerk (2.8.1)
 
 PLATFORMS
   aarch64-linux
@@ -471,4 +471,4 @@ RUBY VERSION
   ruby 3.2.2p53
 
 BUNDLED WITH
-  4.0.11
+  4.0.12
