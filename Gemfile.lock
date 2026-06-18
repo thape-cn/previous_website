@@ -182,7 +182,7 @@ GEM
       domain_name (~> 0.5)
     httpx (1.8.0)
       http-2 (>= 1.2.0)
-    i18n (1.15.0)
+    i18n (1.15.1)
       concurrent-ruby (~> 1.0)
     image_processing (1.14.0)
       mini_magick (>= 4.9.5, < 6)
