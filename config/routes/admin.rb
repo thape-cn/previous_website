@@ -56,6 +56,7 @@ namespace :admin do
   end
   resources :pictures, except: [:show]
   resources :message, only: [:index, :show, :destroy]
+  resources :project_messages, only: [:index, :show, :destroy]
   resources :portfolios, except: [:show]
   resources :publications, except: [:show]
   resources :insights, except: [:show]

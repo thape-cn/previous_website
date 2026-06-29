@@ -1,0 +1,46 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<h3>项目合作留言</h3>
+<%= link_to '导出', admin_project_messages_path(format: :csv), class: 'btn btn-primary' %>
+<br>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th><h4>公司 / 姓名 <br /> 联系电话</h4></th>
+      <th><h5>项目类型</h5></th>
+      <th><h5>服务类型</h5></th>
+      <th><h5>项目面积</h5></th>
+      <th><h4>合作内容</h4></th>
+      <th><h5>留言时间</h5></th>
+      <th><h5>广告评分</h5></th>
+      <th><h4>动作</h4></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project_messages.each do |project_message| %>
+      <tr>
+        <td>
+          <%= project_message.company %>
+          <%= link_to_if project_message.name.present?, project_message.name, admin_project_message_path(id: project_message.id) %>
+          <br />
+          <%= project_message.phone %>
+        </td>
+        <td><%= project_message.project_type %></td>
+        <td><%= project_message.service_type %></td>
+        <td><%= project_message.project_area %></td>
+        <td><%= project_message.message %></td>
+        <td><%= project_message.created_at %></td>
+        <td><%= project_message.spam_score %></td>
+        <td>
+          <%= link_to fa_icon("trash"), admin_project_message_path(project_message), method: :delete %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @project_messages, hide_goto_page: false %>

@@ -1,0 +1,16 @@
+<% flash.each do |message_type, message| %>
+  <div class="alert alert-<%= message_type %>"><%= message %></div>
+<% end %>
+
+<h3>项目合作留言</h3>
+
+<br>
+
+<h3><%= @project_message.company %></h3>
+<h4><%= @project_message.name %></h4>
+<p><%= @project_message.phone %></p>
+<p>项目类型：<%= @project_message.project_type %></p>
+<p>服务类型：<%= @project_message.service_type %></p>
+<p>项目面积：<%= @project_message.project_area %></p>
+<p>广告评分：<%= @project_message.spam_score %></p>
+<p><%= simple_format @project_message.message %></p>
