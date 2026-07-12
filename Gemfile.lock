@@ -386,7 +386,7 @@ GEM
     terser (1.2.8)
       execjs (>= 0.3.0, < 3)
     thor (1.5.0)
-    tidewave (0.5.1)
+    tidewave (0.5.2)
       rack (>= 2.0)
     tilt (2.8.0)
     timeout (0.6.1)
@@ -475,4 +475,4 @@ RUBY VERSION
   ruby 3.2.2p53
 
 BUNDLED WITH
-  4.0.15
+  4.0.16
