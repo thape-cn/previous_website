@@ -159,7 +159,7 @@ GEM
     ed25519 (1.4.0)
     enumize (0.2.1)
       rails (>= 5.0.0)
-    erb (6.0.4)
+    erb (6.0.5)
     erubi (1.13.1)
     execjs (2.10.1)
     ffi (1.16.3)
