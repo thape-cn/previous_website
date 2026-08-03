@@ -311,7 +311,7 @@ GEM
       tsort (>= 0.2)
       zeitwerk (~> 2.6)
     rake (13.4.2)
-    rbs (4.1.0)
+    rbs (4.1.1)
       logger
       prism (>= 1.6.0)
       tsort
@@ -380,7 +380,7 @@ GEM
     terser (1.2.8)
       execjs (>= 0.3.0, < 3)
     thor (1.5.0)
-    tidewave (0.8.0)
+    tidewave (0.8.1)
       rack (>= 2.0)
     tilt (2.8.0)
     timeout (0.6.1)
@@ -410,7 +410,7 @@ GEM
       ffi (~> 1.16.3)
     yggdrasil-engine (1.0.4-x86_64-linux)
       ffi (~> 1.16.3)
-    zeitwerk (2.8.2)
+    zeitwerk (2.8.3)
 
 PLATFORMS
   aarch64-linux
