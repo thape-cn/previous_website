@@ -159,7 +159,7 @@ GEM
     ed25519 (1.4.0)
     enumize (0.2.1)
       rails (>= 5.0.0)
-    erb (6.0.6)
+    erb (6.0.7)
     erubi (1.13.1)
     execjs (2.10.1)
     ffi (1.16.3)
@@ -311,7 +311,7 @@ GEM
       tsort (>= 0.2)
       zeitwerk (~> 2.6)
     rake (13.4.2)
-    rbs (4.1.1)
+    rbs (4.1.2)
       logger
       prism (>= 1.6.0)
       tsort
