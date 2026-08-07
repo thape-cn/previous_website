@@ -227,7 +227,7 @@ GEM
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
     mime-types-data (3.2026.0701)
-    mini_magick (5.3.2)
+    mini_magick (5.3.3)
       logger
     mini_mime (1.1.5)
     minitest (5.27.0)
@@ -380,7 +380,7 @@ GEM
     terser (1.2.8)
       execjs (>= 0.3.0, < 3)
     thor (1.5.0)
-    tidewave (0.8.1)
+    tidewave (0.8.2)
       rack (>= 2.0)
     tilt (2.8.0)
     timeout (0.6.1)
